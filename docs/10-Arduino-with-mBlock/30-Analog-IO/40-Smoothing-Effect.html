@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Arduino with mBlock</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Arduino with mBlock
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an Arduino Uno with mBlock to create a product for Active Living.</div>
+            <p>Getting Started</p><ul><a href="../10-Intro/10-intro.html"><li >Introduction</li></a><a href="../10-Intro/20-Arduino-Uno.html"><li >Arduino Uno</li></a><a href="../10-Intro/30-mBlock.html"><li >mBlock Basics</li></a><a href="../10-Intro/40-Basic-Setup.html"><li >Basic Setup</li></a></ul><p>Basic I/O</p><ul><a href="../20-Basic-IO/10-Blink.html"><li >Blink</li></a><a href="../20-Basic-IO/20-Challenge-1a.html"><li >Challenge 1a</li></a><a href="../20-Basic-IO/30-External-LED.html"><li >External LED</li></a><a href="../20-Basic-IO/40-Challenge-1b.html"><li >Challenge 1b</li></a><a href="../20-Basic-IO/50-Button-Input.html"><li >Digital Input</li></a><a href="../20-Basic-IO/60-Challenge-1c.html"><li >Challenge 1C</li></a><a href="../20-Basic-IO/70-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>Analog I/O</p><ul><a href="../30-Analog-IO/10-Dimmer-Effect.html"><li >Dimmer Effect</li></a><a href="../30-Analog-IO/20-Analog-PWM.html"><li >Setting Analog PWM</li></a><a href="../30-Analog-IO/30-Challenge-2a.html"><li >Challenge 2a</li></a><a href="../30-Analog-IO/40-Smoothing-Effect.html"><li class="current">Smoothing the Effect</li></a><a href="../30-Analog-IO/50-Challenge-2b.html"><li >Challenge 2b</li></a><a href="../30-Analog-IO/60-Extra-Challenges.html"><li >Extra Challenges</li></a></ul>
+        </nav>
+        <div id="content">
+            <h1>Smoothing the Effect</h1>
+<h2>More Brightness Levels, Please!</h2>
+<p>With 10 keys controling brightness levels progressivley you can run up and down the keyboard like a piano simulating a dimmer effect.</p>
+<p>If we want a smoother dimmer effect we need to run PWM through the LED at many more PWM levels (all integers 0-255)</p>
+<p>But we don’t have enough keys or patience to code and press all of them, so let’s try more coding...</p>
+<h2>Creating Your First Variable</h2>
+<p><br></p>
+<p><img alt="" src="images/makevar.jpg" /></p>
+<p><img alt="" src="images/makevar2.jpg" /></p>
+<p><img alt="" src="images/makevar3.jpg" /></p>
+<hr />
+<h2>Changing the Variable</h2>
+<p><br></p>
+<p><img alt="" src="images/changevar.jpg" /></p>
+<p>We want to use the value in our program to change the PWM output of our LED pin.</p>
+<p>We can use the Variable itself in the <em>Level</em> bubble in the <em>Set PWM Output</em> block.</p>
+<p><img alt="" src="images/setpwmvar.jpg" /></p>
+<h2>Dimmer Effect - Loops</h2>
+<p>So how does this help us achieve the dimmer effect?</p>
+<p>We wanted some way to progressively set the PWM levels from 0 to 255...</p>
+<p>Think about how we can change that PWM level variable by 1 step in a loop?</p>
+<p><img alt="" src="images/loopblocks.jpg" /></p>
+<p><img alt="" src="images/counter.jpg" /></p>
+<p>Now let's set the actual PWM level in the LED pin to these levels in the loop!  Replace the <em>Wait</em> block with the <em>set PWM output</em> block:</p>
+<p><img alt="" src="images/dimupled.jpg" /></p>
+<p>The <em>set PWM output</em> function already blocks for a split second, so we don't need to worry about the <em>Wait</em> block anymore...</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

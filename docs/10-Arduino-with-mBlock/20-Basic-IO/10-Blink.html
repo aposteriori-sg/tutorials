@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Arduino with mBlock</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Arduino with mBlock
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an Arduino Uno with mBlock to create a product for Active Living.</div>
+            <p>Getting Started</p><ul><a href="../10-Intro/10-intro.html"><li >Introduction</li></a><a href="../10-Intro/20-Arduino-Uno.html"><li >Arduino Uno</li></a><a href="../10-Intro/30-mBlock.html"><li >mBlock Basics</li></a><a href="../10-Intro/40-Basic-Setup.html"><li >Basic Setup</li></a></ul><p>Basic I/O</p><ul><a href="../20-Basic-IO/10-Blink.html"><li class="current">Blink</li></a><a href="../20-Basic-IO/20-Challenge-1a.html"><li >Challenge 1a</li></a><a href="../20-Basic-IO/30-External-LED.html"><li >External LED</li></a><a href="../20-Basic-IO/40-Challenge-1b.html"><li >Challenge 1b</li></a><a href="../20-Basic-IO/50-Button-Input.html"><li >Digital Input</li></a><a href="../20-Basic-IO/60-Challenge-1c.html"><li >Challenge 1C</li></a><a href="../20-Basic-IO/70-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>Analog I/O</p><ul><a href="../30-Analog-IO/10-Dimmer-Effect.html"><li >Dimmer Effect</li></a><a href="../30-Analog-IO/20-Analog-PWM.html"><li >Setting Analog PWM</li></a><a href="../30-Analog-IO/30-Challenge-2a.html"><li >Challenge 2a</li></a><a href="../30-Analog-IO/40-Smoothing-Effect.html"><li >Smoothing the Effect</li></a><a href="../30-Analog-IO/50-Challenge-2b.html"><li >Challenge 2b</li></a><a href="../30-Analog-IO/60-Extra-Challenges.html"><li >Extra Challenges</li></a></ul>
+        </nav>
+        <div id="content">
+            <h1>Blink</h1>
+<h2>Arduino Blink</h2>
+<p>The first program you learn to write for Arduino is usually Blink - it's the "Hello World" of the Arduino platform.  Blink code makes the internal LED (marked "L") on the Arduino blink on/off.</p>
+<p>Let's start by understanding some of the pinout on the Arduino Uno board - refer to this image:</p>
+<p><img alt="" src="images/arduinopinoutright.jpg" /></p>
+<p>The 13 pinholes on the right starting from the bottom represent 13 digital input/output's.  That means each of those is connected to an internal pin that can either:
+* Output ON (5V) or OFF (0V or GND) signal to toggle some external circuit
+* Input ON (+V) or OFF (0V or GND) signal to read from some external device</p>
+<p>We are going to look at some examples of such external circuits shortly, but for now, we just want to toggle the internal LED (marked "L") near the top right of the Arduino.</p>
+<p>It just so happens that <strong>this built-in LED is internally connected to digital I/O PIN 13</strong>.</p>
+<p>Therefore, when PIN 13 is set to ON/TRUE/HIGH the LED will turn on.
+And when PIN13 is set to OFF/FALSE/LOW the LED will turn on.</p>
+<p>ON/OFF, TRUE/FALSE, and HIGH/LOW are just three different designations you can use to describe the state of these digital I/O pins.</p>
+<p><img alt="" src="images/blink.jpg" /></p>
+<h2>Sample Code for Toggling Pins</h2>
+<p>Our program then needs to toggle the state of PIN 13.</p>
+<p>Let's look at the mBlock coding blocks for the Arduino Device.</p>
+<p><img alt="" src="images/pinblocks.jpg" /></p>
+<p>The first two start with <em>read...</em> - that means they assume the pin in question is an INPUT.  We want to treat PIN 13 as an OUTPUT.</p>
+<p>NOTE Greyed out blocks are usually meant for the other mode (Upload), so <em>"read pulse pin"</em> can only be used if we switch mode.</p>
+<p><em>set digital pin (__) output as [__]</em> - that looks like a promising block.</p>
+<p>Let's drag one onto our Workspace, change the Pin field to 13, and the High/Low dropdown to High.  If your Arduino is <em>Connected</em>, just click the set pin block, and you should see the "L"-labelled LED is lit.</p>
+<p>Duplicate or drag a second <em>set digital pin</em> block with the same pin 13, but this time set to <strong>Low</strong>.  Now click on this block and the LED shoudl turn off.</p>
+<p>Similarly, we can attach Events like <em>When Key Pressed</em> to create a manual light switch for our built-in LED:</p>
+<p><img alt="" src="images/simplecodeswitch.jpg" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
