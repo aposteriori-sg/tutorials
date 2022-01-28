@@ -7,7 +7,7 @@ With 10 keys controling brightness levels progressivley you can run up and down 
 
 If we want a smoother dimmer effect we need to run PWM through the LED at many more PWM levels (all integers 0-255)
 
-But we don’t have enough keys or patience to code and press all of them, so let’s try more coding...
+But we don't have enough keys or patience to code and press all of them, so let's try more sophisticated coding...
 
 ## Creating Your First Variable
 <br>
@@ -43,7 +43,9 @@ Think about how we can change that PWM level variable by 1 step in a loop?
 
 ![](images/counter.jpg)
 
-Now let's set the actual PWM level in the LED pin to these levels in the loop!  Replace the *Wait* block with the *set PWM output* block:
+Now let's set the actual PWM level in the LED pin to these levels in the loop!
+
+Replace the *Wait* block with the *set PWM output* block:
 
 ![](images/dimupled.jpg)
 

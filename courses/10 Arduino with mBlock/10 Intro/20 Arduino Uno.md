@@ -21,7 +21,7 @@ Basic micro-controllers can be a pain!
 
 ![AVRRISP - AVR in-system programmer](images/avrisp.png)
 
-* The need to be combined with external electronics like voltage regulators, oscilators, and capacitors in order to work properly
+* They need to be combined with external electronics like voltage regulators, oscilators, and capacitors in order to work properly
 
 ![](images/externals.png)
 

@@ -1,18 +1,20 @@
 External LED
 ===
 
-A [Light-Emitting Diode (LED)](https://en.wikipedia.org/wiki/LED) is a simple semiconductor that glows when enough current passes through it.  Depending on the semiconductor material, the LED may glow blue, red, yellow, green, and more...
+A [Light-Emitting Diode (LED)](https://en.wikipedia.org/wiki/LED) is a simple semiconductor that glows when enough current passes through it.  Depending on the semiconductor material, the LED may glow blue, red, yellow, green, and so forth...
 
-A diode allows electrical current to pass through it in only one direction, so an LED is similarly polarized.  Note that external LEDs have wires/legs sticking out of the bulb.  The short leg connects back to the Negative(-) or GND side of the power source, while the long leg should be connected to the Positive(+) side:
+A diode allows electrical current to pass through it in only one direction, so an LED is similarly polarized.  
+
+Note that external LEDs have wires/legs sticking out of the bulb.  The short leg connects back to the Negative(-) or GND side of the power source, while the long leg should be connected to the Positive(+) side:
 
 ![](images/led.jpg)
 
-Here is a simple LED circuit showing a power source (battery, and an LED):
+Here is a simple LED circuit showing a power source (battery), and an LED:
 <br>
 <br>
 ![](images/ledcircuit.jpg)
 
-Exercise: Which leg sticks out to which direction?
+Question: Which leg sticks out in which direction?
 
 ## Resistor
 
@@ -20,9 +22,8 @@ There is a third component required in the simple LED circuit as shown above.  T
 
 LED's, like most electrical components, are finnicky about how much electricity should flow through them, a little bit like Goldilocks.
 
-Too little current, and the LED is either too dim or completely shut off.  Too much currect and the LED burns out and is forever destroyed... so, we should err on the too little side of this dillema.
+Too little current, and the LED is either too dim or completely shut off.  Too much currect and the LED burns out and is forever destroyed... So, we should err on the too little side of this dillema.
 
-Arduino pins provide 5V
 Different color LEDs require different voltages:
 
 <table>
@@ -31,13 +32,17 @@ Different color LEDs require different voltages:
 <tr><td><font color="rgreened">Green</font></td><td>Depends. Try 1.8V first</td></tr>
 </table>
 
-Resistor helps to reduce the voltage.
+Arduino pins provide 5V.
 
-What happens when you connect 5V to a Red LED without a resistor?
+The resistor helps to reduce the voltage, and the current it creates.
+
+Question: What happens when you connect 5V to a Red LED without a resistor?
 
 # Breadboard
 
-We will be using the Arduino Uno itself as the power source for our external LED.  So find an LED and a resistor in your kit.  Now in order to connect these components as shown in the above simple circuit diagram, you'd need some way to hold the wires/legs asainst each other and stick some of them into the Arduino pin holes.  Holding all of these together is a pain.
+We will be using the Arduino Uno itself as the power source for our external LED.  So find an LED and a resistor in your kit.  Now in order to connect these components as shown in the above simple circuit diagram, you'd need some way to hold the wires/legs asainst each other and stick some of them into the Arduino pin holes.  
+
+Holding all of these together in your fingers is a pain.
 
 [Soldering](https://en.wikipedia.org/wiki/Soldering) is one way we can connect these togther, but that's too permanent for the kind of prototyping we are doing, so we are going to use a [Breadboard](https://en.wikipedia.org/wiki/breadboard) to connect many of the circuits in this tutorial.
 
@@ -45,7 +50,7 @@ We will be using the Arduino Uno itself as the power source for our external LED
 
 In this kind of breadboard, the long columns marked (+) and (-) on the sides are connected.  That means all the pin holes on the (+) column are connected internally.  Putting the end of one component in one of the (+) column holes, and putting another component in another of the (+) column holes is the same as holding those two wire ends/legs together.  The two (+) columns on either side are not connected to each ther.  Similarly for the (-) columns.
 
-Similarly every mini row is internally connected.  For instance, all the five pins in row 8 marked with columns abcde are all connected. Also all the row 16 pins with columns fghij are internally connected.  The big line in the middle separates rows on either side of that divide.  So 16a is not connected to 16f and so on.
+Every mini row is internally connected as well.  For instance, all the five pins in row 10 marked with columns *abcde* are all connected. Also all the row 4 pins with columns *fghij* are internally connected.  The big line in the middle separates rows on either side of that divide.  So 10a is not connected to 10f and so on.
 
 ![](images/breadboardconnections.jpg)
 

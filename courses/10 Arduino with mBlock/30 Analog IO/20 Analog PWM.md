@@ -23,11 +23,17 @@ Let's review the LED wiring once again, as we will need an external LED to play 
 
 Why 255? 
 
-It has to do with how numbers are stored in binary formats in a computer memory.  If we store a number in 8-bits of memory we can represent 256 discrete integers: 0-255
+It has to do with how numbers are stored in binary formats in a computer memory.
+
+If we store a number in 8-bits of memory we can represent 256 discrete integers: 0-255
 
 ## Add more Brightness Levels
 
-Say we wanted OFF, %50 bright, %100 ON:
+Say we wanted 3 levels:
+
+* OFF
+* %50 bright
+* %100 ON
 
 ![](images/3pwmlevels.jpg)
 

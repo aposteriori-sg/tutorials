@@ -1,9 +1,11 @@
 Digital Input
 ===
 
-We've seen how to use a simple, digital output pin to toggle an LED circuit ON/oFF.
+We've seen how to use a simple, digital **output** pin to toggle an LED circuit ON/oFF.
 
-Now let's look at reading in a digital input.  The simplest version of this would be an ON/OFF push-button (ON while pushed).
+Now let's look at reading in a digital **input**.
+
+The simplest version of this would be an ON/OFF push-button (ON while pushed).
 
 ![](images/pushbuttons.jpg)
 
@@ -19,7 +21,7 @@ Get your Arduino, breadboard, jump wires, resistor, and push-button:
 
 ![](images/switchcircuit.jpg)
 
-NOTE: The red connection from the switch to Arduino is via **digital I/O PIN 11**
+NOTE: The red connection from the switch to Arduino is via **digital I/O PIN 11**.  
 
 ## State of Circuit and PIN 11
 

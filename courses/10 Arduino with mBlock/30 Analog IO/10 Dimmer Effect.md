@@ -3,13 +3,14 @@ Dimmer Effect
 
 ## Analog Output
 
-Let's improve the Basic LED project by introducing dimmer effect:
+Let's improve the Basic LED project by introducing a dimmer effect:
 
 ![](images/pulse.gif)
 
 Note that the LED is not turning on and shutting off instantly, but rather slowly getting brighter and then dimming out.
 
 Digital Signals:
+
 * Low vs. High
 * False vs. True
 * 0V or 5V
@@ -23,7 +24,9 @@ Analog Signals:
 ![Credit: https://www.researchgate.net/figure/Analog-vs-Digital-Signal_fig21_288180515](images/Analog-vs-Digital-Signal.png)
 
 <br>
-We need an Analog output signal to drive a dimmer effect through the LED.
+
+We need an **Analog output signal** to drive a dimmer effect through the LED.
+
 <br>
 
 ----
@@ -45,24 +48,27 @@ So, how can we control brightness on the LED?
 
 ## Pulse Width Modulation (PWM)
 
-**PWM** is an efficient method to vary and control power.
+**PWM** is an efficient method for varying and controling power.
 
-It is wsed in various electrical systems:
+It is used in all sorts of electrical systems:
+
 * Lights
 * Motors
 * Communications
 * Others
 
-We can only On/Off or HIGH/LOW or 5V/0V the digital outputs.
+We can only turn On/Off digital outputs from 0v to 5V.
 
 But, what if we wanted %50 power?
 
-* Can’t set digital output to 2.5V….
+* Cannot set digital output to 2.5V
 * So, we add **Time** to our signal!
+
 ---
+
 ## Making a PWM digital signal:
 * Let's pick some tiny Interval or Period (say 1 ms, or 1000 Hz)
-* Set signal to HIGH ½ of the Period (0.5 ms ON)
+* Set signal to HIGH half of the Period (0.5 ms ON)
 * Set signal to LOW rest of the period (0.5 ms OFF) 
 * Run signal over and over...
 

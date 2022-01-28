@@ -7,9 +7,11 @@ Let's turn our potentiometer into a Joystick for moving Panda.
 
 ![](images/pandajoy.jpg)
 
-We like to use the Joystick as an encoder of the Panda's actual location.  Just like before a potentiometer value encode a particular LED brightness level, now the potentiometer value will encode a particular Panda location. 
+We would like to use the Joystick as an encoder of the Panda's actual location.  
 
-There are other ways to make a joystick, which we can look at later...
+Just as before a potentiometer value encoded a particular LED brightness level, now the potentiometer value will encode a particular Panda location. 
+
+There are other ways to make a joystick behave, which we can look at later...
 
 But, first you need to figure out what is Panda's X-Axis range of values...  You can move it around the screen and look at its X values, or you can change the X to extreme values and see where they are capped.
 
@@ -17,7 +19,7 @@ But, first you need to figure out what is Panda's X-Axis range of values...  You
 
 Let's say Panda can move on the X-Axis from -50 to 50 (it can move more, but it's up to you to figure out how much!).
 
-The our mapping function would look like this:
+Our mapping function would look like this:
 
 ![](images/maptoxaxis.svg)
 
@@ -43,4 +45,4 @@ Ok, now that the Arduino Joystick part is done, we need to go to the Panda Sprit
 
 NOTE: We created a global X variable... That would be associated with a dark orange block.  What is this blue Set X block?  What does it do?
 
-When you figure this out, your Panda should strat moving nicely with the Arduino Joystick.
+When you figure this out, your Panda should start moving nicely with the Arduino Joystick.

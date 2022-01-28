@@ -20,11 +20,11 @@ This software is called mLink and you should find it and start it on your PC/Lap
 
 If your PC/Laptop doesn't have it installed, you can find it [here](https://mblock.makeblock.com/en-us/download/mlink/).
 
-And if you are using mBlock the app on your PC/Laptop, you will not need the separate mLink software at all.
+But, if you are using the mBlock app on your PC/Laptop, you will not need the separate mLink software at all.
 
 ## Start the mBlock IDE - http://ide.mblock.cc
 
-From a modern browser (preferably Chrome), you can load the above [URL](http://ide.mbock.cc).
+From a modern browser (preferably Chrome), you can load the above [URL](http://ide.mblock.cc){:target="_blank"}.
 
 If you have mLink up, you can also click on the "Create now" button as shown below, but note that it will load the IDE on the default browser, which might not be Chrome or the one you'd prefer.
 
@@ -35,7 +35,15 @@ If you're using a local mBlock app, just start it up as any other.
 
 ## Setup Arduino Uno as Device
 
-In the version of mBlock as-of writing, the default Device loaded in the IDE is CyberPi.  We want Arduino Uno, so let's remove(x) CyberPi, and Add(+) Arduino Uno instead. 
+You should see something like this:
+
+![](images/mblockide.jpg)
+
+Let's zoom in on the highlighted area and do some plumbing...
+
+In the version of mBlock as-of writing, the default Device loaded in the IDE is CyberPi.  
+
+We want Arduino Uno, so let's remove(x) CyberPi, and Add(+) Arduino Uno instead. 
 
 ![](images/setupdevice.jpg)
 
@@ -59,20 +67,24 @@ You will see a connection dialog like this:
 
 If you see a **COM<NN> Port** listed in the dropdown, and the *Connect* label is not greyed out, you can press *Connect* and see if that was successful.  It is possible you may need to change to a different COM Port if more than one is listed in the drop-down.
 
-If there are not COM ports listed, the try checking the *Show all connectable devices* checkbox, and see if you get a COM port listed then.  If so, click *Connect*.
+If there are no COM ports listed, try checking the *Show all connectable devices* checkbox, and see if you get a COM port listed then.  If so, click *Connect*.
 
 ![](images/showall.jpg)
 
-If you're still not geeing a COM port listed, make sure your Arduino is properly connected with the USB cable to your PC/Laptop, or ask for help.
+If you're still not getting a COM port listed, make sure your Arduino is properly connected with the USB cable to your PC/Laptopo, disconnect the cable and connect it back, and try the above connection process again.
 
-## Settings / Firmware Update
+## Setting / Firmware Update
 
-You are almost done, once the Arduino Uno establishes a connection the *Connect* button turns into a *Disconnect* button, and you shoudl also see a new *Setting* button below that.
+You are almost done.
 
-If this is the first time you are using teh Arduino Uno in *Live mode* you will need to download some code into the Arduino to behave in this synchronous style.
+Once the Arduino Uno establishes a connection, the *Connect* button turns into a *Disconnect* button, and you should also see a new *Setting* button below that.
 
-You will know if you need to update the Arduino by looking at the *Setting* button.  If it is Yellow/Orange and shows a warning/exclamation sign, you need to update.  Click the colored *Setting* button and follow the instructions.
+If this is the first time you are using the Arduino Uno in *Live mode* you will need to download some code into the Arduino to behave in this synchronous style.
+
+You will know if you need to update the Arduino by looking at the *Setting* button.  
+
+If it is Yellow/Orange and shows a warning/exclamation sign, you need to update.  Click the colored *Setting* button and follow the instructions.
 
 ![](images/settings.jpg)
 
-After than please click *Connect* to re-connect to the Arduino, and you should be all set (*Setting* will have a clear/white background).
+Once done, click *Connect* to re-connect to the Arduino, and you should be all set (*Setting* should have a clear/white background).

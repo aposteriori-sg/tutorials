@@ -11,9 +11,9 @@ Write code that connects different key press events to those keys' morse code - 
 
 Wire two(2) separate push-buttons each to its own digital I/O pin. 
 
-Make Panda move Left when pushing Button 1, and move Right when Pushing Button 2
+Make Panda move Left when pushing Button 1, and move Right when Pushing Button 2.
 
-# 1f LED Toggle Switch
+## 1f LED Toggle Switch
 
 For this challenge you need to connect an LED and a Button input to the Arduino.
 

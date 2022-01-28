@@ -9,7 +9,10 @@ It is useful in our more advanced projects to have a **Power Bus** - that means 
 
 ![](images/powerbus.jpg)
 
-And here is how we will connect our Potentiometer using a power bus.
+---
+And here is how we will connect our Potentiometer using a power bus:
+
+<br>
 
 ![](images/potcircuit.png)
 
@@ -19,16 +22,23 @@ And here is how we will connect our Potentiometer using a power bus.
 
 ## Read Analog Input into Variable
 
+The circuit is in place, so now we need to code reading in the input signal.
+
 <br>
 
 ![](images/readanalog.jpg)
 
 <br>
 
-<font size=4>
+Some useulf questions to consider:
 <ol>
 <li>What are the minimum and maximum values read?</li>
 <li>What would be the half value, that is (max - min)/2?</li>
-<li>Write code that makes Panda say "LOW" if the reading is between minimum and half, and say "HIGH" if the reading is greater than half.  Remember you will need to Broadcast from Arduino code to the Panda's code...</li>
 </ol>
-</font>
+
+And for the challenge itself:
+
+Write code that makes Panda say "LOW" if the reading is between minimum and half, and say "HIGH" if the reading is greater than half.  
+
+Remember you will need to Broadcast from Arduino code to the Panda's code...
+

@@ -11,7 +11,9 @@ Pin 13 is already being turned on/off in your program, because that's how you co
 
 When PIN 13 is ON/HIGH it is acting like a +/5V pin, so electricty can flow from GND through the LED into this programmable pin.
 
-When PIN 13 is OFF/LOW it is active like a -/GND/0V pin, so electricty has no where to go to.  Electricty moves through a [voltage](https://en.wikipedia.org/wiki/Voltage) gradient from - to +, but if the endpoints of the circuit have equal potential (both 0V/GND) then there is no voltage gradient to carry the current.
+When PIN 13 is OFF/LOW it is acting like a -/GND/0V pin, so electricty has no where to go to.
+
+Electricty moves through a [voltage](https://en.wikipedia.org/wiki/Voltage) gradient from - to +, but if the endpoints of the circuit have equal potential (both 0V/GND) then there is no voltage gradient to carry the current.
 
 You can also connect your external LED to one of the other pins, and change your program to control that pin instead...
 
