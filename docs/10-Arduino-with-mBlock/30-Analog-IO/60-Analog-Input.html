@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Arduino with mBlock</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Arduino with mBlock
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an Arduino Uno with mBlock to create a product for Active Living.</div>
+            <p>Getting Started</p><ul><a href="../10-Intro/10-intro.html"><li >Introduction</li></a><a href="../10-Intro/20-Arduino-Uno.html"><li >Arduino Uno</li></a><a href="../10-Intro/30-mBlock.html"><li >mBlock Basics</li></a><a href="../10-Intro/40-Basic-Setup.html"><li >Basic Setup</li></a></ul><p>Basic I/O</p><ul><a href="../20-Basic-IO/10-Blink.html"><li >Blink</li></a><a href="../20-Basic-IO/20-Challenge-1a.html"><li >Challenge 1a</li></a><a href="../20-Basic-IO/30-External-LED.html"><li >External LED</li></a><a href="../20-Basic-IO/40-Challenge-1b.html"><li >Challenge 1b</li></a><a href="../20-Basic-IO/50-Button-Input.html"><li >Digital Input</li></a><a href="../20-Basic-IO/60-Challenge-1c.html"><li >Challenge 1C</li></a><a href="../20-Basic-IO/70-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>Analog I/O</p><ul><a href="../30-Analog-IO/10-Dimmer-Effect.html"><li >Dimmer Effect</li></a><a href="../30-Analog-IO/20-Analog-PWM.html"><li >Setting Analog PWM</li></a><a href="../30-Analog-IO/30-Challenge-2a.html"><li >Challenge 2a</li></a><a href="../30-Analog-IO/40-Smoothing-Effect.html"><li >Smoothing the Effect</li></a><a href="../30-Analog-IO/50-Challenge-2b.html"><li >Challenge 2b</li></a><a href="../30-Analog-IO/60-Analog-Input.html"><li class="current">Analog Input</li></a><a href="../30-Analog-IO/70-Challenge-2c.html"><li >Challenge 2c</li></a><a href="../30-Analog-IO/80-Mapping-Input-to-Output.html"><li >Mapping Input to Output</li></a><a href="../30-Analog-IO/90-Challenge-2d.html"><li >Challenge 2d</li></a><a href="../30-Analog-IO/99-Extra-Challenges.html"><li >Extra Challenges</li></a></ul>
+        </nav>
+        <div id="content">
+            <h1>Analog Input</h1>
+<p>We've looked at how to make Analog output using PWM create a dimming effect in external LEDs.  </p>
+<p>Now we are going to figure out how to accept Analog signals as input.  That means we need to be able to accept a range of values, not just ON or OFF.</p>
+<p>In Challenge 2b we showed how to make a UI Analog Input.</p>
+<p><img alt="" src="images/slider.png" /></p>
+<p>So, how do we create an exetrnal electronic slider and how does the Arduino collect that input?</p>
+<h2>The Potentiometer</h2>
+<p>Answer: we will be using a <strong>Potentiometer</strong> as a variable resistor, or Rheostat, to achieve this physically.</p>
+<p><br></p>
+<p><img alt="" src="images/pot.png" /></p>
+<h2>Electrical Resistance Revisited</h2>
+<p>To get a feel for what is a potentiometer, or variable resistor, we should revisit the notion of electrical resistance.  We've discussed it briefly when looking at the LED basic circuit, where we used a resistor to limit the amount of current flowing through the connected LED - to make sure it doesn't burn out.</p>
+<p><strong>Resistance</strong> - a measure of the difficulty to pass an electric current through a circuit element.</p>
+<p><img alt="" src="images/resistance.png" /></p>
+<p><strong>Fixed</strong> resistors have fixed (non-changing) resistance:</p>
+<p><img alt="" src="images/fixedresistor.jpg" /></p>
+<p><strong>Variable</strong> resistors have changeable resistance: </p>
+<p><img alt="" src="images/varresistor.jpg" /></p>
+<h2>How a Potentiometer works</h2>
+<p>Inside a variable resistor there’s usually a fixed resistor and a <em>wiper</em> that points between the minimum and maximum terminals of the resistor.  Depending on where you're pointing the wiper, the resistance between one of the end terminals and that wiper will be determined.  As you change the wiper, so does the resistance between it and the end terminal is varied.</p>
+<p><img alt="" src="images/wiper.jpg" /></p>
+<h2>Measuring Resistance in a Potentiometer</h2>
+<p>Resistance is measured in <strong>Ohms</strong>.</p>
+<p>We can use a multimeter to measure the resistance between one end terminal and the wiper of a potentiometer.</p>
+<p><img alt="" src="images/multimeter.jpg" /></p>
+<h2>BUT! Arduino Analog Input Doesn't Read Ohms...</h2>
+<p>If we examine the Arduino's Analog Input documentation, we would find that the pin holes in question do not really read Ohms... </p>
+<p>No, Analog Inputs in microcontrollers utilize Analog-to-Digital Converters (ADCs), which read in <em>signals</em>.  Signals require electricty to flow through, not inert resistance on its own...</p>
+<p>What we need really is to connect the end terminals to the Arduino's power source (GND &amp; +5V).</p>
+<p><img alt="" src="images/potsignal.jpg" /></p>
+<p>The wiper creates a voltage divider, meaning some of the voltage will go to one side of the potentiometer, and the rest will go to the other.</p>
+<p>If the wiper is in the middle, both sides are getting half or 2.5V.  </p>
+<p><img alt="" src="images/wiperathalf.jpg" /></p>
+<p>If we reconnect our multimeter but this time read the voltage as a signal between the GND/MIN terminal and the wiper, we can see how the voltage can be varied from 0-5V.</p>
+<p><img alt="" src="images/multimeter2.jpg" /></p>
+<p><img alt="" src="images/wiperatzero.jpg" /></p>
+<p><img alt="" src="images/wiperatmax.jpg" /></p>
+<p><img alt="" src="images/wiperat1v.jpg" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
