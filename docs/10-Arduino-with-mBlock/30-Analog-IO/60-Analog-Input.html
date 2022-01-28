@@ -35,17 +35,19 @@
         </nav>
         <div id="content">
             <h1>Analog Input</h1>
-<p>We've looked at how to make Analog output using PWM create a dimming effect in external LEDs.  </p>
-<p>Now we are going to figure out how to accept Analog signals as input.  That means we need to be able to accept a range of values, not just ON or OFF.</p>
+<p>We used <strong>Analog Output</strong> with PWM signals to create a dimming effect in external LEDs.  </p>
+<p>Now we are going to figure out how to accept <strong>Analog Input</strong>.  </p>
+<p>That means we need to be able to accept a range of values, not just ON or OFF.</p>
 <p>In Challenge 2b we showed how to make a UI Analog Input.</p>
 <p><img alt="" src="images/slider.png" /></p>
-<p>So, how do we create an exetrnal electronic slider and how does the Arduino collect that input?</p>
+<p>So, how do we create something like an exetrnal electronic slider?</p>
+<p>And how does the Arduino reaqd in that input?</p>
 <h2>The Potentiometer</h2>
-<p>Answer: we will be using a <strong>Potentiometer</strong> as a variable resistor, or Rheostat, to achieve this physically.</p>
-<p><br></p>
+<p>We will be using a <strong>Potentiometer</strong> as a variable resistor, or Rheostat, to model the slider physically.</p>
 <p><img alt="" src="images/pot.png" /></p>
 <h2>Electrical Resistance Revisited</h2>
-<p>To get a feel for what is a potentiometer, or variable resistor, we should revisit the notion of electrical resistance.  We've discussed it briefly when looking at the LED basic circuit, where we used a resistor to limit the amount of current flowing through the connected LED - to make sure it doesn't burn out.</p>
+<p>To get a feel for what is a <a href="https://en.wikipedia.org/wiki/Potentiometer">potentiometer</a>, or variable resistor, we should revisit the notion of electrical resistance.  </p>
+<p>We've discussed it briefly when looking at the LED basic circuit, where we used a resistor to limit the amount of current flowing through the connected LED - to make sure it doesn't burn out.</p>
 <p><strong>Resistance</strong> - a measure of the difficulty to pass an electric current through a circuit element.</p>
 <p><img alt="" src="images/resistance.png" /></p>
 <p><strong>Fixed</strong> resistors have fixed (non-changing) resistance:</p>
@@ -53,7 +55,8 @@
 <p><strong>Variable</strong> resistors have changeable resistance: </p>
 <p><img alt="" src="images/varresistor.jpg" /></p>
 <h2>How a Potentiometer works</h2>
-<p>Inside a variable resistor thereâ€™s usually a fixed resistor and a <em>wiper</em> that points between the minimum and maximum terminals of the resistor.  Depending on where you're pointing the wiper, the resistance between one of the end terminals and that wiper will be determined.  As you change the wiper, so does the resistance between it and the end terminal is varied.</p>
+<p>Inside a variable resistor there’s usually a fixed resistor and a <em>wiper</em> that points between the minimum and maximum terminals of the resistor.  Depending on where you're pointing the wiper, the resistance between one of the end terminals and that wiper will be determined.  </p>
+<p>As you change the wiper, so does the resistance between it and the end terminal is varied.</p>
 <p><img alt="" src="images/wiper.jpg" /></p>
 <h2>Measuring Resistance in a Potentiometer</h2>
 <p>Resistance is measured in <strong>Ohms</strong>.</p>
@@ -61,16 +64,19 @@
 <p><img alt="" src="images/multimeter.jpg" /></p>
 <h2>BUT! Arduino Analog Input Doesn't Read Ohms...</h2>
 <p>If we examine the Arduino's Analog Input documentation, we would find that the pin holes in question do not really read Ohms... </p>
-<p>No, Analog Inputs in microcontrollers utilize Analog-to-Digital Converters (ADCs), which read in <em>signals</em>.  Signals require electricty to flow through, not inert resistance on its own...</p>
-<p>What we need really is to connect the end terminals to the Arduino's power source (GND &amp; +5V).</p>
+<p>Analog Inputs in microcontrollers utilize Analog-to-Digital Converters (ADCs), which read in <em>signals</em>.  Signals require electricty to flow through, not inert resistance on its own...</p>
+<p>We can create a variable signal by connecting the end terminals of the potentiometer to the Arduino's power source (GND &amp; +5V).</p>
 <p><img alt="" src="images/potsignal.jpg" /></p>
 <p>The wiper creates a voltage divider, meaning some of the voltage will go to one side of the potentiometer, and the rest will go to the other.</p>
 <p>If the wiper is in the middle, both sides are getting half or 2.5V.  </p>
 <p><img alt="" src="images/wiperathalf.jpg" /></p>
 <p>If we reconnect our multimeter but this time read the voltage as a signal between the GND/MIN terminal and the wiper, we can see how the voltage can be varied from 0-5V.</p>
 <p><img alt="" src="images/multimeter2.jpg" /></p>
+<hr />
 <p><img alt="" src="images/wiperatzero.jpg" /></p>
+<hr />
 <p><img alt="" src="images/wiperatmax.jpg" /></p>
+<hr />
 <p><img alt="" src="images/wiperat1v.jpg" /></p>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>

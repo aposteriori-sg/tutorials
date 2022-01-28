@@ -39,21 +39,26 @@
 <p>First, let's connect our potentiometer to the Arduino board.</p>
 <p>It is useful in our more advanced projects to have a <strong>Power Bus</strong> - that means a strip of pin holes on the breadboard that will provide many leads to GND and +5V from the Arduino.  As many of our devices will requires power to work, we cannot depend on a single 5V pin, or even 3 GND pins...</p>
 <p><img alt="" src="images/powerbus.jpg" /></p>
-<p>And here is how we will connect our Potentiometer using a power bus.</p>
+<hr />
+<p>And here is how we will connect our Potentiometer using a power bus:</p>
+<p><br></p>
 <p><img alt="" src="images/potcircuit.png" /></p>
 <p><strong><em>NOTE: Be careful when you insert the potentiometer's legs into into breadboard holes - don't bend them too much or they will break!</em></strong></p>
 <p><br></p>
 <h2>Read Analog Input into Variable</h2>
+<p>The circuit is in place, so now we need to code reading in the input signal.</p>
 <p><br></p>
 <p><img alt="" src="images/readanalog.jpg" /></p>
 <p><br></p>
-<p><font size=4></p>
+<p>Some useulf questions to consider:</p>
 <ol>
 <li>What are the minimum and maximum values read?</li>
 <li>What would be the half value, that is (max - min)/2?</li>
-<li>Write code that makes Panda say "LOW" if the reading is between minimum and half, and say "HIGH" if the reading is greater than half.  Remember you will need to Broadcast from Arduino code to the Panda's code...</li>
 </ol>
-<p></font></p>
+
+<p>And for the challenge itself:</p>
+<p>Write code that makes Panda say "LOW" if the reading is between minimum and half, and say "HIGH" if the reading is greater than half.  </p>
+<p>Remember you will need to Broadcast from Arduino code to the Panda's code...</p>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
     </div>

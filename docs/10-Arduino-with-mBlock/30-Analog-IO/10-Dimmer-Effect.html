@@ -36,22 +36,24 @@
         <div id="content">
             <h1>Dimmer Effect</h1>
 <h2>Analog Output</h2>
-<p>Let's improve the Basic LED project by introducing dimmer effect:</p>
+<p>Let's improve the Basic LED project by introducing a dimmer effect:</p>
 <p><img alt="" src="images/pulse.gif" /></p>
 <p>Note that the LED is not turning on and shutting off instantly, but rather slowly getting brighter and then dimming out.</p>
-<p>Digital Signals:
-* Low vs. High
-* False vs. True
-* 0V or 5V</p>
+<p>Digital Signals:</p>
+<ul>
+<li>Low vs. High</li>
+<li>False vs. True</li>
+<li>0V or 5V</li>
+</ul>
 <p>These are binary discrete states.</p>
 <p>Analog Signals:</p>
 <ul>
 <li>A range of possible discrete values (e.g. 0-5V)</li>
 </ul>
 <p><img alt="Credit: https://www.researchgate.net/figure/Analog-vs-Digital-Signal_fig21_288180515" src="images/Analog-vs-Digital-Signal.png" /></p>
-<p><br>
-We need an Analog output signal to drive a dimmer effect through the LED.
-<br></p>
+<p><br></p>
+<p>We need an <strong>Analog output signal</strong> to drive a dimmer effect through the LED.</p>
+<p><br></p>
 <hr />
 <h2>Analog I/O on Arduino</h2>
 <p>Let's take a look at the Arduino board:</p>
@@ -64,23 +66,25 @@ We need an Analog output signal to drive a dimmer effect through the LED.
 </ul>
 <hr />
 <h2>Pulse Width Modulation (PWM)</h2>
-<p><strong>PWM</strong> is an efficient method to vary and control power.</p>
-<p>It is wsed in various electrical systems:
-* Lights
-* Motors
-* Communications
-* Others</p>
-<p>We can only On/Off or HIGH/LOW or 5V/0V the digital outputs.</p>
+<p><strong>PWM</strong> is an efficient method for varying and controling power.</p>
+<p>It is used in all sorts of electrical systems:</p>
+<ul>
+<li>Lights</li>
+<li>Motors</li>
+<li>Communications</li>
+<li>Others</li>
+</ul>
+<p>We can only turn On/Off digital outputs from 0v to 5V.</p>
 <p>But, what if we wanted %50 power?</p>
 <ul>
-<li>Can’t set digital output to 2.5V….</li>
+<li>Cannot set digital output to 2.5V</li>
 <li>So, we add <strong>Time</strong> to our signal!</li>
 </ul>
 <hr />
 <h2>Making a PWM digital signal:</h2>
 <ul>
 <li>Let's pick some tiny Interval or Period (say 1 ms, or 1000 Hz)</li>
-<li>Set signal to HIGH ½ of the Period (0.5 ms ON)</li>
+<li>Set signal to HIGH half of the Period (0.5 ms ON)</li>
 <li>Set signal to LOW rest of the period (0.5 ms OFF) </li>
 <li>Run signal over and over...</li>
 </ul>

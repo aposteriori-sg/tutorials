@@ -46,16 +46,20 @@
 <br>
 <img alt="" src="images/mlink.jpg" /></p>
 <p>If your PC/Laptop doesn't have it installed, you can find it <a href="https://mblock.makeblock.com/en-us/download/mlink/">here</a>.</p>
-<p>And if you are using mBlock the app on your PC/Laptop, you will not need the separate mLink software at all.</p>
+<p>But, if you are using the mBlock app on your PC/Laptop, you will not need the separate mLink software at all.</p>
 <h2>Start the mBlock IDE - http://ide.mblock.cc</h2>
-<p>From a modern browser (preferably Chrome), you can load the above <a href="http://ide.mbock.cc">URL</a>.</p>
+<p>From a modern browser (preferably Chrome), you can load the above <a href="http://ide.mblock.cc">URL</a>{:target="_blank"}.</p>
 <p>If you have mLink up, you can also click on the "Create now" button as shown below, but note that it will load the IDE on the default browser, which might not be Chrome or the one you'd prefer.</p>
 <p>If you're using a local mBlock app, just start it up as any other.
 <br>
 <br>
 <img alt="" src="images/createnow.jpg" /></p>
 <h2>Setup Arduino Uno as Device</h2>
-<p>In the version of mBlock as-of writing, the default Device loaded in the IDE is CyberPi.  We want Arduino Uno, so let's remove(x) CyberPi, and Add(+) Arduino Uno instead. </p>
+<p>You should see something like this:</p>
+<p><img alt="" src="images/mblockide.jpg" /></p>
+<p>Let's zoom in on the highlighted area and do some plumbing...</p>
+<p>In the version of mBlock as-of writing, the default Device loaded in the IDE is CyberPi.  </p>
+<p>We want Arduino Uno, so let's remove(x) CyberPi, and Add(+) Arduino Uno instead. </p>
 <p><img alt="" src="images/setupdevice.jpg" /></p>
 <p><img alt="" src="images/addarduinodevice.jpg" /></p>
 <p>Make sure you get Arduino Uno with <strong>Developers: Ablock</strong></p>
@@ -67,15 +71,17 @@
 <p>You will see a connection dialog like this:</p>
 <p><img alt="" src="images/connectdialog.jpg" /></p>
 <p>If you see a <strong>COM<NN> Port</strong> listed in the dropdown, and the <em>Connect</em> label is not greyed out, you can press <em>Connect</em> and see if that was successful.  It is possible you may need to change to a different COM Port if more than one is listed in the drop-down.</p>
-<p>If there are not COM ports listed, the try checking the <em>Show all connectable devices</em> checkbox, and see if you get a COM port listed then.  If so, click <em>Connect</em>.</p>
+<p>If there are no COM ports listed, try checking the <em>Show all connectable devices</em> checkbox, and see if you get a COM port listed then.  If so, click <em>Connect</em>.</p>
 <p><img alt="" src="images/showall.jpg" /></p>
-<p>If you're still not geeing a COM port listed, make sure your Arduino is properly connected with the USB cable to your PC/Laptop, or ask for help.</p>
-<h2>Settings / Firmware Update</h2>
-<p>You are almost done, once the Arduino Uno establishes a connection the <em>Connect</em> button turns into a <em>Disconnect</em> button, and you shoudl also see a new <em>Setting</em> button below that.</p>
-<p>If this is the first time you are using teh Arduino Uno in <em>Live mode</em> you will need to download some code into the Arduino to behave in this synchronous style.</p>
-<p>You will know if you need to update the Arduino by looking at the <em>Setting</em> button.  If it is Yellow/Orange and shows a warning/exclamation sign, you need to update.  Click the colored <em>Setting</em> button and follow the instructions.</p>
+<p>If you're still not getting a COM port listed, make sure your Arduino is properly connected with the USB cable to your PC/Laptopo, disconnect the cable and connect it back, and try the above connection process again.</p>
+<h2>Setting / Firmware Update</h2>
+<p>You are almost done.</p>
+<p>Once the Arduino Uno establishes a connection, the <em>Connect</em> button turns into a <em>Disconnect</em> button, and you should also see a new <em>Setting</em> button below that.</p>
+<p>If this is the first time you are using the Arduino Uno in <em>Live mode</em> you will need to download some code into the Arduino to behave in this synchronous style.</p>
+<p>You will know if you need to update the Arduino by looking at the <em>Setting</em> button.  </p>
+<p>If it is Yellow/Orange and shows a warning/exclamation sign, you need to update.  Click the colored <em>Setting</em> button and follow the instructions.</p>
 <p><img alt="" src="images/settings.jpg" /></p>
-<p>After than please click <em>Connect</em> to re-connect to the Arduino, and you should be all set (<em>Setting</em> will have a clear/white background).</p>
+<p>Once done, click <em>Connect</em> to re-connect to the Arduino, and you should be all set (<em>Setting</em> should have a clear/white background).</p>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
     </div>

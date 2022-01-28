@@ -38,7 +38,7 @@
 <h2>More Brightness Levels, Please!</h2>
 <p>With 10 keys controling brightness levels progressivley you can run up and down the keyboard like a piano simulating a dimmer effect.</p>
 <p>If we want a smoother dimmer effect we need to run PWM through the LED at many more PWM levels (all integers 0-255)</p>
-<p>But we don’t have enough keys or patience to code and press all of them, so let’s try more coding...</p>
+<p>But we don't have enough keys or patience to code and press all of them, so let's try more sophisticated coding...</p>
 <h2>Creating Your First Variable</h2>
 <p><br></p>
 <p><img alt="" src="images/makevar.jpg" /></p>
@@ -57,7 +57,8 @@
 <p>Think about how we can change that PWM level variable by 1 step in a loop?</p>
 <p><img alt="" src="images/loopblocks.jpg" /></p>
 <p><img alt="" src="images/counter.jpg" /></p>
-<p>Now let's set the actual PWM level in the LED pin to these levels in the loop!  Replace the <em>Wait</em> block with the <em>set PWM output</em> block:</p>
+<p>Now let's set the actual PWM level in the LED pin to these levels in the loop!</p>
+<p>Replace the <em>Wait</em> block with the <em>set PWM output</em> block:</p>
 <p><img alt="" src="images/dimupled.jpg" /></p>
 <p>The <em>set PWM output</em> function already blocks for a split second, so we don't need to worry about the <em>Wait</em> block anymore...</p>
         </div>

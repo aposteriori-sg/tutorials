@@ -39,26 +39,36 @@
 <p>The first program you learn to write for Arduino is usually Blink - it's the "Hello World" of the Arduino platform.  Blink code makes the internal LED (marked "L") on the Arduino blink on/off.</p>
 <p>Let's start by understanding some of the pinout on the Arduino Uno board - refer to this image:</p>
 <p><img alt="" src="images/arduinopinoutright.jpg" /></p>
-<p>The 13 pinholes on the right starting from the bottom represent 13 digital input/output's.  That means each of those is connected to an internal pin that can either:
-* Output ON (5V) or OFF (0V or GND) signal to toggle some external circuit
-* Input ON (+V) or OFF (0V or GND) signal to read from some external device</p>
+<p>The 13 pinholes on the right starting from the bottom represent 13 digital input/output's.  That means each of those is connected to an internal pin that can either:</p>
+<ul>
+<li>Output a signal to toggle some external circuit</li>
+<li>Input a signal to read from some external device</li>
+</ul>
 <p>We are going to look at some examples of such external circuits shortly, but for now, we just want to toggle the internal LED (marked "L") near the top right of the Arduino.</p>
-<p>It just so happens that <strong>this built-in LED is internally connected to digital I/O PIN 13</strong>.</p>
-<p>Therefore, when PIN 13 is set to ON/TRUE/HIGH the LED will turn on.
-And when PIN13 is set to OFF/FALSE/LOW the LED will turn on.</p>
-<p>ON/OFF, TRUE/FALSE, and HIGH/LOW are just three different designations you can use to describe the state of these digital I/O pins.</p>
+<p>It just so happens that <strong>this built-in LED is connected to digital I/O PIN 13</strong> internally.</p>
+<p>Therefore, when PIN 13 is turned <em>ON</em> the LED will turn on.</p>
+<p>Similarly, when PIN 13 is turned <em>OFF</em> the LED will turn off.</p>
+<ul>
+<li>ON/OFF</li>
+<li>TRUE/FALSE</li>
+<li>HIGH/LOW </li>
+</ul>
+<p>These are just three different designations you can use to describe the state of these digital I/O pins.</p>
 <p><img alt="" src="images/blink.jpg" /></p>
 <h2>Sample Code for Toggling Pins</h2>
-<p>Our program then needs to toggle the state of PIN 13.</p>
+<p>Our Blink program needs to toggle the state of PIN 13.</p>
 <p>Let's look at the mBlock coding blocks for the Arduino Device.</p>
 <p><img alt="" src="images/pinblocks.jpg" /></p>
 <p>The first two start with <em>read...</em> - that means they assume the pin in question is an INPUT.  We want to treat PIN 13 as an OUTPUT.</p>
-<p>NOTE Greyed out blocks are usually meant for the other mode (Upload), so <em>"read pulse pin"</em> can only be used if we switch mode.</p>
 <p><em>set digital pin (__) output as [__]</em> - that looks like a promising block.</p>
-<p>Let's drag one onto our Workspace, change the Pin field to 13, and the High/Low dropdown to High.  If your Arduino is <em>Connected</em>, just click the set pin block, and you should see the "L"-labelled LED is lit.</p>
-<p>Duplicate or drag a second <em>set digital pin</em> block with the same pin 13, but this time set to <strong>Low</strong>.  Now click on this block and the LED shoudl turn off.</p>
+<p>Let's drag one onto our Workspace, change the Pin field to 13, and the High/Low dropdown to <strong>High</strong>.  </p>
+<p><img alt="" src="images/setoutputpin.svg" /></p>
+<p>If your Arduino is <em>Connected</em>, just click the block, and you should see the "L"-labelled LED is lit.  Clicking the block is causing mBlock to execute it and send the command to Arduino.</p>
+<p>Duplicate or drag a second <em>set digital pin</em> block with the same PIN 13, but this time set to <strong>Low</strong>.  </p>
+<p>Now click on this block and the LED should turn off.</p>
 <p>Similarly, we can attach Events like <em>When Key Pressed</em> to create a manual light switch for our built-in LED:</p>
 <p><img alt="" src="images/simplecodeswitch.jpg" /></p>
+<p>NOTE: Greyed out blocks are usually meant for the other mode (Upload), so <em>"read pulse pin"</em> can only be used if we switch to <em>Upload Mode</em>.</p>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
     </div>
