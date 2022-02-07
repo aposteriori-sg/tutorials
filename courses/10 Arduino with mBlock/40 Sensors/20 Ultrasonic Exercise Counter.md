@@ -3,7 +3,7 @@ Challenge 3a - Ultrasonic Exercise Counter
 
 Now we can only detect push-up, but not count each one...
 
-A single push-up consists of two actions…
+A single push-up consists of two actions:
 - Going down
 - Returning up
 
