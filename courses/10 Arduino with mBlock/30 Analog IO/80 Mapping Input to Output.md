@@ -12,6 +12,12 @@ So, let's try to combine the new Read Analog code with the LED dimmer effect cod
 ![](images/potled.gif)
 
 
+## First, we will need to combine the simple LED circuit with the Potentiometer wiring - Potentiometer input into **Pin A0**, and LED PWM output from **Pin 11**:
+<br>
+
+![](images/ledpotwiring.svg)
+
+
 ## Can't we just do this???
 <br>
 

@@ -1,4 +1,4 @@
-Challenge 1C
+Challenge 1c
 ===
 
 Add code like this to continuously read the state of the push-button by reading thh state of PIN 11.
