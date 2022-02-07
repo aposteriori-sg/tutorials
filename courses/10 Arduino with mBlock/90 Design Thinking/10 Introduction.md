@@ -1,4 +1,4 @@
-Design Thinking: Active Living
+ALP Project Overview
 ---
 
 Product developers and policy makers utilize **Design Thinking** processes to come up with ideas that solve real-world problems.
