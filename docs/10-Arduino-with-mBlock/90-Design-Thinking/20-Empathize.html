@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Arduino with mBlock</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Arduino with mBlock
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an Arduino Uno with mBlock to create a product for Active Living.</div>
+            <p>Getting Started</p><ul><a href="../10-Intro/10-intro.html"><li >Introduction</li></a><a href="../10-Intro/20-Arduino-Uno.html"><li >Arduino Uno</li></a><a href="../10-Intro/30-mBlock.html"><li >mBlock Basics</li></a><a href="../10-Intro/40-Basic-Setup.html"><li >Basic Setup</li></a></ul><p>Basic I/O</p><ul><a href="../20-Basic-IO/10-Blink.html"><li >Blink</li></a><a href="../20-Basic-IO/20-Challenge-1a.html"><li >Challenge 1a</li></a><a href="../20-Basic-IO/30-External-LED.html"><li >External LED</li></a><a href="../20-Basic-IO/40-Challenge-1b.html"><li >Challenge 1b</li></a><a href="../20-Basic-IO/50-Button-Input.html"><li >Digital Input</li></a><a href="../20-Basic-IO/60-Challenge-1c.html"><li >Challenge 1c</li></a><a href="../20-Basic-IO/70-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>Analog I/O</p><ul><a href="../30-Analog-IO/10-Dimmer-Effect.html"><li >Dimmer Effect</li></a><a href="../30-Analog-IO/20-Analog-PWM.html"><li >Setting Analog PWM</li></a><a href="../30-Analog-IO/30-Challenge-2a.html"><li >Challenge 2a</li></a><a href="../30-Analog-IO/40-Smoothing-Effect.html"><li >Smoothing the Effect</li></a><a href="../30-Analog-IO/50-Challenge-2b.html"><li >Challenge 2b</li></a><a href="../30-Analog-IO/60-Analog-Input.html"><li >Analog Input</li></a><a href="../30-Analog-IO/70-Challenge-2c.html"><li >Challenge 2c</li></a><a href="../30-Analog-IO/80-Mapping-Input-to-Output.html"><li >Mapping Input to Output</li></a><a href="../30-Analog-IO/90-Challenge-2d.html"><li >Challenge 2d</li></a><a href="../30-Analog-IO/99-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>40 Sensors</p><ul><a href="../40-Sensors/10-Ultrasonic-Sensor.html"><li >Ultrasonic Distance Sensor</li></a><a href="../40-Sensors/20-Ultrasonic-Exercise-Counter.html"><li >Challenge 4a - Ultrasonic Exercise Counter</li></a></ul><p>Design Thinking: Active Living</p><ul><a href="../90-Design-Thinking/10-Introduction.html"><li >Design Thinking: Active Living</li></a><a href="../90-Design-Thinking/20-Empathize.html"><li class="current">Empathize</li></a><a href="../90-Design-Thinking/30-Define.html"><li >Define</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Empathize</h2>
+<ul>
+<li>Understand the human needs involved.</li>
+<li>Research and consult experts</li>
+<li>Observe, engage, empathize with users</li>
+<li>Immerse yourself in the same environment as the user (body storming)</li>
+</ul>
+<p>The first step in our formal Design Thinking process is to put ourselves in the shoes of the people we are trying to help.  Empathy is the ability to understand and share someone else's feelings... </p>
+<p><img alt="" src="images/empathy.jpg" /></p>
+<p>It sounds easy, but most of the time when we think we're being empathetic, but instead we are making a lot of assumptions about others.</p>
+<p>People don't think alike and it's quite hard to really look at the world from the perspective of someone else's brain.</p>
+<h2>Empathy as a Process</h2>
+<ul>
+<li>Pick a User</li>
+<li>Interviews</li>
+<li>Boystorming</li>
+</ul>
+<h2>Pick a User Group</h2>
+<p><img alt="" src="images/users.jpg" /></p>
+<p>Find a group of people whose Active Living needs you'd like to address, for instance:</p>
+<ul>
+<li>Working Adults</li>
+<li>Teenagers (like you)</li>
+<li>Couch Potatoes</li>
+<li>Elderly</li>
+<li>Physically Disabled</li>
+<li>Parents</li>
+<li>Kids / Students</li>
+<li>Exercise Freaks</li>
+<li>Economically Challenged</li>
+<li>Everyone</li>
+</ul>
+<h2>Interviewing Potential Users</h2>
+<ul>
+<li>Prepare questions: How? What? Why?<ul>
+<li>How often do you exercise? </li>
+<li>What exercise do you do? </li>
+<li>Why do you exercise?
+<br>
+<br></li>
+</ul>
+</li>
+<li>Test your questions on a team mate before actual interview
+<br>
+<br></li>
+<li>Avoid negative questions<ul>
+<li><strong>Bad</strong>
+    &gt; Why don't you exercise more?</li>
+<li><strong>Good</strong>
+    &gt; What did you enjoy most from your last exercise session?</li>
+</ul>
+</li>
+</ul>
+<h2>Bodystorming</h2>
+<ul>
+<li>Act out the situation or role that you are targeting</li>
+<li>Understand the problem and avoid assumptions</li>
+<li>Example:<ul>
+<li>Using exercise equipment while seated to understand difficulties faced by wheelchair users</li>
+<li>Try jogging with foggy glasses to simulate the difficulties faced by people with poor vision</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=FoygAHTGPRU">Bodystorming Example</a></p>
+<h2>So, what now?</h2>
+<p>As a team decide:</p>
+<ul>
+<li>Who is your target user group?</li>
+<li>What is your Empathy plan, how will you get to understand their Active Living issues?</li>
+<li>Plan your empathy activity, e.g.:<ul>
+<li>Write out questions and test them on one another</li>
+<li>Plan out how to bodystorm a likely active living scenario</li>
+</ul>
+</li>
+</ul>
+<p>Then execute your plan <strong>outside of class time</strong>
+Fill out this <a href="images/empathy%20guide.pdf">handout</a>.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Arduino with mBlock</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Arduino with mBlock
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an Arduino Uno with mBlock to create a product for Active Living.</div>
+            <p>Getting Started</p><ul><a href="../10-Intro/10-intro.html"><li >Introduction</li></a><a href="../10-Intro/20-Arduino-Uno.html"><li >Arduino Uno</li></a><a href="../10-Intro/30-mBlock.html"><li >mBlock Basics</li></a><a href="../10-Intro/40-Basic-Setup.html"><li >Basic Setup</li></a></ul><p>Basic I/O</p><ul><a href="../20-Basic-IO/10-Blink.html"><li >Blink</li></a><a href="../20-Basic-IO/20-Challenge-1a.html"><li >Challenge 1a</li></a><a href="../20-Basic-IO/30-External-LED.html"><li >External LED</li></a><a href="../20-Basic-IO/40-Challenge-1b.html"><li >Challenge 1b</li></a><a href="../20-Basic-IO/50-Button-Input.html"><li >Digital Input</li></a><a href="../20-Basic-IO/60-Challenge-1c.html"><li >Challenge 1c</li></a><a href="../20-Basic-IO/70-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>Analog I/O</p><ul><a href="../30-Analog-IO/10-Dimmer-Effect.html"><li >Dimmer Effect</li></a><a href="../30-Analog-IO/20-Analog-PWM.html"><li >Setting Analog PWM</li></a><a href="../30-Analog-IO/30-Challenge-2a.html"><li >Challenge 2a</li></a><a href="../30-Analog-IO/40-Smoothing-Effect.html"><li >Smoothing the Effect</li></a><a href="../30-Analog-IO/50-Challenge-2b.html"><li >Challenge 2b</li></a><a href="../30-Analog-IO/60-Analog-Input.html"><li >Analog Input</li></a><a href="../30-Analog-IO/70-Challenge-2c.html"><li >Challenge 2c</li></a><a href="../30-Analog-IO/80-Mapping-Input-to-Output.html"><li >Mapping Input to Output</li></a><a href="../30-Analog-IO/90-Challenge-2d.html"><li >Challenge 2d</li></a><a href="../30-Analog-IO/99-Extra-Challenges.html"><li >Extra Challenges</li></a></ul><p>40 Sensors</p><ul><a href="../40-Sensors/10-Ultrasonic-Sensor.html"><li >Ultrasonic Distance Sensor</li></a><a href="../40-Sensors/20-Ultrasonic-Exercise-Counter.html"><li >Challenge 4a - Ultrasonic Exercise Counter</li></a></ul><p>Design Thinking: Active Living</p><ul><a href="../90-Design-Thinking/10-Introduction.html"><li >Design Thinking: Active Living</li></a><a href="../90-Design-Thinking/20-Empathize.html"><li >Empathize</li></a><a href="../90-Design-Thinking/30-Define.html"><li class="current">Define</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Define</h2>
+<p><img alt="" src="images/definephase.jpg" /></p>
+<ul>
+<li>Write the Problem Statement<ul>
+<li>One of the hardest parts of the process</li>
+</ul>
+</li>
+</ul>
+<p>Empathize helps us gain insights.
+<br>
+Define helps us make sense of it!</p>
+<p>Why is it important to Define the problem?</p>
+<h2>Example of What Can Go Wrong!</h2>
+<p>In the 60s, NASA realized that normal pens do not work in space.</p>
+<p><strong>Problem Statement</strong>:
+<br><em>Ink won’t flow without gravity</em></p>
+<p><strong>Solution</strong>:
+<br><em>High tech pressurized pen that doesn’t require gravity</em></p>
+<p><img alt="" src="images/pen.jpg" /></p>
+<p>The Russian Space Agency encountered the same problem, but had defined the problem differently...</p>
+<p><strong>Problem Statement:</strong>
+<br><em>Pen won’t work in space</em></p>
+<p><strong>Solution:</strong>
+<br><em>Use a pencil</em></p>
+<p><img alt="" src="images/pencil.jpg" /></p>
+<h2>Good Problem Statements</h2>
+<ul>
+<li>Human-centered</li>
+<li>Broad enough for creative freedom</li>
+<li>Narrow enough to be manageable</li>
+</ul>
+<p><img alt="" src="images/statement.jpg" /></p>
+<h2>5 “Why” Technique</h2>
+<p>One way to try to get to a good problem statement is by pretending to be a six-year-old who keeps asking "Why?"</p>
+<p>The technique was developed by Toyota to help make sure designers put the user first in their process, and that they actually understood the user's needs and wants.</p>
+<p>If you cannot answer “Why”, go back to to the “Empathize” stage, don’t make assumptions!</p>
+<h3><em>Example</em></h3>
+<blockquote>
+<p>Observation: Working adults are often unhealthy.</p>
+</blockquote>
+<ul>
+<li>Why are they unhealthy?<ul>
+<li>Because they didn’t exercise enough</li>
+</ul>
+</li>
+<li>Why don’t they exercise enough?<ul>
+<li>Because they are too busy.</li>
+</ul>
+</li>
+<li>Why are they too busy?</li>
+<li>Because they have work and family time.</li>
+<li>Why are they not exercising during family time?</li>
+<li>Because their kids couldn’t join them.</li>
+<li>Why couldn’t their kids join in the exercise?</li>
+<li>Because the exercise facilities are not suitable for kids.</li>
+</ul>
+<h2>So, what now?</h2>
+<p>As a team, work on your problem statement by looking at your Empathy report, discussing the main issue and drilling down to the Why of the matter...</p>
+<p>If you need to re-empathize, this is still a good time to get a better understanding of your user.  But don;t dilly dally any longer!</p>
+<p>Fill out this <a href="images/define%20guide.pdf">handout</a>.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
