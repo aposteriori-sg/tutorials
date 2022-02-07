@@ -1,4 +1,4 @@
-Challenge 4a - Ultrasonic Exercise Counter
+Challenge 3a - Ultrasonic Exercise Counter
 ---
 
 Now we can only detect push-up, but not count each one...
