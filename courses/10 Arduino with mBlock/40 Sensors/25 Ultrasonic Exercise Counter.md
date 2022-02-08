@@ -1,4 +1,4 @@
-Challenge 3a - Exercise Counter
+Challenge 3b - Exercise Counter
 ---
 
 Now we can only detect push-up, but not count each one...

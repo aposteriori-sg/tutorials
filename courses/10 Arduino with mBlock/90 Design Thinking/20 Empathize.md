@@ -76,4 +76,4 @@ As a team decide:
     - Plan out how to bodystorm a likely active living scenario
 
 Then execute your plan **outside of class time**
-Fill out this [handout](images/empathy%20guide.pdf).
+Fill out this [handout](download/empathy%20guide.pdf).

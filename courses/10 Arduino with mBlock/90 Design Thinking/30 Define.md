@@ -71,4 +71,4 @@ As a team, work on your problem statement by looking at your Empathy report, dis
 
 If you need to re-empathize, this is still a good time to get a better understanding of your user.  But don't dilly dally any longer!
 
-Fill out this [handout](images/define%20guide.pdf).
+Fill out this [handout](download/define%20guide.pdf).
