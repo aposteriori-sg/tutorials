@@ -42,7 +42,7 @@ We've discussed it briefly when looking at the LED basic circuit, where we used 
 
 ## How a Potentiometer works
 
-Inside a variable resistor there’s usually a fixed resistor and a *wiper* that points between the minimum and maximum terminals of the resistor.  Depending on where you're pointing the wiper, the resistance between one of the end terminals and that wiper will be determined.  
+Inside a variable resistor there's usually a fixed resistor and a *wiper* that points between the minimum and maximum terminals of the resistor.  Depending on where you're pointing the wiper, the resistance between one of the end terminals and that wiper will be determined.  
 
 As you change the wiper, so does the resistance between it and the end terminal is varied.
 
@@ -50,15 +50,15 @@ As you change the wiper, so does the resistance between it and the end terminal 
 
 ## Measuring Resistance in a Potentiometer
 
-Resistance is measured in **Ohms**.
+Resistance is measured in **&Omega; (ohms)**.
 
 We can use a multimeter to measure the resistance between one end terminal and the wiper of a potentiometer.
 
 ![](images/multimeter.jpg)
 
-## BUT! Arduino Analog Input Doesn't Read Ohms...
+## BUT! Arduino Analog Input Doesn't Read &Omega;...
 
-If we examine the Arduino's Analog Input documentation, we would find that the pin holes in question do not really read Ohms... 
+If we examine the Arduino's Analog Input documentation, we would find that the pin holes in question do not really read Ohms (&Omega;)... 
 
 Analog Inputs in microcontrollers utilize Analog-to-Digital Converters (ADCs), which read in *signals*.  Signals require electricty to flow through, not inert resistance on its own...
 
