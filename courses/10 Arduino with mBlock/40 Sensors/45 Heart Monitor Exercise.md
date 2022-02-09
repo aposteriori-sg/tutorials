@@ -12,3 +12,7 @@ On top of showing the EKG timeline, add heart beats to the monitor.
 Use Timer to keep track of time, and on every beat calculate:
 
 > BPM = # of beats / time-in-seconds * 60
+
+<br>
+
+![](images/bpmcode.jpg)
