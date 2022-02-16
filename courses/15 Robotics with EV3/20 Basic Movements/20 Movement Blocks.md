@@ -5,6 +5,15 @@ Basic Movement Blocks
 
 The following blocks are good to use for some basic sequential programs where you program the robot to drive in a particular path.
 
+Use the blocks below to test your robot's mobility:
+
+1. Drive straight for 1 rotation
+1. Drive back for 180 degrees
+1. Drive straight for 1 second
+1. Make a perfect Right turn
+1. Make a perfect Left turn
+1. Drive in circles for 5 seconds
+
 ## Set Movement Motors
 
 ![](images/setmovementmotors.jpg)
