@@ -4,6 +4,7 @@ Course Overview
 Robotics is a multi-disciplinary subject.
 
 In order to get a good grasp of Robotics, you need to understand:
+
 - **Mechanics**: how forces act on objects
 - **Electronics**: how electrical circuits work
 - **Computer Science**: the mathematics behind computers
@@ -13,6 +14,7 @@ In order to get a good grasp of Robotics, you need to understand:
 These are the foundational theoretical fields related to Robotics.
 
 But in order to make Robots you also need to study their counterpart engineering disciplines:
+
 - **Mechanical Engineering**: how to build machines that use Mechanics to their advantage
 - **Electrical Engineering**: how to create circuits that manipulate electrical signals that power our mechanical devices
 - **Software Engineering**: how to build algorithms that drive the electrical circuits that power our devices
