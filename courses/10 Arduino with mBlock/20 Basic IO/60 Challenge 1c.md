@@ -5,7 +5,7 @@ Add code like this to continuously read the state of the push-button by reading 
 
 ![](images/readpin.jpg)
 
-Pushing the button should control the built-in or an external LED if you have it wired up.
+Pushing the button should control the built-in or an external LED if you have it wired up to PIN 13.
 
 ## Broadcast
 

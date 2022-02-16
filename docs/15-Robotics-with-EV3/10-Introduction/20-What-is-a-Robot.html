@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with EV3</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with EV3
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO EV3 platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li class="current">What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li >First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li >Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li >Basic Movement Blocks</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>What is a Robot?</h2>
+<p><img alt="" src="images/robots.jpg" /></p>
+<p>Take a moment to reflect on the various machines in the illustration above.</p>
+<p>Which one would you consider a robot?  Some?  None?  All?</p>
+<p>The word <strong>Robot</strong> was coined by the European author and playwright, Karl Capek, in a play about androids (humanoid robots) taking over the world...</p>
+<p><img alt="" src="images/rur.jpg" /></p>
+<p>The idea comes from a Slavic word that means servitude and drudgery, which is farily apt looking at the way robots are used in industrial automation.</p>
+<p>Today, almost anything automated is called a robot, from factory robot arms to driverless cars, from chatbots to other types of software that automate some business or organizational process (bot).</p>
+<p><img alt="" src="images/chatbot.jpg" /></p>
+<p>We are going to focus mainly on the class of physical robots that most resemble driverless cars...</p>
+<p>As such, our robots will all share some basic electronic &amp; mechanical elements:</p>
+<ul>
+<li>Computer Brain</li>
+<li>Body / Frame</li>
+<li>Motors</li>
+<li>Sensors</li>
+<li>Wires</li>
+</ul>
+<p><img alt="" src="images/technic.jpg" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

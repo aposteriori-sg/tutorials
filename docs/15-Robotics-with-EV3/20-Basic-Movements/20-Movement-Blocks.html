@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with EV3</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with EV3
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO EV3 platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li >First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li >Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li class="current">Basic Movement Blocks</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Basic Movement Blocks</h2>
+<p><img alt="" src="images/movementtab.jpg" /></p>
+<p>The following blocks are good to use for some basic sequential programs where you program the robot to drive in a particular path.</p>
+<h2>Set Movement Motors</h2>
+<p><img alt="" src="images/setmovementmotors.jpg" /></p>
+<p>Tell the Brick which 2 Motor ports to use for the Right &amp; Left wheel motors.</p>
+<p>The default is B &amp; C.  If you want to use A &amp; D, you better set it properly at the outset of your program. </p>
+<h2>Move Forward/Backward for ...</h2>
+<p><img alt="" src="images/movefwdback.jpg" /></p>
+<p>Use this block to go Forward or Backward only.
+The block tries it best to move the two main motors connected at the same speed in the same direction.</p>
+<ul>
+<li>
+<p>For __ Rotations</p>
+<ul>
+<li>The amount you enter is the number of times the motor shafts will rotate before coming to a stop.  </li>
+</ul>
+</li>
+<li>
+<p>For __ Degrees</p>
+<ul>
+<li>Similar to Rotations, but with more accuracy, e.g:</li>
+<li>360 degrees = 1 rotation</li>
+<li>90 degrees = 1/4 of a rotation</li>
+<li>540 degrees = 1 and a half rotations</li>
+<li>and so forth...</li>
+</ul>
+</li>
+<li>
+<p>For __ Seconds</p>
+<ul>
+<li>Keep the motors running for the specified time</li>
+</ul>
+</li>
+</ul>
+<h2>Move with Steering for ...</h2>
+<p><img alt="" src="images/movesteering.jpg" /></p>
+<p>This block let's you set the direction - so you can steer sideways, not just drive forward and backward.</p>
+<p>Same options as above:
+- For <strong> Rotations
+- For </strong> Degrees
+- For __ Seconds</p>
+<h2>Set Movement Speed</h2>
+<p><img alt="" src="images/setmovementspeed.jpg" /></p>
+<p>The default speed the above blocks are using is %50.  If you want to go faster you can set the Movement Speed higher.  Similarly, you can also set it lower to make the robot drive even slower.</p>
+<h2>Set Movement Motors to Hold/Float at Stop</h2>
+<p><img alt="" src="images/setstopoption.jpg" /></p>
+<p>Say you tell your robot to move Forward for 1 second.</p>
+<p>When the 1 second is up, there are various behaviors that could take place:</p>
+<ul>
+<li>
+<p><strong>Float</strong>: The power to the motors is cut, but the motor shaft is allowed to rotate freely.  Some momentum will persist and the robot will advance a bit longer before coming to a full rest.</p>
+</li>
+<li>
+<p><strong>Hold Position</strong>: The power to the motors is cut, and the motor shaft is held in place.  Some momentum will persist and the robot may jerk a bit, but the wheels should hold fast.</p>
+</li>
+</ul>
+<h2>(Advanced) For Rotations/Degrees vs. For Seconds</h2>
+<p>Important: Try to make the robot bump into a wall using for <strong>Rotations</strong> vs. for <strong>Seconds</strong>.  Note the difference:</p>
+<ul>
+<li>
+<p>For Rotations: program never stops.  The block waits until those number of rotations have completed before moving on to the next code block</p>
+</li>
+<li>
+<p>For Seconds: no matter what, the motors will shut off and the program will continue to the next line </p>
+</li>
+</ul>
+<p>You can test this with a simple program as follows:</p>
+<p><img alt="" src="images/rotationsvsseconds.jpg" /></p>
+<p>In the case of bumping the wall and not being able to rotate as many times as specified, the EV3 should not show the end image.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

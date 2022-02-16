@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with EV3</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with EV3
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO EV3 platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li >First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li class="current">Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li >Basic Movement Blocks</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Just Go Straight</h2>
+<p>As we've seen before, to go straight you just need to tell the two wheel motors to move in the same forward direction with the same speed.</p>
+<p><img alt="" src="images/forward.jpg" /></p>
+<p>So, let's do that now.</p>
+<h2>Connect EV3</h2>
+<p>First, let's connect our brick to our PC, Laptop, or iPad.</p>
+<p>If you're using <strong>Bluetooth</strong> best to <strong>rename your Brick</strong> now, so it stands out among the other classroom devices when finding connections.</p>
+<p><img alt="" src="images/ev3name.jpg" /></p>
+<p>Make sure the new name appears as shown here:</p>
+<p><img alt="" src="images/newname.jpg" /></p>
+<p><strong>Make sure Bluetooth is turned ON!</strong></p>
+<p><img alt="" src="images/bluetooth.jpg" /></p>
+<p><img alt="" src="images/bluetooth2.jpg" /></p>
+<p><img alt="" src="images/bluetooth3.jpg" /></p>
+<h2>EV3 Classroom</h2>
+<p>Your PC/Laptop/Tablet should have EV3 Classroom installed on it.
+Look for something like this icon:</p>
+<p><img alt="" src="images/ev3logo.jpg" /></p>
+<p>It might take some time to come up.
+<br>Don't try to start it over and over or it will incapcitate your PC.</p>
+<p>Create a <strong>New Project</strong>. </p>
+<p>Click on the small <strong>Connect</strong> button on top.</p>
+<p>Follow the instructions to connect...</p>
+<p>You will need to enter a Passkey and press enter on the EV3 brick.</p>
+<h2>Code</h2>
+<ul>
+<li>Under the <strong>Movement</strong> tab, you will find the <em>move</em> blocks</li>
+<li>Pick a <em>move</em> block and move it to the coding canvas under the <em>when program starts</em> block</li>
+<li>Make sure the robot is on a safe surface!!!</li>
+<li>Hit the <strong>Play</strong> button</li>
+</ul>
+<p><img alt="" src="images/gostraight.jpg" /></p>
+<h2>Going Straight?</h2>
+<p>LEGO robots, like all robots, don't just go straight without some work.  </p>
+<p>You can tell both motors to go at the same speed, but the tires may still rotate at different speeds.  </p>
+<p>You can use motor encoders to make sure the motor shafts are really rotating at the same speeds, but due to some other mechanical noise (friction, misalignments, assymetrical weight distributions, etc) you will still not see your robot go exactly straight.</p>
+<p>The only way to do that is by giving your robot knowlede about what it's doing and the ability to correct any deviations from going straight...</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
