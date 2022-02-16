@@ -26,3 +26,7 @@ Use a Potentiometer to code how fast an LED is blinking (instead of how bright i
 ## 2i Etch a Sketch Panda
 
 Use 2 Potentiometer Joysticks, one to control X and one to control Y of the Panda.
+
+Here's how you'd wire up two Potentiometers:
+
+![](images/two_pots.jpg)
