@@ -24,5 +24,7 @@ Or:
 - Navigate to *BUILD*
 - Click on **Driving Base**
 
-![](images/ev3units.png)
-![](images/ev3build.png)
+<p float="left">
+  <img src="images/ev3units.png" width="300" />
+  <img src="images/ev3build.png" width="300" /> 
+</p>
