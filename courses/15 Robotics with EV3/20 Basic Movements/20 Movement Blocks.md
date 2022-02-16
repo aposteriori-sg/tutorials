@@ -81,8 +81,12 @@ Important: Try to make the robot bump into a wall using for **Rotations** vs. fo
 
 - For Seconds: no matter what, the motors will shut off and the program will continue to the next line 
 
-You can test this with a simple program as follows:
+You can test this with 2 simple and similar programs as follows:
 
 ![](images/rotationsvsseconds.jpg)
 
-In the case of bumping the wall and not being able to rotate as many times as specified, the EV3 should not show the end image.
+In this case when bumping the wall, the motor shafts would not be able to rotate as many times as specified, and the EV3 should not show the end image (only eyes).
+
+![](images/rotationsvsseconds2.jpg)
+
+No matter what the motors and the wheels are doing, this should show a smile after 10 seconds had elapsed.
