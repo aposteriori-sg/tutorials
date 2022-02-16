@@ -29,6 +29,8 @@ The default is B & C.  If you want to use A & D, you better set it properly at t
 Use this block to go Forward or Backward only.
 The block tries it best to move the two main motors connected at the same speed in the same direction.
 
+![](images/movefwdchoices.jpg)
+
 - For __ Rotations
     - The amount you enter is the number of times the motor shafts will rotate before coming to a stop.  
 

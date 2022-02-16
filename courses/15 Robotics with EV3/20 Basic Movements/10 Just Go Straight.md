@@ -56,6 +56,8 @@ You will need to enter a Passkey and press enter on the EV3 brick.
 
 ![](images/gostraight.jpg)
 
+You may not need to set the Motor ports.  The default motor port setting is B & C.  To explicitly use A & D ports do as above.
+
 ## Going Straight?
 
 LEGO robots, like all robots, don't just go straight without some work.  
