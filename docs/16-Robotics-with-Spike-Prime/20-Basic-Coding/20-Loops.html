@@ -31,10 +31,48 @@
         <div id="sidebarOverlay"></div>
         <nav id="sidebar" role="navigation">
             <div id="sidebarHeader">This course uses the LEGO Spike Prime platform to teach basic Robotics.</div>
-            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-Spike-Hub.html"><li >The Spike Hub & App</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/20-Loops.html"><li class="current">Loops</li></a></ul>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-Spike-Hub.html"><li >The Spike Hub & App</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/20-Loops.html"><li class="current">Loops</li></a><a href="../20-Basic-Coding/30-Events.html"><li >Events</li></a></ul>
         </nav>
         <div id="content">
             <h2>Loops</h2>
+<p>Now that you've played a bit with statments and sequences, we can introduce another fundamental coding concept - the <strong>loop</strong>.</p>
+<p>Loops are used to <strong>execute a patten of statements</strong> more than once, without having to reprogram the sequences.</p>
+<p>Let's look at an example.</p>
+<h2>Delete &amp; Reorder Statements</h2>
+<p>Before we go much further we wanted to say a word about deleting and reordering coding statements in these World Blocks projects.</p>
+<p>If you need to <strong>delete</strong> any blocks, you can just <strong>drag</strong> them back to the blocks tabs.  </p>
+<p><img alt="" src="images/delete.jpg" /></p>
+<p>If you want to <strong>reorder</strong> blocks, just note that whenever you <strong>grab</strong> a statement you are grabbing it and everything attached <strong>below</strong> it... </p>
+<p><img alt="" src="images/reorder.jpg" /></p>
+<p>It takes some getting used to, but you will soon get the hang of it!</p>
+<h2>The Wink</h2>
+<p>Let's try to make our Hub give us a wink.</p>
+<p>A wink means you close one eye and then open it back up.</p>
+<p>If we start with a smiley face, we can add another block to close the right eye.</p>
+<p><img alt="" src="images/wink1.jpg" /></p>
+<p>Then we will add another block to re-open that eye:</p>
+<p><img alt="" src="images/wink2.jpg" /></p>
+<p><em>HINT: If you think the winks are too slow you can reduce the time for each image.</em></p>
+<p>But, what if I want to write a program that will wink 5 times?</p>
+<p>When one first starts coding, the inclination is always to copy and paste the sequences:</p>
+<p><img alt="" src="images/wink3.jpg" /></p>
+<p>But we can simplify (rationalize, in software engineering terminology) this code to repeat the wink pattern.</p>
+<h2>Repeat</h2>
+<p>You will find various Loop blocks under the <strong>Control</strong> blocks tab.  </p>
+<p>The most common Loop block to use is the <strong>Repeat []</strong> block.  </p>
+<p>Any sequences you add inside the Repeat block will be executed in sequence the amount of times you indicate, for instance:</p>
+<p><img alt="" src="images/winkloop.jpg" /></p>
+<p>If you wish for the animation to last forever, you can replace the <strong>Repeat</strong> block with a <strong>Forever</strong> block:</p>
+<p><img alt="" src="images/winkforever.jpg" /></p>
+<h2>Challenge</h2>
+<p>Can you try and come up with another type of animation that you can loop over and over again?</p>
+<p>Some ideas:</p>
+<ul>
+<li>A beating heart (big, small, big, small)</li>
+<li>A dot bouncing along the screen</li>
+<li>A rocket shooting up </li>
+<li>A square pattern building up from one corner...</li>
+</ul>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
     </div>
