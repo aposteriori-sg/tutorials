@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with Spike Prime</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with Spike Prime
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO Spike Prime platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-Spike-Hub.html"><li >The Spike Hub & App</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li class="current">Sequences</li></a><a href="../20-Basic-Coding/20-Loops.html"><li >Loops</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Sequences</h2>
+<h2>Statements</h2>
+<p>The fundamental unit of a code is an execution <strong>statement</strong>.  </p>
+<p>Do this.  </p>
+<p>Do that.  </p>
+<p>When we program a bunch of these statements one after the other, the hub will execute them in the same order.  </p>
+<p>This is called a <strong>sequence</strong>, meaning one statement follows another.</p>
+<h2>Sequences</h2>
+<p>Let's try some simple code sequences.</p>
+<p>First, make the Hub display smile.</p>
+<p><img alt="" src="images/smile.jpg" /></p>
+<h3>Events</h3>
+<p>When you start a new project, you will see an initial event block <strong>when program starts</strong>.  Any statements attaced to this event will be executed each time the program is initiated.</p>
+<p><img alt="" src="images/whenstart_code.jpg" /></p>
+<p>All event blocks can be found under the <strong>Events</strong> blocks tab.</p>
+<p>More on Events later...</p>
+<h3>Light</h3>
+<p>Let's add a statement to make the Hub show a smile face on its LED display.</p>
+<p>The LED display is controlled by coding blocks under the <strong>Light</strong> blocks tab.</p>
+<p>To add a statement to the when program starts event, you need to find the block you want and <strong>drag it over</strong> the code area with that event block.</p>
+<p>Let's drag the <em>Matrix [] turn on [] for [] seconds</em> block - the first one in the Light tab - under the <em>when program starts</em> event block.</p>
+<p><img alt="" src="images/smile_code.jpg" /></p>
+<p>This will make the smiley face show up for 2 seconds.  </p>
+<p>Click <strong>Play</strong> button to execute.</p>
+<h3>Sound</h3>
+<p>Let's add another block to make a sound as well.  </p>
+<p><img alt="" src="images/sound_code.jpg" /></p>
+<p>The default sound is a cat meow... We don't know why!</p>
+<p>You can "Add Sound" to choose from many other library sounds available. </p>
+<p><img alt="" src="images/addsound.jpg" /></p>
+<p>You can also record and edit sound waves inside the Spike App.  </p>
+<h2>Test/Explore</h2>
+<p>Feel free to explore a bit.</p>
+<p>Add different light and sound effects to make a sequence of statements, and test it by running the program on the hub.</p>
+<p>Next we will look at how to repeat  statement patterns using Loops.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
