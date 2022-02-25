@@ -31,7 +31,7 @@
         <div id="sidebarOverlay"></div>
         <nav id="sidebar" role="navigation">
             <div id="sidebarHeader">This course uses the LEGO EV3 platform to teach basic Robotics.</div>
-            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li >First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li >Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li class="current">Basic Movement Blocks</li></a></ul>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li >First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li >Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li class="current">Basic Movement Blocks</li></a><a href="../20-Basic-Movements/30-Sequences-to-Functions.html"><li >Sequences to Functions</li></a></ul>
         </nav>
         <div id="content">
             <h2>Basic Movement Blocks</h2>
@@ -52,13 +52,10 @@
 </ol>
 <h3>Advanced</h3>
 <ol>
-<li>Make a perfect Right turn </li>
-<li>Make a perfect Left turn</li>
+<li>Make a near-perfect Right turn </li>
+<li>Make a near-perfect Left turn</li>
 </ol>
-<h2>Set Movement Motors</h2>
-<p><img alt="" src="images/setmovementmotors.jpg" /></p>
-<p>Tell the Brick which 2 Motor ports to use for the Right &amp; Left wheel motors.</p>
-<p>The default is B &amp; C.  If you want to use A &amp; D, you better set it properly at the outset of your program. </p>
+<p><em>Note the parameters you used for this.  It may come in handy in the future.</em></p>
 <h2>Move Forward/Backward for ...</h2>
 <p><img alt="" src="images/movefwdback.jpg" /></p>
 <p>Use this block to go Forward or Backward only.
@@ -110,6 +107,12 @@ The block tries it best to move the two main motors connected at the same speed 
 <p><strong>Hold Position</strong>: The power to the motors is cut, and the motor shaft is held in place.  Some momentum will persist and the robot may jerk a bit, but the wheels should hold fast.</p>
 </li>
 </ul>
+<h2>Set Movement Motors</h2>
+<p><img alt="" src="images/setmovementmotors.jpg" /></p>
+<p>Tell the Brick which 2 Motor ports to use for the Right &amp; Left wheel motors.</p>
+<p>The default is B &amp; C, but EV3 Classroom is smart enough to detect the Movement Motors if you have only 2 large motors connected.</p>
+<p><img alt="" src="images/motordetection.png" /></p>
+<p>Make sure they are set correctly if the automatic detection is not working as expected.</p>
 <h2>(Advanced) For Rotations/Degrees vs. For Seconds</h2>
 <p>Important: Try to make the robot bump into a wall using for <strong>Rotations</strong> vs. for <strong>Seconds</strong>.  Note the difference:</p>
 <ul>
