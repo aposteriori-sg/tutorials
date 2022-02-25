@@ -19,16 +19,10 @@ Use the blocks below to explore your robot's basic mobility with these driving t
 1. Drive 2 rotations at %100 speed and hold position
 
 ### Advanced
-1. Make a perfect Right turn 
-1. Make a perfect Left turn
+1. Make a near-perfect Right turn 
+1. Make a near-perfect Left turn
 
-## Set Movement Motors
-
-![](images/setmovementmotors.jpg)
-
-Tell the Brick which 2 Motor ports to use for the Right & Left wheel motors.
-
-The default is B & C.  If you want to use A & D, you better set it properly at the outset of your program. 
+*Note the parameters you used for this.  It may come in handy in the future.*
 
 ## Move Forward/Backward for ...
 
@@ -81,6 +75,18 @@ When the 1 second is up, there are various behaviors that could take place:
 
 - **Hold Position**: The power to the motors is cut, and the motor shaft is held in place.  Some momentum will persist and the robot may jerk a bit, but the wheels should hold fast.
 
+## Set Movement Motors
+
+![](images/setmovementmotors.jpg)
+
+Tell the Brick which 2 Motor ports to use for the Right & Left wheel motors.
+
+The default is B & C, but EV3 Classroom is smart enough to detect the Movement Motors if you have only 2 large motors connected.
+
+![](images/motordetection.png)
+
+Make sure they are set correctly if the automatic detection is not working as expected.
+
 ## (Advanced) For Rotations/Degrees vs. For Seconds
 
 Important: Try to make the robot bump into a wall using for **Rotations** vs. for **Seconds**.  Note the difference:
@@ -98,3 +104,4 @@ In this case when bumping the wall, the motor shafts would not be able to rotate
 ![](images/rotationsvsseconds2.jpg)
 
 No matter what the motors and the wheels are doing, this should show a smile after 10 seconds had elapsed.
+
