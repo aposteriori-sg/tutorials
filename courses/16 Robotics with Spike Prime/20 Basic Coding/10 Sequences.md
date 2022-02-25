@@ -47,6 +47,8 @@ This will make the smiley face show up for 2 seconds.
 
 Click **Play** button to execute.
 
+You can use the 5X5 matrix to turn on and off various LEDs to draw different images.
+
 ### Sound
 
 Let's add another block to make a sound as well.  
@@ -59,12 +61,16 @@ You can "Add Sound" to choose from many other library sounds available.
 
 ![](images/addsound.jpg)
 
-You can also record and edit sound waves inside the Spike App.  
+You can also record and edit sound waves inside the Spike App.
+
+![](images/editsound.jpg)
+
+Don't forget to test your changes by clicking **Run** to execute your program on the Hub.
 
 ## Test/Explore
 
 Feel free to explore a bit.
 
-Add different light and sound effects to make a sequence of statements, and test it by running the program on the hub.
+Add different Light and Sound effects to make a sequence of statements, and test it by running the program on the hub.
 
 Next we will look at how to repeat  statement patterns using Loops.
