@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with EV3</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with EV3
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO EV3 platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li >First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/Final-Challenges.html"><li class="current">Final Challenges</li></a><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li >Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li >Basic Movement Blocks</li></a><a href="../20-Basic-Movements/30-Sequences-to-Functions.html"><li >Sequences to Functions</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Final Challenges</h2>
+<p>Try some of these challenges with what you've learned:</p>
+<h2>Square</h2>
+<p><img alt="" src="images/square.jpg" /></p>
+<p>Make your robot trace a square shape.</p>
+<p>Use Functions to make the code readbale.</p>
+<h2>Loops</h2>
+<p>You should also use loops to avoid repeating code, so this:</p>
+<p><img alt="" src="images/duplicate.jpg" /></p>
+<p>Should be rewritten as this:</p>
+<p><img alt="" src="images/squareloop.jpg" /></p>
+<h2>Trainagle</h2>
+<p><img alt="" src="images/triangle.jpg" /></p>
+<p>Make your robot trace a triangle shape - use functions and loops!</p>
+<h2>Small &amp; Big Circles</h2>
+<p><img alt="" src="images/circles.jpg" /></p>
+<p>Make your robot trace the smallest circle possible.</p>
+<p>Then, find the largest open area available and make it trace the largest circle.</p>
+<p>Use the Tank Move block for this to get a better understanding of your drive system and its capabilities:</p>
+<p><img alt="" src="images/tankmove.jpg" /></p>
+<p>The point of this exercise is to understand your potential turn geometry - different turns are useful in different circumstances.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
