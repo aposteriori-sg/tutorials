@@ -45,3 +45,24 @@ Test and make sure the built-in LED lights up when you perform some movement-bas
 ![](images/ultrasoniccounter.jpg)
 
 You may need to adjust the detection distance to be longer than or shorter than 20cm.
+
+
+## Upload-Mode Broadcast
+
+If you wish to interact withthe Sprites on stage, you will need to add an mBlock extension to **both the Device and Sprites**:
+
+![](images/ultrasonicbroadcast0.jpg)
+
+
+![](images/ultrasonicbroadcast1.jpg)
+
+The Device and Sprite code might then look like this:
+
+**Device**
+
+![](images/ultrasonicbroadcast2.png)
+
+
+**Sprite**
+
+![](images/ultrasonicbroadcast3.png)

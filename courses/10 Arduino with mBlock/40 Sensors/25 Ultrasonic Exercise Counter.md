@@ -30,8 +30,31 @@ Once your lower your body and the condition of the distance is met, the variable
 
 So we need to somehow wait and hold the program until you finish each rep.
 
-Try to use this block to get this to work:
+Try to use Wait and Wait Until blocks to get this to work (remember how we removed noise from the Tilt sensor program?):
 
 ![](images/waituntil.svg)
 
 ## *How else can you use the ultrasonic distance sensor in your Active Living solution design?*
+
+Scroll down to see a more complete solution:
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+**Device**
+
+![](images/ultrasonicfullexampledevice.png)
+
+
+**Sprite**
+
+![](images/ultrasonicfullexamplesprite.png)
