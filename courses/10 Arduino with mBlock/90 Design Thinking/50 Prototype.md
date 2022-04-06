@@ -10,13 +10,15 @@ Start Creating Solution
 - Work with your team to fabricate your device
 - Test early & often
 
-![](images/cuttingboard.jpg)
+![](images/test.jpg)
 
-Keep In Mind
+When Testing, Keep In Mind
 
 - User is the most important member of the design team
 - If they are not around, empathize & test from their viewpoint
 - Be open to criticism, feedback and creative destruction
+
+![](images/cuttingboard.jpg)
 
 Time to make hard decisions:
 
