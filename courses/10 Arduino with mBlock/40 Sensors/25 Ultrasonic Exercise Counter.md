@@ -58,3 +58,14 @@ Scroll down to see a more complete solution:
 **Sprite**
 
 ![](images/ultrasonicfullexamplesprite.png)
+
+
+If you can, check what the Ultrasonic Sensor returns when there's nothing in front of it for > 2.5 meters.  That's the max...
+
+When no signal returns in time (too close or too far), the Ultrasonic distance block returns ZERO (0).
+
+So, really any boolean test for short distance should look more like this:
+
+![](images/ultrasonicavoidzero.png)
+
+This way we avoid a false positive 0 zero reading...
