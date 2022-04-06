@@ -16,3 +16,5 @@ Use Timer to keep track of time, and on every beat calculate:
 <br>
 
 ![](images/bpmcode.jpg)
+
+You can find a sample Heart Monitor program that you can open in mBlock [here](download/heartMonitor.mblock).

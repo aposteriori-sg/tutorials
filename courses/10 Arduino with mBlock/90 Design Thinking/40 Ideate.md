@@ -66,3 +66,11 @@ As a team, utilize one or more of the above Ideation techniques, and come up wit
 If you need to re-empathize or re-define, this is your last chance to better understand your user before commmitting to some prototyping work. 
 
 **Fill out this [handout](download/ideate%20guide.pdf).**
+
+A further note - when ideating for an Active Living project specifically, you should keep a few points in mind to help focus:
+
+- What kind of specific behavior or exercise is appropriate for your user group, that you wish to encourage.
+
+- What incentives can you create for the user, or which disincentives can your remove from the user's path in order to motivate them in the right way.
+
+What you **should not** be thinking about at this stage is how hard will it be to prototype or build or code this idea...
