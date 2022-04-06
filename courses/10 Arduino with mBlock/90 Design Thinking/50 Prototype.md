@@ -31,8 +31,8 @@ Shopping List
 - Sensors (Ultrasonic, Button, Tilt)
 - Actuators (LED, Speaker, LCD, Motor)
 - Fabrication Materials, Tools, and more...
-- The earlier you identify what you’ll need, the more likely you will get it in time for your prototyping and testing
-- Don’t ask for everything, but guess what you’ll need most likely
+- The earlier you identify what you'll need, the more likely you will get it in time for your prototyping and testing
+- Don't ask for everything, but guess what you'll need most likely
 
 Sample things people asked extra:
 - Toilet or papertowel rolls (not the paper, the cardboard)
