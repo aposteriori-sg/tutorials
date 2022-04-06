@@ -67,6 +67,11 @@
 <p><img alt="" src="images/ultrasonicfullexampledevice.png" /></p>
 <p><strong>Sprite</strong></p>
 <p><img alt="" src="images/ultrasonicfullexamplesprite.png" /></p>
+<p>If you can, check what the Ultrasonic Sensor returns when there's nothing in front of it for &gt; 2.5 meters.  That's the max...</p>
+<p>When no signal returns in time (too close or too far), the Ultrasonic distance block returns ZERO (0).</p>
+<p>So, really any boolean test for short distance should look more like this:</p>
+<p><img alt="" src="images/ultrasonicavoidzero.png" /></p>
+<p>This way we avoid a false positive 0 zero reading...</p>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
     </div>
