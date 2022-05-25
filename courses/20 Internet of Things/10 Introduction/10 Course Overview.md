@@ -6,6 +6,7 @@ The **Internet of Things** is a multi-disciplinary subject.
 In order to get a good grasp of Robotics, you need to understand:
 
 - **Electronics**: how electrical circuits work
+- **Coding**: the logic behind computer programs
 - **Product Design & UX**: making effective user interfaces
 
 ![](images/IOT.png)
