@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Internet of Things</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Internet of Things
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li class="current">IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li >RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>IoT Simulation</h2>
+<p>We will start with a simulation evironment.
+This will introduce us to the 3 basic parts of an IoT enterprise solution:</p>
+<ul>
+<li>WiFi/Bluetooth-connected <strong>micro-controller</strong> &amp; electronics</li>
+<li>IoT-customized <strong>Cloud Servers</strong></li>
+<li><strong>Graphic User Interface</strong> for monitoring and remote-controlling the electronics</li>
+</ul>
+<p><img alt="" src="images/enterpriseiot.png" /></p>
+<p>For our IoT micro-controller we will be using the Espressif (ESP) family of development boards (namely, ESP8266 &amp; ESP32).</p>
+<p>For our IoT Cloud, we have a customized <strong>Blynk</strong> server in our office.</p>
+<p>And for our GUI Dashboard, we will be using the Blynk Legacy application on our phones/tablets.</p>
+<p>Of course, all of these devices must be connected to the internet at all times for things to work seemlessly.</p>
+<h2>Registration</h2>
+<p>The registration link for the custom Blynk Service can be found <a href="https://iot.aposteriori.com.sg/register.html">here</a>.</p>
+<p>Please make sure to:
+- Use an email you can easily get to on your laptop/phone/tablet
+- Remember the password!</p>
+<h2>Simulators</h2>
+<p>The IoT simulators can be found <a href="http://a9i.sg/iot">here</a>.</p>
+<h2>Blynk App</h2>
+<p>The Blynk App to download to your phone/tablet is the LEGACY version of the app:</p>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=cc.blynk">Android</a></li>
+<li><a href="https://apps.apple.com/us/app/blynk-0-1-legacy/id808760481">iOS</a></li>
+</ul>
+<h2>Tutorial</h2>
+<p>The tutorial we will be following can be found <a href="https://www.aposteriori.com.sg/wp-content/uploads/2021/10/ITE-IoT-Slides.pdf">here</a>.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

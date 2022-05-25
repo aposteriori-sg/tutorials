@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Internet of Things</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Internet of Things
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li class="current">Using Real Electronics</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li >RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Using Real Electronics</h2>
+<p>Now that we have learned the basic ideas behind IoT technology, it's time to take our understanding into the real world, where things get a bit more complex, but way more fun!</p>
+<p><strong>Things will not always work!</strong></p>
+<p>That's ok - part of engineering and being a technologist is learning to find the source of a problem, and figuring out how to solve it with materials you have.</p>
+<p>First, let's get acquainted with our board.
+We've chosen one of the more ubiquitous and easily-available development kits on the market: Espressif's ESP32.</p>
+<p>It's got:</p>
+<ul>
+<li>WiFi </li>
+<li>Bluetooth</li>
+<li>Buttons</li>
+<li>LEDs</li>
+<li>USB connection for easy programming</li>
+<li>multi-us GPIO pins</li>
+<li>Built-in I2C &amp; SPI support</li>
+</ul>
+<p>In short - it can connect to and control a lot of electronics!</p>
+<p><img alt="" src="images/esp32pinout.png" /></p>
+<h2>Connect</h2>
+<p>First, let's make sure we can connect and program this micro-controller.</p>
+<p>Use the short USB wire to connect the ESP32 to your laptop.  You should see a small LED light up.  That indicates the controller is connected to power.</p>
+<h2>Arduino &amp; Hello World/Blink</h2>
+<p>First, find the Arduino app on your laptop and bring it up:
+<img alt="" src="images/arduino.jpg" /></p>
+<p>Arduino is an open-sourced platform for programming micro-controllers.  We need to make sure it's setup to control your ESP32.</p>
+<h3>Board Manager</h3>
+<p>First, open the <strong>Prefences</strong>:</p>
+<p><img alt="" src="images/pref.png" /></p>
+<p>And add the following to the Board Manager URLs list (copy and paste):</p>
+<p>http://dl.espressif.com/dl/package_esp32_index.json</p>
+<p>Click <strong>OK</strong> to close the Preferences.</p>
+<p>Now navigate to <strong>Tools-&gt;Board-&gt;Board Manager</strong>.</p>
+<p>Type "esp32" in the search box and install the ESP32 library:</p>
+<p><img alt="" src="images/installesp32.png" /></p>
+<p>Then follow the below image to pick the correct Board, NodeMCU 32-S:</p>
+<p><img alt="" src="images/pickesp32s.png" /></p>
+<h3>Choose Speed &amp; COM Port</h3>
+<p>Make sure that a COM port is selected - it may already populate when you connect the board to the laptop:</p>
+<p><img alt="" src="images/comport.png" /></p>
+<p>If there's more than one choice, you may need to experiment to see which one is the correct one.</p>
+<p>As for <strong>Upload Speed</strong>, leave it on whatever the default is.</p>
+<h3>Test Program</h3>
+<p>Before we do anything IoT, let's write a simple test program we can use to see that we can easily change the behavior of our board.</p>
+<p>We will just blink the built-in user-controlled LED.</p>
+<p>You can copy this code into the Arduino Sketch area:</p>
+<pre class="codehilite"><code>int LED_BUILTIN = 2;
+void setup() {
+  pinMode (LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}
+</code></pre>
+
+<p>Next, compile the program to make sure you followed the above instructions properly:</p>
+<p><img alt="" src="images/compile.jpg" /></p>
+<p>It will ask you to save the file if you haven't yet.  You can call it whatever you want...</p>
+<p>If there are no errors, proceed.
+If there are errors, see if you can fix them on your own, and if not, call an instructor to help you.</p>
+<p>Finally, it's time to upload the program:</p>
+<p><img alt="" src="images/upload.jpg" /></p>
+<p><strong>IMPORTANT NOTE - BOOT MODE</strong></p>
+<p>Every time you Upload a program to the ESP32, you have to click and hold the small Boot button next to the mini-USB connector.</p>
+<p><img alt="" src="images/boot.jpg" /></p>
+<p><em>The buttons may be labelled differently on your board, but it should be the same side as shown here.</em></p>
+<p>This puts the board into programming mode.</p>
+<p>Hold the button until the Arduino log says it passed the connection part:</p>
+<pre class="codehilite"><code>Connecting........___   &lt;----
+Chip is ESP32-D0WDQ6 (revision 1)
+
+...
+&lt;bunch of other logs&gt;
+...
+
+Leaving...
+Hard resetting via RTS pin...
+</code></pre>
+
+<p>After that you should start seeing a new LED light blinking on your board.</p>
+<p>You can mess around with the <strong>delay()</strong> times to make the LED flash longer or more frequently, just to get comfortable with the programming environment.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
