@@ -31,7 +31,7 @@
         <div id="sidebarOverlay"></div>
         <nav id="sidebar" role="navigation">
             <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
-            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li class="current">RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-IoT.html"><li >Internet of Things</li></a><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/15-Compile-and-Upload.html"><li >Compile & Upload</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li class="current">RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul>
         </nav>
         <div id="content">
             <h2>RGB Strip - Coding</h2>
@@ -39,8 +39,8 @@
 <h3>RGB Strip API Library</h3>
 <p>First, let's find a suitable library to support controlling the RGB Strip. </p>
 <p>It has some electronic communication protocol that is simple enough, but we won't be coding it from scratch!</p>
-<p>In Arduino, go to <em>Tools -&gt; Library Manager</em> and install Adafruit NeoPixel library (latest version):
-<img alt="" src="images/neopixel.jpg" /></p>
+<p>In Arduino, go to <em>Tools -&gt; Library Manager</em> and install Adafruit NeoPixel library (latest version):</p>
+<p><img alt="" src="images/neopixel.jpg" /></p>
 <h3>Test RGB Strip Control</h3>
 <p>First, let's just make sure that we can control the RGB Strip without Blynk.</p>
 <p>Add the following to the top of your basic Blynk sketch:</p>
@@ -56,10 +56,12 @@
 <pre class="codehilite"><code>// Define red color
 uint32_t red = strip.Color(255, 0, 0);  // HIGH red, no green, no blue
 
-// Cycle through all 6 LEDs
+// for each of the six LEDs (index 0 thru 5)
 for(int c=0; c &lt; strip.numPixels(); c += 1) {
-  // Set pixel 'c' to red
-  strip.setPixelColor(c, red); 
+
+  // Set LED/pixel 'c' to red
+  strip.setPixelColor(c, red);
+
 }
 
 // Now show the contents of the different LEDs as defined above
@@ -71,19 +73,26 @@ strip.show();
 <h3>Intercepting V0 Messages from Blynk</h3>
 <p>If you managed to control the RGB Strip and turn it some color (you can change the value of the color from red to something else using different RGB values), it's time to ty to control it from Blynk.</p>
 <p>We will need to add an intercepting code for when Blynk tries to write some new RGB values to the board:</p>
-<p>The code this extra function is as follows:</p>
-<pre class="codehilite"><code>BLYNK_WRITE(V0)
+<p>The code for this extra function is as follows:</p>
+<pre class="codehilite"><code>// Just says this is a WRITE/PUSH from Blynk dashboard for V0 virtual pin
+BLYNK_WRITE(V0)
 {
-
+  // If you clicked *Merge* in the widget properties 
+  // you will receive the different RGB levels as 3 parameters
   int R = param[0].asInt();
   int G = param[1].asInt();
   int B = param[2].asInt();
 
-  uint32_t color = strip.Color(R,G,B); 
+  // Create the RGB color type
+  uint32_t color = strip.Color(R,G,B);
+
+  // for each of the six LEDs (index 0 thru 5)
   for(int c=0; c &lt; strip.numPixels(); c += 1) {
 
-  // Set pixel 'c' to color
-  strip.setPixelColor(c, color);
+    // Set LED/pixel 'c' to color
+    strip.setPixelColor(c, color);
+
+  }
 
   // Now show the contents of the different LEDs as defined above
   strip.show(); 
@@ -91,30 +100,8 @@ strip.show();
 </code></pre>
 
 <h2>Compile &amp; Upload</h2>
-<p>Next, compile the program to make sure you followed the above instructions properly:</p>
-<p><img alt="" src="images/compile.jpg" /></p>
-<p>It will ask you to save the file if you haven't yet.  You can call it whatever you want...</p>
-<p>If there are no errors, proceed.
-If there are errors, see if you can fix them on your own, and if not, call an instructor to help you.</p>
-<p>Finally, it's time to upload the program:</p>
-<p><img alt="" src="images/upload.jpg" /></p>
-<p><strong>IMPORTANT NOTE - BOOT MODE</strong></p>
-<p>Every time you Upload a program to the ESP32, you have to click and hold the small Boot button next to the mini-USB connector.</p>
-<p><img alt="" src="images/boot.jpg" /></p>
-<p><em>The buttons may be labelled differently on your board, but it should be the same side as shown here.</em></p>
-<p>This puts the board into programming mode.</p>
-<p>Hold the button until the Arduino log says it passed the connection part:</p>
-<pre class="codehilite"><code>Connecting........___   &lt;----
-Chip is ESP32-D0WDQ6 (revision 1)
-
-...
-&lt;bunch of other logs&gt;
-...
-
-Leaving...
-Hard resetting via RTS pin...
-</code></pre>
-
+<p>Same as in the past modules.</p>
+<p>See instructions <a href="../20-Getting-Real/15-Compile-and-Upload.html" target="_blank">here</a></p>
 <h2>Test</h2>
 <p>So now you should be able to change the color of the LEDs on the strip by running your Blynk dasshboard and choosing different colors from the zeRGBa widget!</p>
 <p>Use all you've learned to make sure you've done everything right before getting help.</p>

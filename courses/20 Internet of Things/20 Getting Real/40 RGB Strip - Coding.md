@@ -10,6 +10,7 @@ First, let's find a suitable library to support controlling the RGB Strip.
  It has some electronic communication protocol that is simple enough, but we won't be coding it from scratch!
 
 In Arduino, go to *Tools -> Library Manager* and install Adafruit NeoPixel library (latest version):
+
 ![](images/neopixel.jpg)
 
 ### Test RGB Strip Control 
@@ -31,10 +32,12 @@ In Setup() function, add the following code:
     // Define red color
     uint32_t red = strip.Color(255, 0, 0);  // HIGH red, no green, no blue
 
-    // Cycle through all 6 LEDs
+    // for each of the six LEDs (index 0 thru 5)
     for(int c=0; c < strip.numPixels(); c += 1) {
-      // Set pixel 'c' to red
+    
+      // Set LED/pixel 'c' to red
       strip.setPixelColor(c, red); 
+    
     }
 
     // Now show the contents of the different LEDs as defined above
@@ -50,62 +53,37 @@ If you managed to control the RGB Strip and turn it some color (you can change t
 
 We will need to add an intercepting code for when Blynk tries to write some new RGB values to the board:
 
-The code this extra function is as follows:
+The code for this extra function is as follows:
 
+    // Just says this is a WRITE/PUSH from Blynk dashboard for V0 virtual pin
     BLYNK_WRITE(V0)
     {
-
+      // If you clicked *Merge* in the widget properties 
+      // you will receive the different RGB levels as 3 parameters
       int R = param[0].asInt();
       int G = param[1].asInt();
       int B = param[2].asInt();
 
+      // Create the RGB color type
       uint32_t color = strip.Color(R,G,B); 
+
+      // for each of the six LEDs (index 0 thru 5)
       for(int c=0; c < strip.numPixels(); c += 1) {
 
-      // Set pixel 'c' to color
-      strip.setPixelColor(c, color); 
-    
+        // Set LED/pixel 'c' to color
+        strip.setPixelColor(c, color); 
+
+      }
+
       // Now show the contents of the different LEDs as defined above
       strip.show(); 
     }
 
 ## Compile & Upload
 
-Next, compile the program to make sure you followed the above instructions properly:
+Same as in the past modules.
 
-![](images/compile.jpg)
-
-
-It will ask you to save the file if you haven't yet.  You can call it whatever you want...
-
-If there are no errors, proceed.
-If there are errors, see if you can fix them on your own, and if not, call an instructor to help you.
-
-Finally, it's time to upload the program:
-
-![](images/upload.jpg)
-
-**IMPORTANT NOTE - BOOT MODE**
-
-Every time you Upload a program to the ESP32, you have to click and hold the small Boot button next to the mini-USB connector.
-
-![](images/boot.jpg)
-
-*The buttons may be labelled differently on your board, but it should be the same side as shown here.*
-
-This puts the board into programming mode.
-
-Hold the button until the Arduino log says it passed the connection part:
-
-    Connecting........___   <----
-    Chip is ESP32-D0WDQ6 (revision 1)
-    
-    ...
-    <bunch of other logs>
-    ...
-    
-    Leaving...
-    Hard resetting via RTS pin...
+See instructions <a href="../20-Getting-Real/15-Compile-and-Upload.html" target="_blank">here</a>
 
 ## Test
 

@@ -9,7 +9,7 @@ In order to get a good grasp of Robotics, you need to understand:
 - **Coding**: the logic behind computer programs
 - **Product Design & UX**: making effective user interfaces
 
-![](images/IOT.png)
+[![](images/IOT.png)](https://www.youtube.com/watch?v=NjYTzvAVozo)
 
 Each of these disciplines normally requires years of university studies to master.  
 

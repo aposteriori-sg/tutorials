@@ -78,53 +78,36 @@ We will just blink the built-in user-controlled LED.
 
 You can copy this code into the Arduino Sketch area:
 
-    int LED_BUILTIN = 2;
+    // This is a comment
+    // LED_BUILTIN is pin 2 on the ESP32
+    // Uncomment below if your Arduino doesn't recognize LED_BUILTIN
+    // int LED_BUILTIN = 2;
+
+    // setup() function - called once, when ESP32 board is powered up / reset
     void setup() {
+      // Set Pin 2 as an output I/O pin
       pinMode (LED_BUILTIN, OUTPUT);
     }
 
+    // loop() function - called over and over so long as ESP32 is running
     void loop() {
+      // Turn power on in Pin 2
       digitalWrite(LED_BUILTIN, HIGH);
+      // Wait 1000msec (1sec)
       delay(1000);
+      // Turn power off in Pin 2
       digitalWrite(LED_BUILTIN, LOW);
+      // Wait 1000msec (1sec)
       delay(1000);
-    }
+    } // and repeat...
 
 Next, compile the program to make sure you followed the above instructions properly:
 
-![](images/compile.jpg)
+## Compile & Upload
 
-It will ask you to save the file if you haven't yet.  You can call it whatever you want...
+See instructions <a href="../20-Getting-Real/15-Compile-and-Upload.html" target="_blank">here</a>
 
-If there are no errors, proceed.
-If there are errors, see if you can fix them on your own, and if not, call an instructor to help you.
-
-Finally, it's time to upload the program:
-
-![](images/upload.jpg)
-
-**IMPORTANT NOTE - BOOT MODE**
-
-Every time you Upload a program to the ESP32, you have to click and hold the small Boot button next to the mini-USB connector.
-
-![](images/boot.jpg)
-
-*The buttons may be labelled differently on your board, but it should be the same side as shown here.*
-
-This puts the board into programming mode.
-
-Hold the button until the Arduino log says it passed the connection part:
-
-    Connecting........___   <----
-    Chip is ESP32-D0WDQ6 (revision 1)
-    
-    ...
-    <bunch of other logs>
-    ...
-    
-    Leaving...
-    Hard resetting via RTS pin...
-
+## Test
 
 After that you should start seeing a new LED light blinking on your board.
 
