@@ -79,13 +79,15 @@ Use the short USB wire to connect the ESP32 to your laptop to power it up.
 
 ### Start with Blynk Blink code
 
+Open the Arduino application.
+
 See the basic code for [Blynk Blink](../20-Getting-Real/20-Blynk-Blink.html) - that will the starting point we assume for this project.
 
 The code for Smart Doorbell needs to set Pin 4 as Input, so we need to add the following line to the setup() function:
 
     pinMode(4, INPUT);
 
-Now, in the loop() function, we can start checking whether the button is pressed by checking the state of Pin 4.  You can add the following to the beginning of the loop() function - make sure it comes before the call ti *Blynk.run()*:
+Now, in the loop() function, we can start checking whether the button is pressed by checking the state of Pin 4.  You can add the following to the beginning of the loop() function - make sure it comes before the call to *Blynk.run()*:
 
     if (digitalRead(4)) {
       Blynk.notify("DOORBELL!");
