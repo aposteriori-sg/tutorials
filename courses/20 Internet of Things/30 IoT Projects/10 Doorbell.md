@@ -47,7 +47,7 @@ Be **VERY CAREFUL** not to damage the pins when you do this:
 
 Next, use a Female-to-Male jumper wire to connect the 3v3 (top left pin) from the ESP32 to the '+' column of the breadboard on the right hand side.
 
-THen, use a Male-to-Male wire to connect the GND (top right pin) from the ESP32 to the '-' column on the right hand side.
+Then, use a Male-to-Male wire to connect the GND (top right pin) from the ESP32 to the '-' column on the right hand side.
 
 The '+' may be the outermost column or the one just next to it.  Or there may be no markings.  Just pick one of those 2 outermost columns as (+) and one as (-) and connect as shown.
 
