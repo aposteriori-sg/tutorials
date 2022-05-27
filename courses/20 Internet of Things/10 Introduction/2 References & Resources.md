@@ -35,6 +35,10 @@ The pinout diagram can be found [here](https://lessons.aposteriori.com.sg/20-Int
 
 https://www.arduino.cc/reference/en/
 
+## Arduino CLI (flash without recompiling)
+
+https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Windows_64bit.zip
+
 ## NeoPixel Library Reference
 
 https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use
