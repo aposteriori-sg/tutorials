@@ -44,8 +44,8 @@ Now, you need to attach the ESP32 to the breadboard.
 Be **VERY CAREFUL** not to damage the pins when you do this:
 
 - Line the pins up with the holes
-  - The first pin from the bottom should be on row 1
-  - The last pin on the top should be row 19
+    - The first pin from the bottom should be on row 1
+    - The last pin on the top should be row 19
 - One side of the board will be dangling in the air to the left of the breadboard
 - Start pushing in from one end of the ESP slightly, then try to push from the other end of the ESP
 - All the pins should be pushed into the holes from a perpendicular angle
