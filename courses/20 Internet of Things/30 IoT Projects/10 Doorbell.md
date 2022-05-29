@@ -91,6 +91,8 @@ Now, in the loop() function, we can start checking whether the button is pressed
 
     if (digitalRead(4)) {
       Blynk.notify("DOORBELL!");
+      // Make sure we don't flood the server
+      delay(200);
     }
 
 This will cause a Message Box with the String "DOORBELL!" to show up on our Blynk Dashboard.  If you want it to say something else, like "Someone at Front Door", or "Back Door Engaged" you can edit the notification text.
