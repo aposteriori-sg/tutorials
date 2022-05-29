@@ -15,13 +15,13 @@ The Blynk App to download to your phone/tablet is the LEGACY version of the app:
 
 ## Blynk Guide & Examples
 
-- http://docs.blynk.cc/#widgets
-- https://examples.blynk.cc/
+- [http://docs.blynk.cc/#widgets](http://docs.blynk.cc/#widgets)
+- [https://examples.blynk.cc/](https://examples.blynk.cc/)
 
 ## Blynk Registration & Dashboard Tokens
 
-- https://iot.aposteriori.com.sg/register.html
-- https://iot.aposteriori.com.sg/token.html
+- [https://iot.aposteriori.com.sg/register.html](https://iot.aposteriori.com.sg/register.html)
+- [https://iot.aposteriori.com.sg/token.html](https://iot.aposteriori.com.sg/token.html)
 
 ## Simulators
 
@@ -33,12 +33,12 @@ The pinout diagram can be found [here](https://lessons.aposteriori.com.sg/20-Int
 
 ## Arduino Reference
 
-https://www.arduino.cc/reference/en/
+[https://www.arduino.cc/reference/en/](https://www.arduino.cc/reference/en/)
 
 ## Arduino CLI (flash without recompiling)
 
-https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Windows_64bit.zip
+[https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Windows_64bit.zip](https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Windows_64bit.zip)
 
 ## NeoPixel Library Reference
 
-https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use
+[https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use)
