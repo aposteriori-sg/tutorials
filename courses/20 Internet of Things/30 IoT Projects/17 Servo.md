@@ -140,9 +140,9 @@ Compile, upload, and test again - see what happens when you click the button on 
 ## Challenges & Showcases
 
 - (MODERATE) Add some mechanical hardware to your motor so it looks like it's a diroama of a:
-   - garage door
-   - carpark gantry
-   - simple door
+    - garage door
+    - carpark gantry
+    - simple door
 
 Show your teachers how you can control different aspects of a real world model with remote control using the Blynk app (a garage door opener from your phone, a remote way to open some malfunctioning carpark gantry, or a way to let the handyman into your home when you're away).
 
