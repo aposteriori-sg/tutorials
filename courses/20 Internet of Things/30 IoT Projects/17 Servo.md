@@ -140,6 +140,7 @@ Compile, upload, and test again - see what happens when you click the button on 
 ## Challenges & Showcases
 
 - (MODERATE) Add some mechanical hardware to your motor so it looks like it's a diroama of a:
+
   - garage door
   - carpark gantry
   - simple door
