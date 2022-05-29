@@ -92,4 +92,71 @@ So now you should be able to change the color of the LEDs on the strip by runnin
 Use all you've learned to make sure you've done everything right before getting help.
 
 
-  
+## Full Code
+
+Just in case you didn't follow the instrcutor, this is the full code for Arduino:
+
+```
+#define BLYNK_PRINT Serial
+#include <BlynkSimpleEsp32.h>
+#include <Adafruit_NeoPixel.h>
+
+Adafruit_NeoPixel strip(6, 5, NEO_GRB + NEO_KHZ800);
+
+// See Auth Token in email from Blynk...
+char auth[] = "YOUR BLYNK TOKEN HERE";
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "YOUR WIFI NAME";
+char pass[] = "YOUR WIFI PASSWORD";
+
+// Just says this is a WRITE/PUSH from Blynk dashboard for V0 virtual pin
+BLYNK_WRITE(V0)
+{
+  // If you clicked *Merge* in the widget properties 
+  // you will receive the different RGB levels as 3 parameters
+  int R = param[0].asInt();
+  int G = param[1].asInt();
+  int B = param[2].asInt();
+
+  // Create the RGB color type
+  uint32_t color = strip.Color(R,G,B); 
+
+  // for each of the six LEDs (index 0 thru 5)
+  for(int c=0; c < strip.numPixels(); c += 1) {
+
+    // Set LED/pixel 'c' to color
+    strip.setPixelColor(c, color); 
+
+  }
+
+  // Now show the contents of the different LEDs as defined above
+  strip.show(); 
+}
+
+void setup() {
+  // Debug console
+  Serial.begin(9600);
+
+  // Define red color
+  uint32_t red = strip.Color(255, 0, 0);  // HIGH red, no green, no blue
+
+  // for each of the six LEDs (index 0 thru 5)
+  for(int c=0; c < strip.numPixels(); c += 1) {
+
+    // Set LED/pixel 'c' to red
+    strip.setPixelColor(c, red); 
+
+  }
+
+  // Now show the contents of the different LEDs as defined above
+  strip.show(); 
+
+  Blynk.begin(auth, ssid, pass, "a9i.sg", 8081);
+}
+
+void loop() {
+  Blynk.run();
+}
+```
