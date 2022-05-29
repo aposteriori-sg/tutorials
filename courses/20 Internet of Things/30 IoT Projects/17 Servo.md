@@ -1,7 +1,7 @@
-Smart Doorbell
+Remote-Controlled Motor
 ---
 
-In this project, we create a simple remote control motor, using the Blynk Button widget and the SG90 Servo motor.
+In this project, we create a simple remote controlled motor, using the Blynk Button widget and the SG90 Servo motor.
 
 ![](images/servo-moving.gif)
 
