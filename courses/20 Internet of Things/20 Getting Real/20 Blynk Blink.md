@@ -60,6 +60,14 @@ You can copy this code into the Arduino Sketch area:
       Blynk.run();
     }
 
+### Auth Token
+
+Get the autohrization token for your Blynk App from [here](https://iot.aposteriori.com.sg/token.html).
+
+### WiFi Info
+
+If you didn't understand what WiFi credentials (ssid/pwd) you need to provide your ESP32 device, please ask the instructors for this information.  It's not your school's normal WiFi.  You can use your phone as a Mobile Hotspot and use the credentials you define there.  It should not move more than several MBs of data throughout the course, if you follow our code samples, and likely not even 1Mb.
+
 ## Compile & Upload
 
 Same as in the past modules.
