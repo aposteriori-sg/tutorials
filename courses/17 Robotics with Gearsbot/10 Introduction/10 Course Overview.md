@@ -1,6 +1,12 @@
 Course Overview
 ---
 
+To load this course you can navigate to:
+
+<h1>http://a9i.sg/gearstut</h1>
+
+<img src="images/qr-code.png" alt="drawing" width="360"/>
+
 Robotics is a multi-disciplinary subject.
 
 In order to get a good grasp of Robotics, you need to understand:

@@ -32,7 +32,7 @@ This is called a **sequence**, meaning one statement follows another.
 
 Let's try some simple code sequences.
 
-First, let's make the robot move forward.
+First, let's make the robot **move forward**.
 
 ### Robot Movement
 
@@ -54,13 +54,17 @@ Drag a Move Tank (2nd block) into When Started:
 
 ![](images/tankfwd.png)
 
-Now go back out to **Simulation** tab and clcik **Run**.
+Now go back out to **Simulation** tab and click **Run**.
 
-Your robot should move fwd.
+Your robot should move forward.
 
-How far is it moving forward?  However far 1 rotation of the wheels gets you - which is the circumference of the wheel.  The bigger the wheel the further you'd go...
+How far is it moving forward?  
 
-1 Rotation = 360 degrees.  If you want to go less than 1 rotation, change the distance unit to degrees.  For instance, to go half as far, use 180 degrees.
+However far 1 rotation of the wheels gets you - which is the circumference of the wheel.  The bigger the wheel the further you'd go...
+
+Also, 1 Rotation = 360 degrees.  
+
+If you want to go less than 1 rotation, change the distance unit to degrees.  For instance, to go half as far, use 180 degrees.
 
 If you know your fractions and decimals, 180 degree is 0.5, or half of a full rotation.
 
@@ -80,11 +84,22 @@ If you know your fractions and decimals, 180 degree is 0.5, or half of a full ro
 
 ### Turn Left
 
-If you remember, doing a Left turn required us to only move the right wheel, or make the right wheel go fwd, and the left wheel go back.
+If you remember, doing a Left turn required us to either:
+
+-  only move the right wheel, or 
+
+- make the right wheel go fwd, and the left wheel go back.
+
+![](images/left.jpg)
+
 
 Use the same Move Tank block to try and make a perfect left turn.  
 
 You'll need to decide on which wheel to move fwd/back or keep off, and you will need to do some trial and error on the number of rotations.
+
+<video autoplay muted loop width=100% height="auto">
+  <source src="images/codeLeftTurn.mp4" type="video/mp4">
+</video>
 
 ## NEXT!
 
