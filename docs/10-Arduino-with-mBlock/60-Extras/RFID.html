@@ -164,120 +164,144 @@ void loop() {
 <p>In this exercise we will match 2 cards to each other and blink a light if we have a good match.</p>
 <p>You will need to create match cards, and affix RFID tags to them.  Then read the pairs, using the above code, and copy those pairs as needed in the code below - where we setup matchdb's.</p>
 <p>The basic code to load is as follows:</p>
-<p>```{r setup, include=FALSE}</p>
-<h1>include <SPI.h></h1>
-<h1>include <MFRC522.h></h1>
-<h1>include <Timer.h></h1>
-<h1>define RST_PIN         9          // Configurable, see typical pin layout above</h1>
-<h1>define SS_PIN          10         // Configurable, see typical pin layout above</h1>
-<p>MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance</p>
-<h1>define MAX_SIZE 52</h1>
-<p>String matchdb1[MAX_SIZE];
-String matchdb2[MAX_SIZE];</p>
-<p>bool isMatch(const String&amp; first, const String&amp; second) {
+<pre class="codehilite"><code>#include &lt;SPI.h&gt;
+#include &lt;MFRC522.h&gt;
+#include &lt;Timer.h&gt;
+
+#define RST_PIN         9          // Configurable, see typical pin layout above
+#define SS_PIN          10         // Configurable, see typical pin layout above
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
+
+#define MAX_SIZE 52
+
+String matchdb1[MAX_SIZE];
+String matchdb2[MAX_SIZE];
+
+bool isMatch(const String&amp; first, const String&amp; second) {
   int index1 = -1, index2 = -1;
   for(int i = 0; i &lt; MAX_SIZE; ++i) {
     if (matchdb1[i] == first) {
       index1 = i;
-      Serial.print("Index 1 = ");
+      Serial.print(&quot;Index 1 = &quot;);
       Serial.println(i);
       break;
     }
-  }</p>
-<p>if (index1 == -1) {
-    Serial.println("First card not in match DB");
+  }
+
+  if (index1 == -1) {
+    Serial.println(&quot;First card not in match DB&quot;);
     return false;
-  }</p>
-<p>for(int i = 0; i &lt; MAX_SIZE; ++i) {
+  }
+
+  for(int i = 0; i &lt; MAX_SIZE; ++i) {
     if (matchdb2[i] == second) {
       index2 = i;
-      Serial.print("Index 2 = ");
+      Serial.print(&quot;Index 2 = &quot;);
       Serial.println(i);
       break;
     }
-  }</p>
-<p>if (index2 == -1) {
-    Serial.println("Second card not in match DB");
+  }
+
+  if (index2 == -1) {
+    Serial.println(&quot;Second card not in match DB&quot;);
     return false;
-  }</p>
-<p>return index1 == index2;
-}</p>
-<p>Timer t;
-String lastUID;</p>
-<p>bool inProgress;</p>
-<p>String getUID() {
-  String content= "";
+  }
+
+  return index1 == index2;
+}
+
+Timer t;
+String lastUID;
+
+bool inProgress;
+
+String getUID() {
+  String content= &quot;&quot;;
   byte letter;
   for (byte i = 0; i &lt; mfrc522.uid.size; i++) 
   {
-   //  content.concat(String(mfrc522.uid.uidByte[i] &lt; 0x10 ? " 0" : " "));
+   //  content.concat(String(mfrc522.uid.uidByte[i] &lt; 0x10 ? &quot; 0&quot; : &quot; &quot;));
      content.concat(String(mfrc522.uid.uidByte[i], HEX));
   }
   content.toUpperCase();
   return content;
-}</p>
-<p>void setup() {
+}
+
+void setup() {
   Serial.begin(9600);   // Initialize serial communications with the PC
   while (!Serial);    // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
   SPI.begin();      // Init SPI bus
   mfrc522.PCD_Init();   // Init MFRC522
   delay(4);       // Optional delay. Some board do need more time after init to be ready, see Readme
   mfrc522.PCD_DumpVersionToSerial();  // Show details of PCD - MFRC522 tag Reader details
-  Serial.println(F("Scan PICC to see UID, SAK, type, and data blocks..."));</p>
-<p>// Build Match Tables (up to 52 slots)
-  matchdb1[0] = "DEF26C7A";
-  matchdb2[0] = "BEE26C7A";</p>
-<p>matchdb1[1] = "30307825";
-  matchdb2[1] = "80C67A3";</p>
-<p>inProgress = false;
-}</p>
-<p>String first, second;</p>
-<p>void loop() {
+  Serial.println(F(&quot;Scan PICC to see UID, SAK, type, and data blocks...&quot;));
+
+  // Build Match Tables (up to 52 slots)
+  matchdb1[0] = &quot;DEF26C7A&quot;;
+  matchdb2[0] = &quot;BEE26C7A&quot;;
+
+  matchdb1[1] = &quot;30307825&quot;;
+  matchdb2[1] = &quot;80C67A3&quot;;
+
+  inProgress = false;
+}
+
+
+
+String first, second;
+
+void loop() {
   // Reset the loop if no new tag present on the sensor/reader. This saves the entire process when idle.
   if ( ! mfrc522.PICC_IsNewCardPresent()) {
     return;
-  }</p>
-<p>// Select one of the tags
+  }
+
+  // Select one of the tags
   if ( ! mfrc522.PICC_ReadCardSerial()) {
     return;
-  }</p>
-<p>// Make sure it's a new Unique Tag
-  String UID = getUID();
-  //Serial.println("UID = " + UID + ", LastUID = " + lastUID);
-  if (lastUID != UID || t.read() &gt; 4000) {</p>
-<pre class="codehilite"><code>// Presenting First Card
-if (inProgress == false) {
-  inProgress = true;
-  first = UID;
-  Serial.println(&quot;First = &quot; + UID);
-}
-
-// Presenting Second Card, check match
-else {
-  second = UID;
-  Serial.println(&quot;Second = &quot; + UID);
-  if (isMatch(first,second)) {
-    Serial.println(&quot;MATCH!&quot;);
-    // Blink Light
-    digitalWrite(2, HIGH);
-    delay(1);
-    digitalWrite(2, LOW);
-    delay(1);
-  } 
-  else {
-    Serial.println(&quot;NO MATCH...&quot;);  
   }
-  inProgress = false;
-  first = second = &quot;&quot;;
+
+  // Make sure it's a new Unique Tag
+  String UID = getUID();
+  //Serial.println(&quot;UID = &quot; + UID + &quot;, LastUID = &quot; + lastUID);
+  if (lastUID != UID || t.read() &gt; 4000) {
+
+    // Presenting First Card
+    if (inProgress == false) {
+      inProgress = true;
+      first = UID;
+      Serial.println(&quot;First = &quot; + UID);
+    }
+
+    // Presenting Second Card, check match
+    else {
+      second = UID;
+      Serial.println(&quot;Second = &quot; + UID);
+      if (isMatch(first,second)) {
+        Serial.println(&quot;MATCH!&quot;);
+        // Blink Light
+        digitalWrite(2, HIGH);
+        delay(1);
+        digitalWrite(2, LOW);
+        delay(1);
+      } 
+      else {
+        Serial.println(&quot;NO MATCH...&quot;);  
+      }
+      inProgress = false;
+      first = second = &quot;&quot;;
+    }
+    lastUID = UID;
+
+    Serial.println(UID);
+    t.start();
+
+
+  }
+
 }
-lastUID = UID;
-
-Serial.println(UID);
-t.start();
 </code></pre>
-
-<p>}</p>
-<p>}```</p>
         </div>
         <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
     </div>
