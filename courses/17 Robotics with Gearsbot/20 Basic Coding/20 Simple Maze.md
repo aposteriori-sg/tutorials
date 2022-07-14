@@ -19,6 +19,8 @@ Below that, change:
   <source src="images/mazeSetup.mp4" type="video/mp4">
 </video>
 
+**Challenge 1: Get to the Red Square!**
+
 ## Coding
 
 You'll have to start by making the robot go 1 grid distance forward.  
@@ -29,7 +31,7 @@ Then go 1 grid distance forward again... and so on!
 
 You can write out your program in words first like I just started.  And then translate that to code blocks.
 
-Only use the 2nd Move Tank block under Motion as before.
+**Only use the 2nd Move Tank block under Motion as before.**
 
 ![](images/tankfwd.png)
 
