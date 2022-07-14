@@ -1,7 +1,7 @@
 pH Sensor
 ---
 
-See https://wiki.dfrobot.com/PH_meter_SKU__SEN0161_
+See [THIS LINK](https://wiki.dfrobot.com/PH_meter_SKU__SEN0161_) for pH Sensor details & Code.
 
 ### Test Sensor
 
@@ -13,7 +13,7 @@ For connection to the IoT microcontroller, you can use the same connection diagr
 
 Just replace the hygrometer board with the pH sensor board.
 
-In the code provided, replace A0 with pin 34  and the LED pin with 2 as follows:
+In the [code provided](https://wiki.dfrobot.com/PH_meter_SKU__SEN0161_), replace A0 with pin 34  and the LED pin with 2 as follows:
 
 ```
 #define SensorPin A0            //pH meter Analog output to Arduino Analog Input 0
