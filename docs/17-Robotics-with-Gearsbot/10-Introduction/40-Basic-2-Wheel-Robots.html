@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with GearsBot</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with GearsBot
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the virtual GearsBot platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-GearsBot-App.html"><li >The GearsBot App</li></a><a href="../10-Introduction/40-Basic-2-Wheel-Robots.html"><li class="current">2-Wheel Robots</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/20-Simple-Maze.html"><li >Simple Maze Challenge</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>2-Wheel Robots</h2>
+<p>The most common robotic platforms in use today for industrial, commmercial and educational purposes are <strong>2-Wheel Differentiated-Drive</strong> robots.</p>
+<p><strong>2 Wheels</strong> just means they are moving by rotating two wheels.  While normal cars use 4 wheels, most cars are 2-wheel drive (2WD) and the other 2 wheels are just for support...</p>
+<p>Moreover, in normal cars one engine is usually powering 2 or 4 wheels because their transmissions are connected.  The steering is handled via rotating the wheels along a second dimension.  </p>
+<p><img alt="" src="images/rackandpinion.gif" /></p>
+<p><strong>Differentiated Drive</strong> means that each wheel is controlled by a different, independent motor.  And the steering is handled by controlling each wheel separately.</p>
+<p>For instance, rotating one wheel forward, and the second wheel backwards would cause a car to rotate about the center between those two wheels.</p>
+<p>Here is an example of 2-wheel wharehouse robots:</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/FBl4Y55V2Z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>The Roomba, various robots deployed to Hawker centers and food courts are all built on similar principles.</p>
+<p>Usually, you will have 2 motors each rotating a wheel or tire that are aligned next to one another.</p>
+<p>Depending on wheel placement, you will also need one or more caster wheels or ball bearings to just balance the rest of the frame, like this:</p>
+<p><img alt="" src="images/2wheelrobot.jpg" /></p>
+<h2>Forward</h2>
+<p>To move forward, you need to rotate both tires forward at the same speed:</p>
+<p><img alt="" src="images/forward.jpg" /></p>
+<hr />
+<h2>Back</h2>
+<p>To move forward, you need to rotate both tires back at the same speed:</p>
+<p><img alt="" src="images/back.jpg" /></p>
+<hr />
+<h2>Right</h2>
+<p>To turn in either direction you will need to vary the direction and/or speeds of the two motors.</p>
+<p>For instance to turn right, you can rotate the left tire forward and the right tire backward at the same speed:</p>
+<p><img alt="" src="images/right.jpg" /></p>
+<hr />
+<h2>Left</h2>
+<p>Similarly, to turn left, you reverse and rotate left tire back, and right tire forward.
+<br><br>
+<img alt="" src="images/left.jpg" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

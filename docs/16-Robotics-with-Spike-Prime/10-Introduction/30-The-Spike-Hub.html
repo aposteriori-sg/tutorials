@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with Spike Prime</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with Spike Prime
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO Spike Prime platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-Spike-Hub.html"><li class="current">The Spike Hub & App</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/20-Loops.html"><li >Loops</li></a><a href="../20-Basic-Coding/30-Events.html"><li >Events</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>The Spike Hub &amp; App</h2>
+<p><img alt="" src="images/spikehub.jpg" /></p>
+<p>The Spike Prime Hub is the brain of any robot we make.</p>
+<p>But we, the programmers, must tell the brain what to think!</p>
+<p>The hub contains <strong>six ports</strong> for controling motors and getting information from sensors.  </p>
+<p>The hub also has a <strong>5x5 LED matrix</strong> as its display, and a <strong>speaker</strong> that can emit different sounds.</p>
+<p>Furthermore, the hub contains an internal <strong>gyro sensor</strong> that can sense the hub's tilt in 3 dimensions.</p>
+<p>We will deal with motors and sensors in later parts of this Robotics tutorial, but for now, let's talk about some basic coding using the display and speaker of the hub. </p>
+<h2>Spike App</h2>
+<p>On your PC/Laptop or Tablet you will need to download the <strong>Spike App</strong> to continue wit this tutorial.</p>
+<p>Get the app <a href="https://education.lego.com/en-us/downloads/spike-app/software">here</a>.</p>
+<h3>Start a New Project</h3>
+<p>To begin exploring the capabilities of the Hub and do some basic coding, you will need to start a <strong>New Project [+]</strong>.  </p>
+<p>You can give it any name you wish.</p>
+<p><img alt="" src="images/newproject.jpg" /></p>
+<p>Make sure to use <strong>World Blocks</strong>.</p>
+<h2>Connect the Hub</h2>
+<p>There are two ways to connect the hub to your programming device.  </p>
+<p>If you are using a laptop you can use either a <strong>USB cable</strong> or <strong>Bluetooth</strong>.  </p>
+<p><img alt="" src="images/connect.jpg" /></p>
+<p><em>Note: If you are using a tablet, you have to use Bluetooth.</em></p>
+<p>Click the <strong>Connect</strong> button on the top of your new project window and follow instructions.  Make sure your hub is charged or connected to a power source. </p>
+<p>Once the Spike Hub is connected to the Spike App you should see this:</p>
+<p><img alt="" src="images/connected.jpg" /></p>
+<p>And you can begin coding the project.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Internet of Things</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Internet of Things
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-IoT.html"><li >Internet of Things</li></a><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-References.html"><li class="current">References & Resources</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/15-Compile-and-Upload.html"><li >Compile & Upload</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li >RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul><p>IoT Projects</p><ul><a href="../30-IoT-Projects/10-Doorbell.html"><li >Smart Doorbell</li></a><a href="../30-IoT-Projects/15-Alarm.html"><li >Intruder Alarm</li></a><a href="../30-IoT-Projects/17-Servo.html"><li >Remote-Controlled Motor</li></a><a href="../30-IoT-Projects/20-Planter.html"><li >Smart Planter</li></a><a href="../30-IoT-Projects/30-GPS.html"><li >GPS</li></a><a href="../30-IoT-Projects/31-pH-Sensor.html"><li >pH Sensor</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>References &amp; Resources</h2>
+<h2>Blynk App</h2>
+<p>The Blynk App to download to your phone/tablet is the LEGACY version of the app:</p>
+<h2><a href="https://play.google.com/store/apps/details?id=cc.blynk">Android</a></h2>
+<p><img alt="" src="images/qrblynkandroid.png" /></p>
+<h2><a href="https://apps.apple.com/us/app/blynk-0-1-legacy/id808760481">iOS</a></h2>
+<p><img alt="" src="images/qrblynkios.png" /></p>
+<h2>Blynk Guide &amp; Examples</h2>
+<ul>
+<li><a href="http://docs.blynk.cc/#widgets">http://docs.blynk.cc/#widgets</a></li>
+<li><a href="https://examples.blynk.cc/">https://examples.blynk.cc/</a></li>
+</ul>
+<h2>Blynk Registration &amp; Dashboard Tokens</h2>
+<ul>
+<li><a href="https://iot.aposteriori.com.sg/register.html">https://iot.aposteriori.com.sg/register.html</a></li>
+<li><a href="https://iot.aposteriori.com.sg/token.html">https://iot.aposteriori.com.sg/token.html</a></li>
+</ul>
+<h2>Simulators</h2>
+<p>The IoT simulators can be found <a href="http://a9i.sg/iot">here</a>.</p>
+<h2>ESP32 Pinout</h2>
+<p>The pinout diagram can be found <a href="https://lessons.aposteriori.com.sg/20-Internet-of-Things/20-Getting-Real/images/esp32pinout.png">here</a></p>
+<h2>Arduino Reference</h2>
+<p><a href="https://www.arduino.cc/reference/en/">https://www.arduino.cc/reference/en/</a></p>
+<h2>Arduino CLI (flash without recompiling)</h2>
+<p><a href="https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Windows_64bit.zip">https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Windows_64bit.zip</a></p>
+<h2>NeoPixel Library Reference</h2>
+<p><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use">https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use</a></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

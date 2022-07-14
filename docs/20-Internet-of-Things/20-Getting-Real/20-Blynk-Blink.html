@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Internet of Things</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Internet of Things
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-IoT.html"><li >Internet of Things</li></a><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-References.html"><li >References & Resources</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/15-Compile-and-Upload.html"><li >Compile & Upload</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li class="current">Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li >RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul><p>IoT Projects</p><ul><a href="../30-IoT-Projects/10-Doorbell.html"><li >Smart Doorbell</li></a><a href="../30-IoT-Projects/15-Alarm.html"><li >Intruder Alarm</li></a><a href="../30-IoT-Projects/17-Servo.html"><li >Remote-Controlled Motor</li></a><a href="../30-IoT-Projects/20-Planter.html"><li >Smart Planter</li></a><a href="../30-IoT-Projects/30-GPS.html"><li >GPS</li></a><a href="../30-IoT-Projects/31-pH-Sensor.html"><li >pH Sensor</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Blynk Blink</h2>
+<p>If you managed to make your on-board LED blink, that's cool!</p>
+<p>But, now we want to try to control that LED from your phone/tablet using IoT technology.</p>
+<h3>The Blynk Dashboard - Real Pins</h3>
+<p>In your phone/tablet, create a new project choosing <em>ESP32 Dev Board</em> and <em>Wi-Fi</em>:</p>
+<p><img alt="" src="images/blynkesp32.jpg" /></p>
+<p>Create the project, and add a button, but this time, instead of a Virtual Pin, let's just make this control our GPIO Pin 2 directly:</p>
+<p><img alt="" src="images/buttongp2.jpg" /></p>
+<h3>Blynk Library</h3>
+<p>OK, back to Arduino on your laptop.</p>
+<p>First, we will need to add the Blynk library, so you can use its API to connect to our Blynk server and communicate with your Blynk dashboard.</p>
+<p>Head to <strong>Tools -&gt; Manage Libraries.. </strong></p>
+<p>Search for Blynk and install <strong>version 1.0.1</strong></p>
+<p><img alt="" src="images/blynklib.jpg" /></p>
+<h3>Blynk Program</h3>
+<p>We now need to change our ESP32 program to:</p>
+<ul>
+<li>Connect to WiFi</li>
+<li>Establish a connection to Blynk Server</li>
+<li>Connect to our Blynk Dashboard</li>
+<li>And that's it...</li>
+</ul>
+<p>You can copy this code into the Arduino Sketch area:</p>
+<pre class="codehilite"><code>#define BLYNK_PRINT Serial
+#include &lt;BlynkSimpleEsp32.h&gt;
+
+// See Auth Token in email from Blynk...
+char auth[] = &quot;YourAuthToken&quot;;
+
+// Your WiFi credentials.
+// Set password to &quot;&quot; for open networks.
+char ssid[] = &quot;YourNetworkName&quot;;
+char pass[] = &quot;YourPassword&quot;;
+
+void setup() {
+  // Debug console
+  Serial.begin(9600);
+
+  Blynk.begin(auth, ssid, pass, &quot;a9i.sg&quot;, 8081);
+}
+
+void loop() {
+  Blynk.run();
+}
+</code></pre>
+
+<h3>Auth Token</h3>
+<p>Get the autohrization token for your Blynk App from <a href="https://iot.aposteriori.com.sg/token.html">here</a>.</p>
+<h3>WiFi Info</h3>
+<p>If you didn't understand what WiFi credentials (ssid/pwd) you need to provide your ESP32 device, please ask the instructors for this information.  It's not your school's normal WiFi.  You can use your phone as a Mobile Hotspot and use the credentials you define there.  It should not move more than several MBs of data throughout the course, if you follow our code samples, and likely not even 1Mb.</p>
+<h2>Compile &amp; Upload</h2>
+<p>Same as in the past modules.</p>
+<p>See instructions <a href="../20-Getting-Real/15-Compile-and-Upload.html" target="_blank">here</a></p>
+<h2>Test</h2>
+<p>After that, if you provided the correct SSID, Password, and Auth Token you should see your Blynk dashboard warning light turn off, and the GP2-controlling button should be able to turn the small on-board LED on and off!</p>
+<p>If something doesn't seem to work, or if you just want to see some logs from your board, try opening the <strong>Serial Monitor</strong> to see if the board reports any issues or if it's getting stuck in a particular place:</p>
+<h2>Debug</h2>
+<p><img alt="" src="images/serialmon.jpg" /></p>
+<p>Make sure your monitor's serial speed matches the one you set in the code:</p>
+<p><img alt="" src="images/monitorlogs.jpg" /></p>
+<pre class="codehilite"><code>  Serial.begin(9600);
+</code></pre>
+
+<p>You have now integrated your first real-world IoT system!</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

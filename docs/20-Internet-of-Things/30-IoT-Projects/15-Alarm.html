@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Internet of Things</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Internet of Things
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-IoT.html"><li >Internet of Things</li></a><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-References.html"><li >References & Resources</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/15-Compile-and-Upload.html"><li >Compile & Upload</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li >RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul><p>IoT Projects</p><ul><a href="../30-IoT-Projects/10-Doorbell.html"><li >Smart Doorbell</li></a><a href="../30-IoT-Projects/15-Alarm.html"><li class="current">Intruder Alarm</li></a><a href="../30-IoT-Projects/17-Servo.html"><li >Remote-Controlled Motor</li></a><a href="../30-IoT-Projects/20-Planter.html"><li >Smart Planter</li></a><a href="../30-IoT-Projects/30-GPS.html"><li >GPS</li></a><a href="../30-IoT-Projects/31-pH-Sensor.html"><li >pH Sensor</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Intruder Alarm</h2>
+<p>In this project, we create a simple intruder alert, using an IR Proximity Sensor.  You can use the same technology to check on open doors or windows, or automate some manufacturing process.</p>
+<h2>LED Widget</h2>
+<p>The first step is to add the LED widget to your dashboard:</p>
+<p><img alt="" src="images/ledwidget.jpg" /></p>
+<p>Change the pin of the LED widget to associate it with an available Virtual Pin, say V0.</p>
+<p>You can also change its color to make it red, as in a Red Flag.</p>
+<p>Otherwise, it is just a passive monitor of messages from the ESP32 board.</p>
+<p>Pick a place for it on the dashboard and leave it there.
+You can resize it to be more obvious.</p>
+<p><img alt="" src="images/led.jpg" /></p>
+<h2>Connecting the IR Proximity Sensor</h2>
+<h3>List of Parts</h3>
+<p>For this project you will need the following electronics from your kit beside the ESP32:</p>
+<ul>
+<li>Breadboard</li>
+<li>IR Proximity Sensor</li>
+<li>1 female-to-male jumper wire</li>
+<li>4 male-to-male jumper wires</li>
+</ul>
+<h2>Connect</h2>
+<p>First, get your breadboard ready:</p>
+<p><img alt="" src="images/esp32withir1.png" /></p>
+<p>It is upside-down on purpose.  I want Row 1 to be on the bottom.</p>
+<p>Now, you need to attach the ESP32 to the breadboard.</p>
+<p>Be <strong>VERY CAREFUL</strong> not to damage the pins when you do this:</p>
+<ul>
+<li>Line the pins up with the holes<ul>
+<li>The first pin from the bottom should be on row 1</li>
+<li>The last pin on the top should be row 19</li>
+</ul>
+</li>
+<li>One side of the board will be dangling in the air to the left of the breadboard</li>
+<li>Start pushing in from one end of the ESP slightly, then try to push from the other end of the ESP</li>
+<li>All the pins should be pushed into the holes from a perpendicular angle</li>
+</ul>
+<p><img alt="" src="images/esp32withir2.png" /></p>
+<p>Next, use a Female-to-Male jumper wire to connect the 3v3 (top left pin) from the ESP32 to the '+' column of the breadboard on the right hand side.</p>
+<p>Then, use a Male-to-Male wire to connect the GND (top right pin) from the ESP32 to the '-' column on the right hand side.</p>
+<p>The '+' may be the outermost column or the one just next to it.  Or there may be no markings.  Just pick one of those 2 outermost columns as (+) and one as (-) and connect as shown.</p>
+<p>The wire colors are not important.</p>
+<p><img alt="" src="images/esp32withir3.png" /></p>
+<p>Now, use the female-to-male connectors to connect as follows:</p>
+<table>
+<thead>
+<tr>
+<th>IR Sensor</th>
+<th>ESP32 / Breadboard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VCC</td>
+<td>'+' column</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>'-' column</td>
+</tr>
+<tr>
+<td>OUT</td>
+<td>GPIO PIN 15 (G15)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="images/esp32withir4.png" /></p>
+<p>This completes our Smart Doorbell circuit.
+Use the short USB wire to connect the ESP32 to your laptop to power it up.</p>
+<h2>Coding</h2>
+<h3>Start with Blynk Blink code</h3>
+<p>Open the Arduino application.</p>
+<p>We need to create an LED Widget variable that will be tied to the Virtual Pin V0 and control the Blynk app's LED we created in the dashboard.</p>
+<pre class="codehilite"><code>WidgetLED led(V0);
+</code></pre>
+
+<p>We will use Pin 15 to monitor the IR Sensor.
+We need to do this on a recurring schedule, so we will need to create a timer as well.</p>
+<p>BlynkTimer timer;</p>
+<p>And we will need to set it to kickoff with our IR check code every so often:</p>
+<pre class="codehilite"><code>  timer.setInterval(500L, blinkLedWidget);
+</code></pre>
+
+<p>This is the final code you will need:</p>
+<pre class="codehilite"><code>#define BLYNK_PRINT Serial
+#include &lt;BlynkSimpleEsp32.h&gt;
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = &quot;xxxx&quot;;
+
+// Your WiFi credentials.
+// Set password to &quot;&quot; for open networks.
+char ssid[] = &quot;xxxx&quot;;
+char pass[] = &quot;xxxx&quot;;
+
+// The timer for checking the IR state
+BlynkTimer timer;
+
+// Control the LED widget via Virtual V0 from this variable
+WidgetLED led(V0);
+
+// This is the function we will call from our timer every so often
+// It checks the state of GPIO Pin 15 (G15).
+void blinkLedWidget() {
+
+  // If the IR Sensor line is HIGH, it means there is nothing in front of it
+  if (digitalRead(15)) {
+    led.off();
+  }
+  else {
+    led.on();
+    delay(2000);  // Wait 2 seconds, so the user gets a clear signal
+  }
+}
+
+void setup() { 
+  // Set G15 as INPUT
+  pinMode(15, INPUT);
+
+  Serial.begin(9600);
+  Blynk.begin(auth, ssid, pass, &quot;a9i.sg&quot;, 8081);
+
+  // Setup the timer to go off twice a second (every 500ms) 
+  timer.setInterval(500L, blinkLedWidget);
+}
+
+void loop() {
+  Blynk.run();
+  timer.run();
+}
+</code></pre>
+
+<p>That's it!  All you have to do is compile and upload these changes.</p>
+<h2>Compile &amp; Upload</h2>
+<p>See instructions <a href="../20-Getting-Real/15-Compile-and-Upload.html" target="_blank">here</a></p>
+<h2>Test</h2>
+<p>After a successful upload you can test by activating the IR Sensor by placing an object in front of it.</p>
+<p>It should cause the LED on your dashboard to light up for 2 seconds.</p>
+<p><img alt="" src="images/testir.png" /></p>
+<p>If it doesn't, you can ask for help.</p>
+<h2>Challenges &amp; Showcases</h2>
+<ul>
+<li>
+<p>See if you can attach the ESP32 to an external power source like a PowerBank charger and glue it to the outer doorframe of the classroom.  </p>
+</li>
+<li>
+<p>Show your teachers how the new Intruder Alert could work - in case a student or some unwanted guest tries to sneak into their office?  They can get a message on their phone and ask school security to look into the matter ASAP!</p>
+</li>
+<li>
+<p>Or it can be used by parents to spy on their kids.   Make sure they stay at their desk doing homework...</p>
+</li>
+<li>
+<p>(MODERATE) Add code to also send a notification with sound alarm to the Blynk App - you will need to add the notification widget like in the Doorbell example.  </p>
+</li>
+<li>
+<p>(MODERATE) This setup can also be used to detect if a refrigerator door is kept open.  In that case it would also be useful to give an indication to whoever is forgetting to close the door by shining a light on the door to the remind them to close it.  You will need your RGB Strip or a single LED to create a warning light.  (it can even be done with the built-in LED on the ESP32)</p>
+</li>
+</ul>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
