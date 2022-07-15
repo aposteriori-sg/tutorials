@@ -42,9 +42,9 @@ Find the **Motion** tab, the first one, and look at the various choices... It ma
 
 ![](images/motion.JPG)
 
-We will only use the 2nd block - **Move tank with _ left  speed and _ right speed for _ time/distance**
+We will only use the 2nd block - **Move tank For ___**
 
-We will discuss all the other blocks in due time, but for now it shoudl suffice to use this one block.
+We will discuss all the other blocks in due time, but for now it should suffice to use this one block.
 
 ### Forward
 
@@ -78,7 +78,7 @@ If you know your fractions and decimals, 180 degree is 0.5, or half of a full ro
 
 - Try to write a simple program that make the robot go back and forth, back and forth over and over!
 
-<video autoplay muted loop width=100% height="auto">
+<video autoplay muted loop width=450 height="auto">
   <source src="images/backandforth.mp4" type="video/mp4">
 </video>
 
@@ -97,12 +97,12 @@ Use the same Move Tank block to try and make a perfect left turn.
 
 You'll need to decide on which wheel to move fwd/back or keep off, and you will need to do some trial and error on the number of rotations.
 
-<video autoplay muted loop width=100% height="auto">
+<video autoplay muted loop width=450 height="auto">
   <source src="images/codeLeftTurn.mp4" type="video/mp4">
 </video>
 
 ## NEXT!
 
-Let's use what we've learned to traverse a maze!
+Let's use what we've learned to complete some paintings!
 
 
