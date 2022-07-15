@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with GearsBot</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with GearsBot
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the virtual GearsBot platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-GearsBot-App.html"><li >The GearsBot App</li></a><a href="../10-Introduction/40-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/15-Painting-Challenges.html"><li >Painting Challenges</li></a><a href="../20-Basic-Coding/20-Simple-Maze.html"><li >Simple Maze Challenge</li></a></ul><p>Mechanical Design</p><ul><a href="../30-Mechanical-Design/Arm-Actuator.html"><li class="current">Arm Actuator</li></a><a href="../30-Mechanical-Design/Basic-Shapes.html"><li >Basic Shapes</li></a><a href="../30-Mechanical-Design/Robot-Configurator.html"><li >Robot Configurator</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Arm Actuator</h2>
+<p><strong>Actuators</strong> are electromechanical parts on your robot that can effect changes in the physical environment.</p>
+<p>For instance, a <strong>motor</strong> can make your robot's wheels spin, or wave its hand, or swivel its head.</p>
+<p>Other types of actuators might <strong>create light or sound</strong>.</p>
+<p>And yet other types might do other strange things, like turn on a magnetic field!</p>
+<p>We are going to add an Arm Actuator to our robor so we can control its arms!  You could use an Arm Actuator to control other parts, like a crane or a door or anything that can rotate around a pivot.</p>
+<video autoplay muted loop width=100% height="auto">
+  <source src="images/wave.mp4" type="video/mp4">
+</video>
+
+<p>Arm Actuators most closely simulate a simple <a href="https://www.youtube.com/watch?v=1WnGv-DPexc">servo motor</a>.</p>
+<h2>Adding an Arm Actuator</h2>
+<p>Let's go back to our <a href="https://gears.aposteriori.com.sg/configurator.html">Robot Configurator</a>.</p>
+<p>Where we now have boxes for arms, we are going to stick arm actuators.</p>
+<p>When we add actuators we cannot add them to our basic shapes, so we have to add them to the Body or other Actuators.</p>
+<p>So let's add an <strong>Arm Actuator</strong> to the body, but place it near the chest, where the arms come out - for RoboFred, that's the big red cylinder.</p>
+<p><img alt="" src="images/addarmactuator.png" /></p>
+<p>When you add the <strong>Arm Actuator</strong>, the default location will likely be hillarious, and everyone will scream and giggle!</p>
+<p>So, I quickly move it to the left of my robot:</p>
+<video autoplay muted loop width=100% height="auto">
+  <source src="images/addarmactuator.mp4" type="video/mp4">
+</video>
+
+<p>You can see how the actuator's arm will be rotating.</p>
+<h2>Positioning &amp; Rotating</h2>
+<p>You can change the actuator's rotation so that the arm could have a different arc relative to your robot.</p>
+<p>In this sample case, our arms are coming out <strong>40 degrees</strong> angle to the chest, so we will make the Arm Actuator also come out at 40 degrees.</p>
+<p>Notice that when you move the actuator, it's arm follows. </p>
+<video autoplay muted loop width=100% height="auto">
+  <source src="images/movearmactuator.mp4" type="video/mp4">
+</video>
+
+<p>The arm is more or less a guide for you to visualize how shapes connected to your actuator will behave.  But the arm itself cannot be resized other than length, so we will be adding another Box on top of it to replicate our arm...</p>
+<p>When you add a Box to the Actuator, the Box will be in a relative position and rotation to the Actuator.  So when you move it along various axes it may move diagonally to the rest of the robot.</p>
+<p><img alt="" src="images/armreference.png" /></p>
+<p>Try to get your arm actuator and the Arm shape (box for RoboFred) into a plausible location and rotation.  </p>
+<p>Then Save &amp; Load into the simulator.</p>
+<p>In thr configurator, when you add an actuator, it will tell you which Motor Port controls it:</p>
+<p><img alt="" src="images/motorport.png" /></p>
+<p>Since it says <strong>outC</strong>, we will use Motor (NOT Movement) code blocks to control this one motor with Port C:</p>
+<p><img alt="" src="images/runmotor.png" /></p>
+<p>Try adding blocks to wave (move arm up, then down).</p>
+<h2>Adding More Arms</h2>
+<p>On your own add a second Arm Actuator to control the second arm.</p>
+<p>Take your time.  </p>
+<p>This is not easy!</p>
+<p>You should be able to wave or otherwise control both arms separately by using various Motor blocks with port C and port D.</p>
+<p>You can even make a walking robot, if you're so inclined:</p>
+<video autoplay muted loop width=100% height="auto">
+  <source src="images/walker.mp4" type="video/mp4">
+</video>
+
+<p>Ergh, that's going to need some work...</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
