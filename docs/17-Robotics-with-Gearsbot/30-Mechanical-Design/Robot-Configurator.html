@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with GearsBot</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with GearsBot
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the virtual GearsBot platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-GearsBot-App.html"><li >The GearsBot App</li></a><a href="../10-Introduction/40-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/15-Painting-Challenges.html"><li >Painting Challenges</li></a><a href="../20-Basic-Coding/20-Simple-Maze.html"><li >Simple Maze Challenge</li></a></ul><p>Mechanical Design</p><ul><a href="../30-Mechanical-Design/Basic-Shapes.html"><li >Basic Shapes</li></a><a href="../30-Mechanical-Design/Robot-Configurator.html"><li class="current">Robot Configurator</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Robot Configurator</h2>
+<p>We can do a lot more with the Worlds and Robots we already have in GearsBot.</p>
+<p>But, now we want to try to make cool-looking robots for a Robotic Dance Show!</p>
+<p>We can modify the basic GearsBot in the <a href="https://gears.aposteriori.com.sg/configurator.html">Robot Configurator</a>.</p>
+<p><a href="https://gears.aposteriori.com.sg/configurator.html"><img alt="" src="images/configurator.png" /></a></p>
+<p>Some Basics:</p>
+<ul>
+<li>
+<p>The left pane contains all the different mechanical parts of your Robot:</p>
+</li>
+<li>
+<p>Simple shapes</p>
+</li>
+<li>Sensors</li>
+<li>
+<p>Actuators</p>
+</li>
+<li>
+<p>The right pane is for properties for whichever robot part is selected</p>
+</li>
+<li>
+<p>Height</p>
+</li>
+<li>Width</li>
+<li>Depth</li>
+<li>Relative Position</li>
+<li>Rotation</li>
+<li>Color/Skin</li>
+<li>
+<p>More...</p>
+</li>
+<li>
+<p>You can use the mouse to rotate, zoom, pan the configured robot in the middle.  You will need to get good at that to:</p>
+</li>
+<li>
+<p>Place things relative to other things</p>
+</li>
+<li>View your robot from different angles</li>
+</ul>
+<h2>Let's Go Real Simple</h2>
+<p>First let's strip our basic robot of all its sensors and magnet actuator...</p>
+<p>Under <strong>Body</strong> in the left pane, take turns clicking on all the extra parts associated with the robot, and delete them!</p>
+<p><img alt="" src="images/deleteparts.png" /></p>
+<p>You should be left with just a Body!</p>
+<p>Feel free to customize the base of your robot:</p>
+<ul>
+<li>Height, Weidth, Length</li>
+<li>Size of wheels</li>
+<li>Size and offset of Caster (ball in back)</li>
+<li>Color or Skin</li>
+</ul>
+<p>For instance:</p>
+<p><img alt="" src="images/custombody.png" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
