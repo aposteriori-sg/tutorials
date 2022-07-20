@@ -29,6 +29,6 @@ As such, our robots will all share some basic electronic & mechanical elements:
 
 ![](images/gearsbot_paintball.png)
 
-In GearsBot, we don't need to worry about the Brain, which usually requires an electronic microcontroller with casing and wires coming out of it to sensors, actuators, and sometimes, an external power source.
+In [GearsBot](https://gears.aposteriori.com.sg/), we don't need to worry about the Brain, which usually requires an electronic microcontroller with casing and wires coming out of it to sensors, actuators, and sometimes, an external power source.
 
 We also have the luxury of working with some alternative actuation you don't see very often, like a paintball launcher!

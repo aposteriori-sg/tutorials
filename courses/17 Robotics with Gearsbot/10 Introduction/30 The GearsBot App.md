@@ -3,7 +3,7 @@ The GearsBot App
 
 ![](images/gearsbot.png)
 
-The GearsBot app was developed by Cort Wee of A Posteriori in Singapore during COVID lockdowns in 2020-2021.
+The [GearsBot app](https://gears.aposteriori.com.sg/) was developed by Cort Wee of A Posteriori in Singapore during COVID lockdowns in 2020-2021.
 
 The project is completely open-source, and has been contributed to by many other developers in the past few years, and used freely by an active and enthusiastic community all over the world.
 

@@ -3,23 +3,18 @@ Simple Maze Challenge
 
 ## Maze World
 
-Let's create a Challenge World using the Maze concept.
+You are ready for the Maze Test!
 
-First go to the **Simulation** tab, and click the World Map icon.
+**Test 1: Get to the Red Square!**
 
-Then choose **Maze Map**.
 
-Below that, change:
+- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
 
-- The Number of columns to 3
-- The Number of rows to 3
-- The Maze Seed to 0
+- Select World: *Challenges*
 
-<video autoplay muted loop width=100% height="auto">
-  <source src="images/mazeSetup.mp4" type="video/mp4">
-</video>
+- Select *Maze: 3X3 Red*
 
-**Challenge 1: Get to the Red Square!**
+- Follow instructions and note down the *special Code* after doing the challenge successfully!
 
 ## Coding
 
@@ -47,14 +42,24 @@ If something doesn't work as expected, figure out which block is probably causin
 
 Test and repeat... Eventually your robot will glide all the way to the finish area - blue grid.
 
-## Challenges
+**Test 2: Get to the Pink Square!**
 
-- Try setting the Maze Seed to 2 and make it all the way to the Pink square.
+You can reuse the 3X3 Red code you created.  You need to get a little further!
 
-- Try setting the rows and columns to 4, to get a bigger maze.  Can you make it to the end?
+- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
 
-![](images/4by4maze.PNG)
+- Select World: *Challenges*
 
-## Observations
+- Select *Maze: 3X3 Pink*
 
-Discuss with your teacher, mentor or other students what are some of the things you noticed about the Maze World and your robot's behavior.
+- Follow instructions and note down the *special Code* after doing the challenge successfully!
+
+**Test 3: A Bigger Maze!**
+
+- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+
+- Select World: *Challenges*
+
+- Select *Maze: 4X4 Red* or *Maze: 4X4 Pink*
+
+- Follow instructions and note down the *special Code* after doing the challenge successfully!

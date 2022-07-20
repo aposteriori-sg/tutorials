@@ -1,6 +1,8 @@
 Sequences
 ---
 
+Let's find out about Sequential programs in [GearsBot](https://gears.aposteriori.com.sg/).
+
 ## Blocks Tab
 
 Navigate to the Blocks tab.
@@ -82,27 +84,13 @@ If you know your fractions and decimals, 180 degree is 0.5, or half of a full ro
   <source src="images/backandforth.mp4" type="video/mp4">
 </video>
 
-### Turn Left
+## Test 
 
-If you remember, doing a Left turn required us to either:
+- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
 
--  only move the right wheel, or 
+- Select World: *Challenges*
 
-- make the right wheel go fwd, and the left wheel go back.
+- Select *Basic: Move*
 
-![](images/left.jpg)
-
-
-Use the same Move Tank block to try and make a perfect left turn.  
-
-You'll need to decide on which wheel to move fwd/back or keep off, and you will need to do some trial and error on the number of rotations.
-
-<video autoplay muted loop width=450 height="auto">
-  <source src="images/codeLeftTurn.mp4" type="video/mp4">
-</video>
-
-## NEXT!
-
-Let's use what we've learned to complete some paintings!
-
+- Follow instructions and note down the *special Code* after doing the challenge successfully!
 
