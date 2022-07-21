@@ -15,14 +15,14 @@ The *Sleep Block* under the *Control* Blocks category will do just that.
 
 **Challenges:**
 
+Use [THIS LINK](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FM9YRPKGWt7.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json) to add Sleep into your code.
+
 - Go back and forth like before, but add a 1 second stop between each direction
 
 ## Test
 
-- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FUPL7UbfCnF.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
 
-- Select World: *Challenges*
-
-- Select * Basic: Sequential Movements*
+- Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!

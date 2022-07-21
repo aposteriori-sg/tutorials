@@ -7,12 +7,11 @@ You are ready for the Maze Test!
 
 **Test 1: Get to the Red Square!**
 
+- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FuocXxvB4c4.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
 
-- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+- Click on *Simulator Tab* to see Challenge
 
-- Select World: *Challenges*
-
-- Select *Maze: 3X3 Red*
+- Follow instructions and note down the *special Code* after doing the challenge successfully!
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
 
@@ -26,7 +25,7 @@ Then go 1 grid distance forward again... and so on!
 
 You can write out your program in words first like I just started.  And then translate that to code blocks.
 
-**Only use the 2nd Move Tank block under Motion as before.**
+**Only use the Move Tank block under Motion as before.**
 
 ![](images/tankfwd.png)
 
@@ -46,20 +45,16 @@ Test and repeat... Eventually your robot will glide all the way to the finish ar
 
 You can reuse the 3X3 Red code you created.  You need to get a little further!
 
-- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FkKLy7LPrdt.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
 
-- Select World: *Challenges*
-
-- Select *Maze: 3X3 Pink*
+- Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
 
 **Test 3: A Bigger Maze!**
 
-- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F5AP3fmip7c.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
 
-- Select World: *Challenges*
-
-- Select *Maze: 4X4 Red* or *Maze: 4X4 Pink*
+- Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!

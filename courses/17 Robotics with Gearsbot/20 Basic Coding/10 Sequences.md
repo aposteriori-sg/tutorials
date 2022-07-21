@@ -1,7 +1,7 @@
 Sequences
 ---
 
-Let's find out about Sequential programs in [GearsBot](https://gears.aposteriori.com.sg/).
+Let's find out about Sequential programs in [GearsBot](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FM9YRPKGWt7.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FRX5XYqn8in.json).
 
 ## Blocks Tab
 
@@ -86,11 +86,9 @@ If you know your fractions and decimals, 180 degree is 0.5, or half of a full ro
 
 ## Test 
 
-- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FM5HDzaVWhm.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FRX5XYqn8in.json&worldScripts=world_challenges)
 
-- Select World: *Challenges*
-
-- Select *Basic: Move*
+- Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
 

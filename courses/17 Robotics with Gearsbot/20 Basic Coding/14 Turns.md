@@ -18,6 +18,8 @@ If you remember, doing a Left turn required us to either:
 
 ## It's Your Turn!
 
+Load [THIS LINK](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FM9YRPKGWt7.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json)
+
 Use the same Move Tank block to try and make a perfect *left turn*.  
 
 You'll need to decide on which wheel to move fwd/back or keep off, and you will need to do some trial and error on the number of rotations.
@@ -34,11 +36,9 @@ You'll need to decide on which wheel to move fwd/back or keep off, and you will 
 
 ## Test 
 
-- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldScripts=world_challenges)
+- Load [this version of GearsBot](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FMLrEZXWzdo.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
 
-- Select World: *Challenges*
-
-- Select *Basic: Turns*
+- Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
 
