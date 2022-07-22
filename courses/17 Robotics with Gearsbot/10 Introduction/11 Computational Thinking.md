@@ -28,13 +28,13 @@ Machines are pretty bad still at some type of human thinking, but can be really 
 Four Computational Thinking skills that machines and humans can be quite good at:
 
 - **Breaking down complex problems into smaller pieces**
-  - Imagine a complex math problem like 12 x 3 + 17 - 54 / 9!
+    - Imagine a complex math problem like 12 x 3 + 17 - 54 / 9!
 - **Planning and following our plans** 
-  -  Someone wrote LEGO instructions, you followed it and made an awesome thing!
+    -  Someone wrote LEGO instructions, you followed it and made an awesome thing!
 - **Pattern Recognition** (machines are finally catching up)
-  - Noticing when things are alike or very different
+    - Noticing when things are alike or very different
 - **Ignoring details that are not relevant to our current task or problem**
-  - We don't need to know how an iPad works to use it!
+    - We don't need to know how an iPad works to use it!
 
   We use these skills every day, but we don't necessarily know we are doing it.
 
