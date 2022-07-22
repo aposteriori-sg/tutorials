@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with GearsBot</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with GearsBot
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the virtual GearsBot platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-Computational-Thinking.html"><li class="current">Computational Thinking</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-GearsBot-App.html"><li >The GearsBot App</li></a><a href="../10-Introduction/40-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/12-Taking-a-Break.html"><li >Pause, Sleep, Rest</li></a><a href="../20-Basic-Coding/14-Turns.html"><li >Turning</li></a><a href="../20-Basic-Coding/15-Painting-Challenges.html"><li >Painting Challenges</li></a><a href="../20-Basic-Coding/20-Simple-Maze.html"><li >Simple Maze Challenge</li></a></ul><p>Mechanical Design</p><ul><a href="../30-Mechanical-Design/10-Robot-Configurator.html"><li >Robot Configurator</li></a><a href="../30-Mechanical-Design/20-Basic-Shapes.html"><li >Basic Shapes</li></a><a href="../30-Mechanical-Design/30-Arm-Actuator.html"><li >Arm Actuator</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Computational Thinking</h2>
+<p>This program is built around the idea of Computational Thinking, which is a 21st Century Competency buzz phrase all students must recognize!</p>
+<p>But what does it mean?</p>
+<p><img alt="" src="images/girlbrain.png" /></p>
+<h2>What is Computational Thinking?</h2>
+<p>When people want to create calculators, computers, robots, and video games they need to think like a machine!  </p>
+<ul>
+<li>What should my iPad do when I turn it on?  </li>
+<li>What if I touch the screen where that icon is?</li>
+</ul>
+<p><img align="left" style="padding: 3px 30px 3px 0px;" width="300" height="200" src="images/glitch.jpg"></p>
+<p>Machines like iPads don't think quite like humans.  They don't get distracted!  They don't care who is touching them.  They are designed to do a few things really well, and they never do anything unexpected - except when they GLITCH!</p>
+<p>So if we want to be good at understanding how our modern world works, we better be good at thinking like a machine, too!  </p>
+<p>Hence, Computational Thinking.</p>
+<p>Machines are pretty bad still at some type of human thinking, but can be really good at some things that people can also be really good at, and much better than people at other ways of "thinking".</p>
+<p>Four Computational Thinking skills that machines and humans can be quite good at:</p>
+<ul>
+<li><strong>Breaking down complex problems into smaller pieces</strong></li>
+<li>Imagine a complex math problem like 12 x 3 + 17 - 54 / 9!</li>
+<li><strong>Planning and following our plans</strong> </li>
+<li>Someone wrote LEGO instructions, you followed it and made an awesome thing!</li>
+<li><strong>Pattern Recognition</strong> (machines are finally catching up)</li>
+<li>Noticing when things are alike or very different</li>
+<li><strong>Ignoring details that are not relevant to our current task or problem</strong></li>
+<li>We don't need to know how an iPad works to use it!</li>
+</ul>
+<p>We use these skills every day, but we don't necessarily know we are doing it.</p>
+<p>For instance, can you solve this?</p>
+<p><img alt="" src="images/spotthediff.jpg" /></p>
+<ul>
+<li>
+<p>Break it down: Don't have to find all 8 things all at once! Look for each difference one at a time!</p>
+</li>
+<li>
+<p>Pattern Recognition: we immediately see a tree, a tree house, a ladder, a house behind... </p>
+</li>
+<li>
+<p>Ignore unnecessary details: don't have to look at every leaf squiggle to see the ladder or window...</p>
+</li>
+<li>
+<p>Plan: I start by just seeing things pop out at me!  but when I get desperate for the last 2 differences, I start scanning the image, from the bottom then a bit higher, then higher, then higher....</p>
+</li>
+</ul>
+<p>We will come back to this idea, when we discuss different activities in coding and designing our robot!</p>
+<p><img alt="" src="images/compthinking.png" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
