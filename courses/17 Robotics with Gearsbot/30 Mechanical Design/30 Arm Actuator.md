@@ -1,15 +1,17 @@
 Arm Actuator
 ---
 
-**Actuators** are electromechanical parts on your robot that can effect changes in the physical environment.
+As we already learned, **actuators** are electromechanical parts on your robot that can effect changes in the physical environment.
 
 For instance, a **motor** can make your robot's wheels spin, or wave its hand, or swivel its head.
 
 Other types of actuators might **create light or sound**.
 
-And yet other types might do other strange things, like turn on a magnetic field!
+And yet other types might do other strange things, like turn on a magnetic field or paint color on the floor under the robot!
 
-We are going to add an Arm Actuator to our robor so we can control its arms!  You could use an Arm Actuator to control other parts, like a crane or a door or anything that can rotate around a pivot.
+We are going to add an Arm Actuator to our robor, so we can control its arms!  
+
+You could use an Arm Actuator to control other parts, like a crane or a door or anything that can rotate around a pivot.
 
 <video autoplay muted loop width=100% height="auto">
   <source src="images/wave.mp4" type="video/mp4">
