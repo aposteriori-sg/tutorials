@@ -54,11 +54,11 @@ Run the code - what does it do?
 
 - Make the Forklift go up (say, 10 rotations) and back down to the starting point
 
-- Lift the table
+- Lift the crate
 
-- Move the table
+- Move the crate to another side of the space
 
-- Put the table down
+- Put the crate down on the floor and move away
 
 ## Test 1
 
