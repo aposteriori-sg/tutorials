@@ -29,7 +29,7 @@ Just search for "platformer sprite sheet" and see...
 
 [Itch]](https://itch.io/game-assets/free/genre-platformer) is one place where you can browse with more certainty.
 
-Once you find the Sprite Sheet of your dreams, you'll still need to cut it up, so that you could import the required tiles into GDevelop as single animation cels.  
+Once you find the Sprite Sheet of your dreams, you may need to cut it up, so that you could import the required tiles into GDevelop as single animation cels.  
 See **Slicing Tile Sheet** below for more information.
 
 ## Platformer Physics

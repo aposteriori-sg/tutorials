@@ -62,13 +62,21 @@ Run the code - what does it do?
 
 ## Test 1
 
+- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FfBTX86iAbK.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FU3gobq2VTv.json&worldScripts=world_challenges)
+
+- Click on *Simulator Tab* to see Challenge
+
+- Follow instructions and note down the *special Code* after doing the challenge successfully!
+
+## Test 2
+
 - Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FXbEgDo8ooG.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FoMA6FRE6Nv.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FU3gobq2VTv.json&worldScripts=world_challenges)
 
 - Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
 
-## Test 2 
+## Test 3 
 
 - Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fk6P2Bj7663.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FoMA6FRE6Nv.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FU3gobq2VTv.json&worldScripts=world_challenges)
 
