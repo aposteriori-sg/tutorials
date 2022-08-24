@@ -32,6 +32,45 @@ Once you add this object to your scene you can experiment with the motion proper
   <source src="images/movingPlatform.mp4" type="video/mp4">
 </video>
 
+NOTE: One major limitation of this and similar linear movement behaviors is that you cannot control the starting direction of objects.  So, making platforms with same speed that criss-cross each other's paths regularly becomes impossible.
+
+## Using Hidden Stage Directions
+
+Another way to control moving platforms is to add stage directions that can be reused with simple events.
+
+We did something similar in the Action RPG tutorial with monsters.
+
+Here is an example:
+
+Create a PlatformObject with no movement behavior, and place it somehwere in the area where you want it to move.
+
+Add an instance Speed variable to this object.
+
+Instance Variables are like Object Variables - they belong to the object - but each instance on the scene can have its own value.  In events, you still use the same Object Variable syntax.
+
+![](images/instanceVariable.png)
+
+Now add some meaningless sprite to your scene, and place it twice, at the two ends of where you wish your platforms to move back and forth between:
+
+![](images/stageDirections.png)
+
+Finally, we will add the two simple events to control our moving platforms:
+
+- First, to simply keep it moving at whatever speed/direction it currently has stored in the speed variable
+
+- Second, on collision with the direction walls, simply reverse direction
+
+<video autoplay muted loop width=450 height="auto">
+  <source src="images/twoMovingPlatforms.mp4" type="video/mp4">
+</video>
+
+![](images/stageDirectionsEvents.png)
+
+You can then have two platforms starting at the same position but with different instance speeds (say, 100 and -100) and they will move in opposite directions!
+
+By the way, don't forget to HIDE the stage direction sprites.
+
+
 ## Irregular Platforms
 
 You may have some ideas about other types of platforms (see-saws, rotators, toggle passthrough on/off, etc)
@@ -64,3 +103,10 @@ You can change the Gravity scale to make it fall slower...
 </video>
 
 HINT: Make sure when you die to restart the scene or re-position and re-Static the object, so that it's reset when necessary.
+
+## Other Ideas
+
+- Platforms that start mpoving when you land on them
+- Moving platforms rthat fall away if you are on top of them AND they have reached some location
+- Moving Platforms that STOP when you land on them
+- Platforms that rotate with your character's weight (like a lever on a center pivot)

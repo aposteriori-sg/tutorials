@@ -35,6 +35,12 @@ You can also make the camera feel more like a Super Mario Bros. game where the w
   <source src="images/centerXOnly.mp4" type="video/mp4">
 </video>
 
+Finally, Center may not be the right location of the camera - it may want to show the character closer to the left edge like many side-scrolling platformers that move towards the right.
+
+Just add an amount of picels you want to **offset the charcter**:
+
+![](images/cameraXoffset.png)
+
 
 ## Background
 
