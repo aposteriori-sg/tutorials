@@ -58,6 +58,33 @@
   <source src="images/movingPlatform.mp4" type="video/mp4">
 </video>
 
+<p>NOTE: One major limitation of this and similar linear movement behaviors is that you cannot control the starting direction of objects.  So, making platforms with same speed that criss-cross each other's paths regularly becomes impossible.</p>
+<h2>Using Hidden Stage Directions</h2>
+<p>Another way to control moving platforms is to add stage directions that can be reused with simple events.</p>
+<p>We did something similar in the Action RPG tutorial with monsters.</p>
+<p>Here is an example:</p>
+<p>Create a PlatformObject with no movement behavior, and place it somehwere in the area where you want it to move.</p>
+<p>Add an instance Speed variable to this object.</p>
+<p>Instance Variables are like Object Variables - they belong to the object - but each instance on the scene can have its own value.  In events, you still use the same Object Variable syntax.</p>
+<p><img alt="" src="images/instanceVariable.png" /></p>
+<p>Now add some meaningless sprite to your scene, and place it twice, at the two ends of where you wish your platforms to move back and forth between:</p>
+<p><img alt="" src="images/stageDirections.png" /></p>
+<p>Finally, we will add the two simple events to control our moving platforms:</p>
+<ul>
+<li>
+<p>First, to simply keep it moving at whatever speed/direction it currently has stored in the speed variable</p>
+</li>
+<li>
+<p>Second, on collision with the direction walls, simply reverse direction</p>
+</li>
+</ul>
+<video autoplay muted loop width=450 height="auto">
+  <source src="images/twoMovingPlatforms.mp4" type="video/mp4">
+</video>
+
+<p><img alt="" src="images/stageDirectionsEvents.png" /></p>
+<p>You can then have two platforms starting at the same position but with different instance speeds (say, 100 and -100) and they will move in opposite directions!</p>
+<p>By the way, don't forget to HIDE the stage direction sprites.</p>
 <h2>Irregular Platforms</h2>
 <p>You may have some ideas about other types of platforms (see-saws, rotators, toggle passthrough on/off, etc)</p>
 <p>For instance, we wanted to have platforms that that fall off-screen and you have to jump off of it before it's too late!</p>
@@ -81,6 +108,13 @@
 </video>
 
 <p>HINT: Make sure when you die to restart the scene or re-position and re-Static the object, so that it's reset when necessary.</p>
+<h2>Other Ideas</h2>
+<ul>
+<li>Platforms that start mpoving when you land on them</li>
+<li>Moving platforms rthat fall away if you are on top of them AND they have reached some location</li>
+<li>Moving Platforms that STOP when you land on them</li>
+<li>Platforms that rotate with your character's weight (like a lever on a center pivot)</li>
+</ul>
         </div>
         <button type="button" id="hamburger">
             <div id="hamburgerTop"></div>
