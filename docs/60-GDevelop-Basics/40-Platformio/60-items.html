@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_default.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>GDevelop Basics</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            GDevelop Basics
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">Basic game development using GDevelop</div>
+            <p>Intro to GDevelop</p><ul><a href="../10-Intro/10-intro.html"><li >Introductions</li></a><a href="../10-Intro/20-gdevelop.html"><li >What is GDevelop?</li></a></ul><p>Dodge the Creep</p><ul><a href="../20-Dodge/10-dodge.html"><li >Dodge the Creep</li></a><a href="../20-Dodge/20-start.html"><li >Getting Started</li></a><a href="../20-Dodge/30-scene.html"><li >Scene Editor</li></a><a href="../20-Dodge/40-object.html"><li >First Object</li></a><a href="../20-Dodge/50-touch.html"><li >Touchscreen Controls</li></a><a href="../20-Dodge/60-events.html"><li >Events</li></a><a href="../20-Dodge/70-animation.html"><li >Animation</li></a><a href="../20-Dodge/80-enemies.html"><li >Enemies</li></a><a href="../20-Dodge/90-sides.html"><li >Four sides</li></a><a href="../20-Dodge/100-gameover.html"><li >Game Over</li></a><a href="../20-Dodge/110-collision.html"><li >Collision</li></a><a href="../20-Dodge/120-start.html"><li >Start Scene</li></a><a href="../20-Dodge/130-score.html"><li >Score</li></a><a href="../20-Dodge/140-sound.html"><li >Sound and Music</li></a><a href="../20-Dodge/150-difficulty.html"><li >Increasing Difficulty</li></a><a href="../20-Dodge/160-export.html"><li >Exporting the Game</li></a><a href="../20-Dodge/170-next.html"><li >What's Next?</li></a></ul><p>Gelda (RPG)</p><ul><a href="../30-Gelda/10-gelda.html"><li >Gelda (RPG)</li></a><a href="../30-Gelda/20-start.html"><li >Getting Started</li></a><a href="../30-Gelda/30-player.html"><li >Player</li></a><a href="../30-Gelda/40-touch.html"><li >Touchscreen Controls</li></a><a href="../30-Gelda/50-tiles.html"><li >Layers and Tiles</li></a><a href="../30-Gelda/60-world.html"><li >Game World</li></a><a href="../30-Gelda/70-npc.html"><li >Non-Player Characters</li></a><a href="../30-Gelda/80-princess.html"><li >Princess NPC</li></a><a href="../30-Gelda/90-monsters.html"><li >Monsters</li></a><a href="../30-Gelda/100-attacks.html"><li >Attacks</li></a><a href="../30-Gelda/110-dialog2.html"><li >Dialog (Part 2)</li></a><a href="../30-Gelda/120-startEnd.html"><li >Start and End Scenes</li></a><a href="../30-Gelda/130-sound.html"><li >Sound and Music</li></a><a href="../30-Gelda/140-fullscreen.html"><li >Fullscreen</li></a><a href="../30-Gelda/150-export.html"><li >Exporting the Game</li></a><a href="../30-Gelda/160-next.html"><li >What's Next?</li></a><a href="../30-Gelda/170-Monsters-Revisited.html"><li >Monsters Revisited</li></a></ul><p>Platformio (Platformer)</p><ul><a href="../40-Platformio/10-platformio.html"><li >Platformio (2D Platformer)</li></a><a href="../40-Platformio/20-basics1.html"><li >Basics - Character</li></a><a href="../40-Platformio/30-basics2.html"><li >Basics - Platforms</li></a><a href="../40-Platformio/40-camera.html"><li >Camera</li></a><a href="../40-Platformio/45-death-zone.html"><li >Death Zone</li></a><a href="../40-Platformio/50-moving-platforms.html"><li >Moving Platforms</li></a><a href="../40-Platformio/60-items.html"><li class="current">Items</li></a><a href="../40-Platformio/70-enemies.html"><li >Enemies & Obstacles</li></a><a href="../40-Platformio/80-checkpoints.html"><li >Checkpoints</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Items</h2>
+<p>In a platformer items can add an interesting dimension to gameplay.</p>
+<p>Items can be:</p>
+<ul>
+<li>
+<p>Part of the level's main goal: <em>find all of the missing presents in each level</em></p>
+</li>
+<li>
+<p>Allow a player to reach areas otherwise impossible to reach: <em>boost jump speed</em></p>
+</li>
+<li>
+<p>Hard to reach, but then make it easier for a player to pass a following challenge: <em>make player faster</em></p>
+</li>
+</ul>
+<p>They can make game play more interesting by creating multiple path choices for the player to choose from.</p>
+<h2>Basics</h2>
+<p>We already dealt with this in the Action RPG tutorial, so without going into much detail, you place the item sprite somewhere in the level, and when the player collides with it:</p>
+<ul>
+<li>
+<p>Play a sound</p>
+</li>
+<li>
+<p>Delete the object</p>
+</li>
+<li>
+<p>Change something about the player or scene, e.g.:</p>
+</li>
+<li>
+<p>Change a variable state</p>
+</li>
+<li>Change PlatformCharacter properties</li>
+<li>Change something in the scene (unlesh hell, change backdrop, slow down platforms, etc)</li>
+</ul>
+<h2>Example</h2>
+<p>Create a new Sprite for the item.  I found a christmas stocking image I decided to use.</p>
+<p>Move the new item sprite into the scene, somewhere where it will be useful.</p>
+<p><img alt="" src="images/platformTooFar.png" /></p>
+<p>I am making my Stockings give Santa a bit of a jumping boost.  I put the Stockings on a platform where you ned the boost to get to the next platform.</p>
+<p><img alt="" src="images/stockingsBasicEvent.png" /></p>
+<h2>Timed Behavior Changes</h2>
+<p>You may wish to start a timer if you want to limit the transformation, and revert whatever properties back after the time - thank getting a Star in Super Mario Bros.</p>
+<p>You may wish to make some change to the visual presence of the player to make it known the behavior is on, and maybe play some different background music.  You can use different particle emitter, change player or background colors, and so forth.</p>
+<p>You could use blinking (add Flash Behavior for a simple solution) to signal that the behavior is about to run out...</p>
+<p>That is why I started a timer in the above example:</p>
+<p><img alt="" src="images/stockingsTimedEvent.png" /></p>
+<h2>Make it Relevant</h2>
+<p>Do not add items that have no relevance to the player or game.</p>
+<p>Items should create interesting game play by introducing a  challenge, creating choice for players, and making the game mechanics more fun.</p>
+        </div>
+        <button type="button" id="hamburger">
+            <div id="hamburgerTop"></div>
+            <div id="hamburgerBottom"></div>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
