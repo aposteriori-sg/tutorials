@@ -7,15 +7,13 @@ You are ready for the Maze Test!
 
 **Test 1: Get to the Red Square!**
 
-- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FuocXxvB4c4.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
+- Load [this challenge](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FuocXxvB4c4.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fe4NgMru2ij.json&worldScripts=world_challenges)
 
 - Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
 
-- Follow instructions and note down the *special Code* after doing the challenge successfully!
-
-## Coding
+## Abstracting With Simple Functions
 
 You'll have to start by making the robot go 1 grid distance forward.  
 
@@ -29,9 +27,20 @@ You can write out your program in words first like I just started.  And then tra
 
 ![](images/tankfwd.png)
 
-Hint:  Once you figure out the perfect # of rotations or degrees or seconds to move 1 grid distance, you can reuse that block over and over by copying it, or by turning it into a function... 
+Hint:  Once you figure out the perfect # of rotations or degrees or seconds to move 1 grid distance, you can reuse that block over and over by copying it, or by turning it into a function, like this:
 
-More on that when you finish your first Maze Challenge!
+![](images/functions.png)
+
+This really allows you to **Abstract** away details!
+
+You can add functions for:
+
+- Turn Left
+- Turn Right
+- Move Fwd 1 Maze Square
+  - Or more challeging: Move Fwd [CHOOSE] Maze Squares
+
+Then your maze code will be more readable: move fwd, turn right, move fwd, turn left, move fwd, turn right, move fwd...
 
 ## Debugging
 
@@ -45,7 +54,7 @@ Test and repeat... Eventually your robot will glide all the way to the finish ar
 
 You can reuse the 3X3 Red code you created.  You need to get a little further!
 
-- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FkKLy7LPrdt.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
+- Load [this challenge](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FkKLy7LPrdt.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fe4NgMru2ij.json&worldScripts=world_challenges)
 
 - Click on *Simulator Tab* to see Challenge
 
@@ -53,7 +62,7 @@ You can reuse the 3X3 Red code you created.  You need to get a little further!
 
 **Test 3: A Bigger Maze!**
 
-- Load [this challenge](https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F5AP3fmip7c.json&robotJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F7r9K65arhz.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fo22H2evjjT.json&worldScripts=world_challenges)
+- Load [this challenge](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F5AP3fmip7c.json&filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2Fe4NgMru2ij.json&worldScripts=world_challenges)
 
 - Click on *Simulator Tab* to see Challenge
 
