@@ -6,7 +6,13 @@ The **Platformer** is a versatile game type that come in many dimensions and siz
 
 For this tutorial, we assume you are already familiar with many GDevelop game-creation concepts and technical know-how (see the previous tutorials in this course, if not).
 
-So, we will dispense with some of the basics, and concentrate on new ideas.
+Also, there are available GDevelop tutorials for such games already, e.g.:
+
+- [Platformer Tutorial (GDev Wiki)](https://wiki.gdevelop.io/gdevelop5/tutorials/platformer/start)
+
+And lots of related youtube videos...
+
+So, we will dispense with some basics, and concentrate on new ideas.
 
 We will also be looking at creating our own or importing different game assets than the ones found in GDevelop's asset store.
 

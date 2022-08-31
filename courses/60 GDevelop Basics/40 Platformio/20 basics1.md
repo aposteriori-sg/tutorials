@@ -30,7 +30,36 @@ Just search for "platformer sprite sheet" and see...
 [Itch]](https://itch.io/game-assets/free/genre-platformer) is one place where you can browse with more certainty.
 
 Once you find the Sprite Sheet of your dreams, you may need to cut it up, so that you could import the required tiles into GDevelop as single animation cels.  
-See **Slicing Tile Sheet** below for more information.
+
+## Slicing Tilesheet
+
+Lots of ways you can get your Sprite animation cels from a tilesheet.
+
+Here is one online tool specifically designed for this:
+https://ezgif.com/sprite-cutter
+
+![](images/slicer.png)
+
+You can choose to cut by the number of rows/columns, or size of each cel.
+It spits out a Zip with individual PNGs you can use in GDevelop.
+
+There are other more complex animation tools, like [Piskel](https://www.piskelapp.com/p/create/sprite) or [PixilArt](https://www.pixilart.com/draw), which are also web-based but not purpose-built for Slicing.
+
+If your Spritesheet is irregular, you may need to do a lot of manual work cropping out each cel and saving as a separate .png (need this file format and not .jpg or .gif - as it adds an Alpha Channel so that the background around the sprite is read as invisible).
+
+Some animation/game design tools like Unity will have built-in Slicers that are pretty clever about finding different sprite edges, even in irregular Spritesheet.
+
+Once you have your various cels cut up into individual PNGs, you can upload them into a Gdevelop Sprite's animation:
+
+- Create New "Sprite" object
+- Add Animation
+- Add each Cel for each particular animation (some for Idle, some for Walk, etc)
+
+![](images/addcel.png)
+
+If you are using the web editor, you will need a cloud resource area where you can park the images, and use URLs.
+
+A Posteriori can provide one for you - if you are doing this tutorial as a class, you have probably been provided a link already.
 
 ## Platformer Physics
 

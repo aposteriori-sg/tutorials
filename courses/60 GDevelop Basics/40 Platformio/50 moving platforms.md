@@ -5,7 +5,7 @@ It's common to have moving platforms:
 
 For this, it's easier if we use an application to create a single-object platform (NOT something using the combined middle tile and end sprites).
 
-It also needs to be its own object, as once we had teh moving behavior, it will apply to all the copies of that object...
+It also needs to be its own object, as once we add the moving behavior, it will apply to all the copies of that object...
 
 ![](images/combinedPlatform.png)
 

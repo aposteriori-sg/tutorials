@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_default.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>GDevelop Basics</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            GDevelop Basics
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">Basic game development using GDevelop</div>
+            <p>Intro to GDevelop</p><ul><a href="../10-Intro/10-intro.html"><li >Introductions</li></a><a href="../10-Intro/20-gdevelop.html"><li >What is GDevelop?</li></a></ul><p>Dodge the Creep</p><ul><a href="../20-Dodge/10-dodge.html"><li >Dodge the Creep</li></a><a href="../20-Dodge/20-start.html"><li >Getting Started</li></a><a href="../20-Dodge/30-scene.html"><li >Scene Editor</li></a><a href="../20-Dodge/40-object.html"><li >First Object</li></a><a href="../20-Dodge/50-touch.html"><li >Touchscreen Controls</li></a><a href="../20-Dodge/60-events.html"><li >Events</li></a><a href="../20-Dodge/70-animation.html"><li >Animation</li></a><a href="../20-Dodge/80-enemies.html"><li >Enemies</li></a><a href="../20-Dodge/90-sides.html"><li >Four sides</li></a><a href="../20-Dodge/100-gameover.html"><li >Game Over</li></a><a href="../20-Dodge/110-collision.html"><li >Collision</li></a><a href="../20-Dodge/120-start.html"><li >Start Scene</li></a><a href="../20-Dodge/130-score.html"><li >Score</li></a><a href="../20-Dodge/140-sound.html"><li >Sound and Music</li></a><a href="../20-Dodge/150-difficulty.html"><li >Increasing Difficulty</li></a><a href="../20-Dodge/160-export.html"><li >Exporting the Game</li></a><a href="../20-Dodge/170-next.html"><li >What's Next?</li></a></ul><p>Gelda (RPG)</p><ul><a href="../30-Gelda/10-gelda.html"><li >Gelda (RPG)</li></a><a href="../30-Gelda/20-start.html"><li >Getting Started</li></a><a href="../30-Gelda/30-player.html"><li >Player</li></a><a href="../30-Gelda/40-touch.html"><li >Touchscreen Controls</li></a><a href="../30-Gelda/50-tiles.html"><li >Layers and Tiles</li></a><a href="../30-Gelda/60-world.html"><li >Game World</li></a><a href="../30-Gelda/70-npc.html"><li >Non-Player Characters</li></a><a href="../30-Gelda/80-princess.html"><li >Princess NPC</li></a><a href="../30-Gelda/90-monsters.html"><li >Monsters</li></a><a href="../30-Gelda/100-attacks.html"><li >Attacks</li></a><a href="../30-Gelda/110-dialog2.html"><li >Dialog (Part 2)</li></a><a href="../30-Gelda/120-startEnd.html"><li >Start and End Scenes</li></a><a href="../30-Gelda/130-sound.html"><li >Sound and Music</li></a><a href="../30-Gelda/140-fullscreen.html"><li >Fullscreen</li></a><a href="../30-Gelda/150-export.html"><li >Exporting the Game</li></a><a href="../30-Gelda/160-next.html"><li >What's Next?</li></a><a href="../30-Gelda/170-Monsters-Revisited.html"><li >Monsters Revisited</li></a></ul><p>Platformio (Platformer)</p><ul><a href="../40-Platformio/10-platformio.html"><li >Platformio (2D Platformer)</li></a><a href="../40-Platformio/20-basics1.html"><li >Basics - Character</li></a><a href="../40-Platformio/30-basics2.html"><li >Basics - Platforms</li></a><a href="../40-Platformio/40-camera.html"><li >Camera</li></a><a href="../40-Platformio/45-death-zone.html"><li >Death Zone</li></a><a href="../40-Platformio/50-moving-platforms.html"><li >Moving Platforms</li></a><a href="../40-Platformio/60-items.html"><li >Items</li></a><a href="../40-Platformio/70-enemies.html"><li >Enemies & Obstacles</li></a><a href="../40-Platformio/80-checkpoints.html"><li >Checkpoints</li></a><a href="../40-Platformio/90-trail-and-other-particle-emmiters.html"><li class="current">Trail & Other Partcile Emmiters</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Trail &amp; Other Partcile Emmiters</h2>
+<p>One of the things that makes games more fun to play is the animation and the feel you get from making your character interact with its fantasy environment.</p>
+<p>In our theme, we have Santa on snow.  We should add sounds as he walks that sound like footsteps on powdery snow.</p>
+<p>Since we can't really add footsteps, at least we can pretend he causes a little flurry under his boots as he trundles around.</p>
+<p>Creating character trails is common, and you can use them for various game concepts.  </p>
+<p>In this case, we just want to add some dynamism to the animation, and explore particle emitters.</p>
+<h2>Particle Emitter</h2>
+<p>A <strong>Particle Emitter</strong> is an object types that emits particles.</p>
+<p>NOTE: This is not useful for making projectiles as the partciles themselves are not objects that can collide with characters and enemies.</p>
+<p>But it is useful for making dynamic animation like character trails, smoke/fire, confetti, fireworks, etc</p>
+<p>So, let's use one to make Santa's trail.</p>
+<p>From the Objects panel, add a <strong>New Object from Scratch</strong> and choose <em>Particle Emitter</em> as the type, and just hit Apply.</p>
+<p>Drag the emitter into your main scene next to your player and run the preview.</p>
+<p>You should see some red bubble emanating from the location of the emitter.</p>
+<video autoplay muted loop width=450 height="auto">
+  <source src="images/emitter.mp4" type="video/mp4">
+</video>
+
+<h2>Color, Shapre, Size of Particles</h2>
+<p>So first let's pick the shapre and color for our snow trail particles - let's assume little dust balls (circles) and that they start out freshly white, but turn grey after emission.</p>
+<p>Double click on or open the properties of the new emitter you created.</p>
+<p>Leave the particle type as Circle.</p>
+<p>For size, the red bubbles were the default 3, so maybe leave it at that for now.</p>
+<p>As for the color, you can select white for start, and grey for the end colors, and you can leave the Opacity as is for now.</p>
+<p>You can rerun the preview again to see the change.</p>
+<p><img alt="" src="images/snowParticles.png" /></p>
+<h2>Emitting from Santa's feet</h2>
+<p>So, now we can put the emitter at Santa's feet so the snow trail comes out from whever he has walked.</p>
+<p>In the Events editor, add an action to re-position the emitter at the bottom of the Santa bounding box whenever Santa walks - you might already have an event with that condition, or you can create a new one.  </p>
+<p>For position: you can create a new Point to use (<strong>edit Points</strong> in the Sprite properties window), or use CenterX for X and BoundingBoxBottom for Y:</p>
+<p><img alt="" src="images/emitterPlacement.png" /></p>
+<h2>Styling the Emission</h2>
+<p>The emission effect as a trail doesn't work well for me yet.  </p>
+<p>The particles seem too diffuse and go all over the place.</p>
+<p>First, let's narrow down that Spray Cone angle from 90 to 30 - much better.</p>
+<p><img alt="" src="images/emitterSprayCone.png" /></p>
+<p>Now, we need to make the particles stop when Santa stops.</p>
+<h2>Limiting the Emission</h2>
+<p>There are a few ways to make the trail appear only in some occasions (moving, on top of a platform), but instead of toggling the animation on/off, another approach is to constantly create a new limited emitter, and simply create new emitters as Santa walks.  That way we don't need to worry about shutting off and restarting the emitter - we just create as needed.  </p>
+<p>So, remove the emitter from the scene, and change the Event from positioning the emitter at Santa's feet to Creating an instance of the Emitter object at Santa's feet - in this case we use a new Point called "feet" that we created in the Sprite's properties.</p>
+<p><img alt="" src="images/emitterCreation.png" /></p>
+<p>Now, we must make sure those emitters will stop and delete themselves when they run out of particles:</p>
+<p>If the trail seems too thick, you can cut down the number of partciles all the way down to 1...</p>
+<p><img alt="" src="images/emitterLimits.png" /></p>
+<p>Now, the main issue left is that the partciles are always coming out towards the right.  When I walk left that's ok, but when I walk to the right, the particles should come out towards the left, behind the character...</p>
+<p>You will need to rotate the emitter 180 degress in that case:</p>
+<p><img alt="" src="images/emitterRotate.png" /></p>
+<p>And this is what 3 partciles per emitter looks like:</p>
+<video autoplay muted loop width=450 height="auto">
+  <source src="images/emitterFinal.mp4" type="video/mp4">
+</video>
+
+<p>(Note: there's some extra size settings set on the emitter when it's created for jumping)</p>
+<h2>Other Uses of Emitters</h2>
+<ul>
+<li>Blood Splatter</li>
+<li>Confetti</li>
+<li>Explosions</li>
+<li>Fire/Smoke</li>
+<li>and more...</li>
+</ul>
+<h3><em>Challenge</em></h3>
+<p>Let's add a bit of confetti celebration animation whenever we pass through a checkpoint.</p>
+<p>First, create the emitter(s) that will create the right effect.</p>
+<p>Once you are satisfied with the effect, limit the confetti particles, remove the permanent instance from the scene, and add an action to create the emitter(s) at the checkpoint during the collision.</p>
+        </div>
+        <button type="button" id="hamburger">
+            <div id="hamburgerTop"></div>
+            <div id="hamburgerBottom"></div>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
