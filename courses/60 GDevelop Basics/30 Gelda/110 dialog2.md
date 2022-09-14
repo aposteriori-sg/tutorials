@@ -19,7 +19,7 @@ These are what we'll be adding to the dialog system, and how we will achieve it.
 
 * Multiple lines of dialog
     * Use an instance variable to keep track of which line of dialog we are at
-    * Increment the variable when the player press the **A** button
+    * Increment the variable when the player press the **dialog** button
 * Responses from the player
     * Use a second text object to display the player's response
     * Check the instance variable to determine which line to say
@@ -52,24 +52,23 @@ Repeat for the other two lines of dialog, but set the checks for the **dialogSta
 
 Now when you touch the wizard, he will only speak the first line of dialog.
 To progress through the remaining two lines, we'll need to change the value of **dialogState**.
-We'll use an event to detect if the **A** button is pressed, and increment **dialogState** if it is.
+We'll use an event to detect if the **dialog** button is pressed, and increment **dialogState** if it is.
 
 Select the **Collision with wizard** event, and add a sub-event under it.
 For the conditions, add...
 
-* **Touch or mouse button down**
-* **Cursor / touch is on A Button**
+* **Key pressed ("a" or whichever)**
 * **Trigger once** (...this is found under **Other conditions**, **Advanced**)
 
 <div class="important" markdown="span">
-The last condition **Trigger once**, ensures that the event is only triggered a single time when you click and hold the A button.
-Without this condition, the event will trigger 60 times a second as long as the A button is held down.
+The last condition, Trigger once, ensures that the event is only triggered a single time when you click and hold the button.
+Without this condition, the event will trigger 60 times a second as long as the button is held down.
 </div>
 
 For the action, select the **Wizard** and **Value of an object variable**.
 Set the variable name to **dialogState**, the modification sign to **+ (add)**, and the value to **1**.
 
-![](images/nextDialogState.png)
+![](images/nextDialogState.jpg)
 
 ## Responses from the Player
 
@@ -88,8 +87,8 @@ Now look for the events where we have the text of the wizard dialog, and add in 
 ![](images/playerDialogText.png)
 
 <div class="info" markdown="span">
-The first two player dialog starts with an **A** to indicate that the player should press that button to progress.
-The last dialog doesn't have the **A** as that's the last dialog line.
+The first two player dialogs start with an A) to indicate that the player should press that button to progress.
+The last dialog doesn't have the A) as that's the last dialog line.
 </div>
 
 ## Princess Dialog
