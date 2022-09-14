@@ -1,4 +1,12 @@
-# Events
+# Character Control
+
+The **Top-down movement** behavior allows you to control the player using the arrow keys on the keyboard, so go ahead and test that in Preview.
+
+<div class="important">
+If you're using a tablet and require touchscreen control, you can see the extra information at the end of this page on adding touchscreen control buttons.
+</div>
+
+So, the character can move around, but it doesn't look very lively.  We will need to add some animation to the player, but before we do that, let's consider the low-coding paradign in GDevelop - **Events**.
 
 In GDevelop, events define the logic of a game.
 If you have experience with Scratch, you would have used events before.
@@ -37,6 +45,39 @@ Switch to the events tab...
 Then click on the **Add new empty event** button. You should now have a new event with empty conditions and actions.
 
 ![](images/emptyEvent.png)
+
+Let's use events to control the animation of our character!
+
+<div class="info">
+Move to next lesson, Animation, if you don't need Touchscreen Controls.
+</div>
+
+<br>
+<br>
+<br>
+
+## (Optional) Touchscreen Control Buttons
+
+<div class="info">
+ONLY do this scection if you want touchscreen controls.
+</div>
+
+Add a new object and select an up arrow. You can use whichever one you prefer.
+
+![](images/arrow.jpg)
+
+Continue adding arrows until you have one in each direction.
+
+![](images/4arrows.jpg)
+
+Drag one instance of each arrow into the scene, and for each arrow...
+
+1. Change the size to something appropriate (...if required).
+2. Position it like in the following image.
+
+![](images/positionArrows.jpg)
+
+Add events to simulate default control:
 
 Click on **Add condition**, click **Other conditions**, and select the **Mouse button pressed or touch held** condition.
 
@@ -101,3 +142,4 @@ When you're done, your events tab should look like this...
 At this point, you can preview the scene by clicking the **Preview** button.
 
 Test the controls and make sure that your player character is moving correctly.
+

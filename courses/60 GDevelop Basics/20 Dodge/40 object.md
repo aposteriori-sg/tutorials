@@ -44,3 +44,12 @@ The **Stay on Scene** behavior will prevent your player from leaving the screen 
 Search for it under **Search new behaviors** and install it in the project.
 Once that is done, you can add it to your object by clicking on it under **Installed behaviors**.
 Set the **bottom margin** and **right margin** to **20**.
+
+## Preview
+
+Let's tale a moment to previw our scene - there's not much there yet, but it's good to constantly test your progress and make sure you're not foregtting anything.
+
+Click on the **Preview Button** and follow any instructions to bring up the Preview window/tab.
+
+![](images/previewScene.jpg)
+

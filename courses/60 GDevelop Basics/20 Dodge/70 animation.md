@@ -20,7 +20,14 @@ Make sure the animation FPS is ok for all of these.
 ## Change Animation
 
 Now we'll need to change the animation depending on which direction the player is moving towards.
-We'll make use of the sub-events that we have already created (...the ones with the **Simulate pressing** actions), and add an additional **Change animation** action.
+
+Let's add a new event, click on your Player object, and add the condition **Control pressed or simulated ("Up")**.
+
+![](images/pressUpEvent.jpg)
+
+- If you don't see that condition, make sure to add the correct **Behavior** to your object as previously mentioned. 
+
+And now the action should be to change the animation to the correct one ("up").
 
 Click on the **Add action** under **Simulate pressing Up**.
 Select the player, then choose the **Change the animation (by name)** action.
@@ -32,7 +39,7 @@ Click **Ok**
 Continue adding the **Change animation** action for the remaining controls.
 When done, your event tab should look like this...
 
-![](images/changeAnimations.png)
+![](images/4directions.jpg)
 
 ## Idle and Flip
 
@@ -52,7 +59,7 @@ Since we want to perform the action when the player is **NOT** moving, we'll nee
 Under the action, add a **Change the animation (by name)** action and set the **Animation name** to **"stand"**.
 It should now look like this...
 
-![](images/idle.png)
+![](images/stand.jpg)
 
 Next, we'll need to flip the player around when moving left.
 
@@ -64,4 +71,14 @@ Under **Activate Flip**, select **Yes**.
 Now do the same for the move right event, but set **Activate Flip** to **No**.
 Your events should now look like this...
 
-![](images/bothFlips.png)
+![](images/playerAnimations.jpg)
+
+If you've also added touchscreen controls as per the previous lesson's optional section, they should be controlling the character by simulating the arrow controls as well.
+
+You can also add **WASD** control using this approach:
+
+![](images/wasd.jpg)
+
+NOTE: I added **Event Groups** to break up the events logically, and make the code more readable and maintainable.
+
+Make sure to **Preview** and test your work.
