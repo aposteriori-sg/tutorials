@@ -44,3 +44,42 @@ You'll need to decide on which wheel to move fwd/back or keep off, and you will 
 
 
 
+## Computational Thinking Hints
+
+Remember some of the processes that can help you think like a robot:
+
+### Decomposition - Break the problem down into little bits
+
+You need:
+
+- a block to move forward
+- a block to turn left
+- a block to turn right
+
+### Abstraction
+
+Figure out the degrees needed to turn left exactly.
+
+Once you have that you can forget about all the numbers in that block - just think of it as a Turn Left block - you can duplicate it if you need to turn left more than once.
+
+### Pattern Recognition
+
+Do the same for a block to turn right. 
+
+It should look similar to your left turn block - just reverse which wheel goes forward and which goes back.
+
+### Algorithmic Thinking
+
+Try to write down in English what you need to do:
+
+- Turn Left
+- Move Forward past zombies
+- Turn Right
+- Move Forward past zombies
+- Turn Right
+- Move Forward
+- ... what's next?
+
+Finish writing the full plan - this is roughly how many blocks of code you will need.
+
+You can also see if you can reuse some of the blocks (duplicate).

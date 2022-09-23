@@ -83,3 +83,53 @@ Run the code - what does it do?
 - Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
+
+## Computational Thinking Hints
+
+Remember some of the processes that can help you think like a robot:
+
+### Decomposition - Break the problem down into little bits
+
+You need:
+
+- a block to move forklift up
+- a block to move forklift down
+- a block to move forward
+- a block to turn left
+- a block to turn right
+
+### Abstraction
+
+Write **functions** for the above blocks so your code will be easy to read, follow, and change.
+
+Once you have that you can forget about all the numbers and details of those blocks. 
+
+This will be very useful, because the algorithm for the last challenge is quite long & complicated.
+
+### Pattern Recognition
+
+Useing the Forklift just means making a motor turn and translating that to a linear movement.  The more you turn the forklift motor, the higher (or lower) the forklift moves...
+
+Note that you will lift the forklift off the ground, but lower it to the table's height.  So it isn't just the reverse of one another...
+
+So, it's not the same amount of motor turns.
+
+### Algorithmic Thinking
+
+Try to write down in English what you need to do:
+
+- Move forward until in line with crate
+- Turn Left
+- Move forward until forklift under crate
+- Lift crate to above table height
+- Move back (to avoid hitting wall when you turn)
+- Turn around to face table
+- Move forward until crate over table
+- Lower crate to table
+- Move back to center
+- Turn right towards green box
+- Move forward until inside box
+
+This is the plan... whoo!  It's quite long...
+
+GOOD LUCK!

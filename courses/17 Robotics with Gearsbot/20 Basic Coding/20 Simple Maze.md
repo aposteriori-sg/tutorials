@@ -42,6 +42,8 @@ You can add functions for:
 
 Then your maze code will be more readable: move fwd, turn right, move fwd, turn left, move fwd, turn right, move fwd...
 
+ABSTRACTION REMOVES DISTRACTION!
+
 ## Debugging
 
 Remember to test your program all the time.  Don't try adding 10 blocks and test it all once at the end.  Test after each code change, unless you're extremely sure about your code.

@@ -26,3 +26,39 @@ Use [THIS LINK](https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2
 - Click on *Simulator Tab* to see Challenge
 
 - Follow instructions and note down the *special Code* after doing the challenge successfully!
+
+## Computational Thinking Hints
+
+Remember some of the processes that can help you think like a robot:
+
+### Decomposition - Break the problem down into little bits
+
+You need:
+
+- a block to move forward
+- a block to pause
+
+### Abstraction
+
+Figure out the degrees/rotations/time needed to move forward to the first rest stop.  
+
+Once you have that you can forget about all the numbers in that move forward block. 
+
+### Pattern Recognition
+
+Note that the space between each rest stop is the same... you can probably reuse that forward block.  
+
+The rest can be the same length of time, so also can ruse!
+
+### Algorithmic Thinking
+
+Try to write down in English what you need to do:
+
+- Move forward
+- Wait
+- Move forward again
+- Wait
+- Move forward again
+- Wait
+
+This is the plan...
