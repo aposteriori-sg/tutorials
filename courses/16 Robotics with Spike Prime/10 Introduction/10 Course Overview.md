@@ -1,6 +1,8 @@
 Course Overview
 ---
 
+![](images/spikeqr.png)
+
 Robotics is a multi-disciplinary subject.
 
 In order to get a good grasp of Robotics, you need to understand:

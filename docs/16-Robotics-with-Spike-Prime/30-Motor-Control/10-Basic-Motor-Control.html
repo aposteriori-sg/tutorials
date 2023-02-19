@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with Spike Prime</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with Spike Prime
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO Spike Prime platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-Spike-Hub.html"><li >The Spike Hub & App</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/20-Loops.html"><li >Loops</li></a><a href="../20-Basic-Coding/30-Events.html"><li >Events</li></a></ul><p>Motor Control</p><ul><a href="../30-Motor-Control/10-Basic-Motor-Control.html"><li class="current">Basic Motor Control</li></a><a href="../30-Motor-Control/20-2-Wheel-Robots.html"><li >Two Wheel Robots</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Basic Motor Control</h2>
+<p>Before we make a 2-wheel robot, we should learn how a single motor works, and how to program it.</p>
+<p>What can we make with just 1 motor?</p>
+<ul>
+<li>
+<p>Vehicles that can drive only forwards and backwards</p>
+<ul>
+<li>Motorcycles</li>
+<li>Trains</li>
+<li>Motor boats &amp; cars (?)</li>
+</ul>
+</li>
+<li>
+<p>Catapults</p>
+</li>
+<li>Construction cranes</li>
+<li>Drills</li>
+<li>Coveyor belts</li>
+<li>Hammers</li>
+<li>Sprinkler head</li>
+<li>Merry-Go-Round</li>
+<li>Ceiling fan</li>
+<li>and more...</li>
+</ul>
+<p>We have two types of motors:</p>
+<p><img alt="medium" src="images/medium.jpg" />
+Medium</p>
+<p><br>
+<br></p>
+<p><img alt="large" src="images/large.jpg" />
+Large</p>
+<h2>Connecting Motors</h2>
+<p>Motors can connect to any of the six Spike Hub ports.</p>
+<p>Once connected the motors can be tested by turning on the Spike Hub, and running the HEART program (scroll using Left &amp; Right buttons until you see the HEART, then press the large ON button to run).</p>
+<p><img alt="" src="images/heart.jpg" /></p>
+<p>Use the LEFT and RIGHT buttons to increase/decrease speeds in both directions.</p>
+<p>Let's test it out!</p>
+<h2>Coding Motors</h2>
+<p><img alt="" src="images/motorcontrol.png" /></p>
+<h2>Make LEGOs Move!</h2>
+<p>Build any mobile contraption you want by adding an axle to the motor shaft, or by hooking up connectors to the off-center motor holes:</p>
+<p><img alt="" src="images/motorbuild.png" /></p>
+<ul>
+<li>
+<p>Build a <strong>motorized project</strong> that can be interacted with</p>
+</li>
+<li>
+<p>Code your motors to spin in both directions (3 seconds forward, 3 seconds backwards, in a loop) to animate it. </p>
+</li>
+<li>
+<p>You can also add sound &amp; lights using what we've learned.</p>
+</li>
+<li>
+<p>You can also experiment with programming various speeds.</p>
+<ul>
+<li>For insatnce, a merry-go-round starts out slow and gains momentum, eventually hitting a top speed, and then slowing down at a pace until coming to a complete stop.</li>
+</ul>
+</li>
+<li>
+<p>You can also use the Heart program, or make your own Remote Control using the Left/Right buttons and their relevant events for control.</p>
+</li>
+</ul>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
