@@ -25,7 +25,9 @@ Depending on wheel placement, you will also need one or more caster wheels or ba
 
 # **MOVEMENT BLOCKS**
 
-Let's figure out how to make our robot move in the four directions we are used.  You can start by loading Gears [here](https://gears.aposteriori.com.sg/index.html?filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FsbVQLkhtDr.json).
+Let's figure out how to make our robot move in the four directions we are used.  
+
+Start by loading Gears [here](https://gears.aposteriori.com.sg/index.html?filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FsbVQLkhtDr.json).
 
 ## Forward
 
@@ -35,38 +37,71 @@ To move forward, you need to rotate both tires forward at the same speed:
 
 ![](images/movetank.jpg)
 
+---
+<br>
+
+## Speed Numbers -100 to 100
+
+<br>
+
+![](images/numberline.png)
+
+Depending on your level, you may not have covered numbers to 100, or negative numbers, so this is a brief review of the numbers from -100 to 100.
+
+- 100: full speed forward
+- 50: half speed forward
+- 0: stop
+- -50: half speed backwards
+- -100: full speed backwards
+
 *Tip: We use %20, a relatively low speed, to avoid a jittery movement.  You can try max speeds %100 to see the difference.*
+
+## Practice 1
+
+- **Change the speeds** to go slower or faster, but remember to keep them the same speeds on both sides to go forward
+
+- Use [this Gears world](https://gears.aposteriori.com.sg/index.html?filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FsbVQLkhtDr.json)
 
 ---
 
+<br>
+
+## Rotations, Degrees, Seconds, Milliseconds
+
+The last parameter/input in this code block refers to how far or how long you want your robot to go.  You can experiment with different options:
+
+![](images/howfar.jpg)
+
+For now just use **Rotations**
+
+## Practice 2
+
+- **Change the amount your wheels rotate** to make your robot bump into the wall!
+
+- Use [this Gears world](https://gears.aposteriori.com.sg/index.html?filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FsbVQLkhtDr.json)
+
+---
+
+<br>
+
 ## Back
 
-To move forward, you need to rotate both tires back at the same speed:
+To move back, you need to rotate both tires back at the same speed:
 
 ![](images/back.jpg)
 
 
-**Challenges:**
+![](images/movetank_back.jpg)
 
-- Change the speeds to go slower or faster, but remember to keep them the same speeds on both sides to go forward
 
-- Make your robot go backward.  What numbers do you think would make your robot reverse?  (yes, negatives!)
 
----
+## Practice 3
 
-## Right
+- Make your robot **go backward** until it hits the back wall
 
-To turn in either direction you will need to vary the direction and/or speeds of the two motors.
+- Use [this Gears world](https://gears.aposteriori.com.sg/index.html?filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FsbVQLkhtDr.json)
 
-For instance to turn right, you can rotate the left tire forward and the right tire backward at the same speed:
+<br>
 
-![](images/right.jpg)
-
----
-## Left
-
-Similarly, to turn left, you reverse and rotate left tire back, and right tire forward.
-<br><br>
-![](images/left.jpg)
 
 
