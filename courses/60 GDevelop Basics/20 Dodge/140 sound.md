@@ -25,10 +25,9 @@ Your event should look like this...
 If you like, you can add a background music for the **End** scene in the same way.
 Note that if you add a background music for the **Start** scene, it will **NOT** play when you start the game in a browser, as the browser will not allow a webpage to play audio before the user interacts with it.
 
-<div class="info" markdown="span">
-When game over occurs, the music will automatically stop.
+INFO: When game over occurs, the music will automatically stop.
 That's because by default, GDevelop stops all music and sounds when starting a new scene.
+
 If you want the music to continue playing, open the **Project** manager, click on the 3 dots (...that's called a kebab menu) next to the **End** scene, select **Edit scene properties**, and turn off **Stop music and sounds on startup**.
-</div>
 
 ![](images/stopAudio.jpg)

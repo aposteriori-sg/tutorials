@@ -4,7 +4,11 @@ For this game, the objective is to stay alive as long as possible.
 So for the score, we'll increment it by 1 point every second.
 
 In the **Play** scene, add a new **Text** object, set the initial text to **0**, and the font size and color to whatever you want.
-Name the object **Score**.
+Name the object **ScoreText**.  Feel free to use the Asset Store fonts to customize th look and resize as you see fit.
+
+![](images/newScoreText.png)
+
+
 Drag a new instance and place it in the top center of the screen.
 
 ![](images/score.png)
@@ -16,12 +20,17 @@ In that event add two new actions:
 - Select **Value of a global variable**.  Set the variable name to **score**, and set it to **0**.
 - **Start (or reset) new timer** names **score timer**
 
-![](images/initScore.png)
+This will set the global variable **score** to a value of zero at the start of the **Level** scene.
 
-This will set the global variable **score** to a value of zero at the start of the **Play** scene.
+![](images/newScoreVariable.png)
+
 Note that we are using a **global** variable here.
 Global means that this variable will be accessible in all of the scenes.
 If you use a **scene** variable, that variable will not be accessible anymore if you change scene.
+
+![](images/initScore.png)
+
+The globe icon indicates it's a global variable,
 
 Next, we'll need to increase the **score** variable by 1 every second, and update the score display that's on screen.
 
@@ -31,10 +40,15 @@ Set the time to 1 second, and the timer name to **"score timer"** (...including 
 Next we have 3 actions to add...
 
 1. **Reset the timer** and set the timer name to **"score timer"**.
-2. **Value of a global variable**, set the variable to **score**, the operator to **add**, and the value to **1**.
-3. **Modify the text**, make sure the **Score** object is selected first, and set the value to **GlobalVariableString(score)**.
 
-![](images/scoreTimer.png)
+2. **Value of a global variable**, set the variable to **score**, the operator to **add**, and the value to **1**.
+
+![](images/changeScore.png)
+
+3. **Modify the text**, make sure the **ScoreText** object is selected first, and **set the value** to the global Score variable.
+
+![](images/setScoretext.png)
+
 
 ## Display Score in Game Over Scene
 
@@ -52,7 +66,8 @@ Set the **modification's sign** to **+ (add)**, and under value, use **GlobalVar
 
 ![](images/endScoreDisplay.png)
 
-## Testing
+## Save & Test
 
-Click the preview button to test your game.
-It should add one to your score ever second, and display your final score at the end of the game.
+Click the Save, and then preview button to test your game.
+
+It should add one to your score every second, and display your final score at the end of the game.

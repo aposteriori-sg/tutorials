@@ -42,14 +42,16 @@ Switch to the events tab...
 
 ![](images/events.png)
 
-Then click on the **Add new empty event** button. You should now have a new event with empty conditions and actions.
+Then click on the **Add an event** button. You should now have a new event with empty conditions and actions.  You can x-out the tutorial banner...
 
 ![](images/emptyEvent.png)
 
 Let's use events to control the animation of our character!
 
+NOTE: There's a really easy way to do this with the Top Down Movement Animator class, but we purposely want to do this the hard way to teach about event logic.
+
 <div class="info">
-Move to next lesson, Animation, if you don't need Touchscreen Controls.
+Move to next lesson, Animation, if you have a keyboard and don't need Touchscreen Controls for your game - e.g. not intended for mobile device play.
 </div>
 
 <br>

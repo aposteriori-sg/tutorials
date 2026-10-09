@@ -14,8 +14,22 @@ To do that, we'll...
 A variable allows you to store **data**, such as a number or a text.
 Think of a variable as a type of box; you can label the box with a name, then place or retrieve things from the box.
 
-Right under the **Reset Timer** action, add a new action, choose **Other Actions**, then select **Value of a scene variable**.
-Under **Variable**, type in **side** (...nothing special about this name, you can use a different name if you prefer).
+Right under the **Reset Timer** action, add a new action.
+
+![](images/enemySideNewAction.png)
+
+Choose **Other Actions**, then under Variables, select **Change variable value**.  Inside the **Variable** choice the drop-down is empty because we have not created any variables... yet!  So click on the **Open Variables Window** icon:
+
+![](images/enemySideNewVariable.png)
+
+This variable belongs to this Scene/Level so we will stay in the Scene Variables tab.  
+
+Under **Variable**, type in **enemySide** (...nothing special about this name, you can use a different name if you prefer).  Make sure it's a **Number** type of variable.
+
+![](images/enemySideDefineVariable.png)
+
+Once you created the new variable you are back in the defintion on how to change the variable value.
+
 Under **Modification's sign**, select **= (set to)**, and under **Value**, select **RandomInRange(1, 4)**.
 
 ![](images/setVariable.png)
@@ -23,10 +37,17 @@ Under **Modification's sign**, select **= (set to)**, and under **Value**, selec
 ## Conditions with Variables
 
 Previously, we left the conditions for timer sub-event blank (...that's the one with the add enemy actions).
-Now, we'll add in a condition, click on **Add condition**, **Other conditions**, and select **Value of a scene variable**.
+
+Now, we'll add in a condition, click on **Add condition**:
+
+![](images/enemySideNewCondition.png)
+
+ Select **Other conditions**, and select **Value of a scene variable**.
 Under **Variable**, type in the same name we've used earlier (...**side**), under **Sign of test**, select **= (equal to)**, and under **Value to compare**, type in **1**.
 
-Now your events should look like this...
+![](images/enemySideSetCondition.png)
+
+Now your Timer events should look like this...
 
 ![](images/checkVariable.png)
 
@@ -44,12 +65,16 @@ It should look something like this...
 ![](images/allSides.png)
 
 <div class="tip">
-You can copy and paste an event, but it can be a little tricky to get it right.
+TIP: You can copy and paste an event, but it can be a little tricky to get it right.
 If you're on a computer, right click on the event.
 If you're on a tablet, tap and hold on the event.<br><br>
 
 The tricky bit is that you must click / hold on to an area without any conditions or actions, else you'll end up copying the conditions / actions instead.
-Best place to click / hold is at the very bottom of the event, to the right of the "Add condition".<br><br>
+Best place to click / hold is at the very bottom of the event, to the right of the "Add condition".<br>
 
 If you've done it correctly, you should see an option to "Toggle disabled". If you don't see this option, you must be on a condition or action.
 </div>
+
+### Save & Preview!
+
+![](images/allSidesPreview.png)

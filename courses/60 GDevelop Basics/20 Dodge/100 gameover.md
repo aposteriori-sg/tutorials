@@ -5,8 +5,11 @@ We can detect the collision between the player and enemy easily using an event, 
 
 Let's start by build a game over scene.
 
-Click on the **Project Manager** button and add a new scene.
-Name the new scene **End**, then click on it to open it.
+Click on the **Project Manager** burger button in the top left, and add a new scene.
+Name the new scene **End**, then pres enter and re-click on the scene to open its Editor and Events tabs.
+
+![](images/gameOverNewScene.png)
+
 
 # Multiple Scenes
 
@@ -22,6 +25,9 @@ For a professional looking game, you would want to draw a nice **Game Over** gra
 ...but since those using the web-editor can't add in their own images, and I'll like to keep this tutorial accessible for everyone, I'm just going to print out the words **Game Over** in big bold letters.
 
 Add a new object, click on **New object from scratch**, then select **Text**.
+
+![](images/newText.png)
+
 Set the font size, color, bold, and type in **Game Over** in the **Initial text**.
 You may also want to give the new object an appropriate name.
 

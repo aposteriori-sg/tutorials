@@ -25,19 +25,29 @@ To do that, make use of a timer, and everytime the timer exceeds 1 second, we'll
 
 First, create a brand new top-level event with a "on scene start" condition - 
 Click on **Add condition**, select **Other Conditions**, then under **Scene** pick **At the beginning of the scene**.
+
+![](images/beginSceneCond.png)
+
 For the action, select **Other Conditions**, and under **Timers and time**, pick **Start (or reset) a scene timer**, then choose a Timer name, say **enemy timer**.  Remember timer names must be put in quotes (**"**), and make sure to copy the timer name, so you can paste it in the follow-up event below.
+
+![](images/beginSceneAct.png)
+
+We will be able to use this event to start other scene timers later on, or begin scene music, etc.  It should look like this in the event list:
 
 ![](images/newSceneTimer.JPG)
 
-We will be able to use this event to start other scene timers later on, or begin scene music, etc.
-
 Now, we will create a new event to check if the timer went over 1 second.
 Click on **Add condition**, select **Other Conditions**, then **Value of a scene timer**.
-Set the **Time in seconds** to **1**, and the **Timer's name** to **enemy timer** (...nothing special about this name; you can use a different name if you want).
+Set the **Time in seconds** to **1**, and the **Timer's name** to **enemy timer** from the list.
+
+![](images/checkTimer.png)
 
 ![](images/timer.png)
 
-Next, add a sub-event under the timer event.
+Next, add a **sub-event** under the check timer event:
+
+![](images/subEvent.png)
+
 Leave the condition blank, and add an action.
 Select the enemy, then the **Create an object** action.
 
@@ -47,6 +57,8 @@ Select the enemy, then the **Create an object** action.
 
 We want the enemy to appear at a random **X position** at the top of the screen.
 To do that, do not key in a value for the **X position**, instead click on the expressions button next to it. ![](images/expressions.png)
+
+![](images/range.png)
 
 Select the **Random integer in range** expression, and set the range **0 to 800**. Click **Apply**
 
@@ -91,3 +103,5 @@ Your events should now look like this...
 
 Test out your game.
 You should see the enemy randomly appear and drop down from the top.
+
+![](images/enemiesOneSidePreview.png)

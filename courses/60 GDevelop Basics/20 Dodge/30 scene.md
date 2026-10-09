@@ -2,7 +2,7 @@
 
 You should now be in the scene editor...
 
-![](images/sceneEditor.jpg)
+![](images/sceneEditor.png)
 
 Take a look around, and take note of the following...
 
@@ -16,6 +16,11 @@ In GDevelop, everything on screen is an object, including players, enemies, and 
 The object panel will list all of the objects in this scene.
 
 **IMPORTANT** Objects do not automatically appear on the scene. To do that, you need to create an **Instance** of the object.
+
+### Global vs. Scene Objects
+Note you can create new objects as relative to the Global or Scene part of the environment. For now we will create Scene Objects, but objects like Player should probably be Global as the player might be moving from scene (level) to scene.
+
+You can move Scene Objects to Global, so it's not a big issue at this point.
 
 ### Instance properties (on the left)
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li class="current">LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>LED Lamp Construction</h2>
+<p>The LED lamp is a simple build with very few moving parts.</p>
+<p>To 3D print the lamp parts, you can use <a href="https://cad.onshape.com/documents/24fde9ee871d6931b7727d17/w/6eb9ca324ad8c5c268c704a6/e/275932345d6faaf717b52255?renderMode=0&amp;uiState=6a9f8f20e3d2677dd5341525">this onshape project</a> and export the 3 parts.</p>
+<p>You will need 2 M3 screws, 4mm in length minimum.</p>
+<h3>1. Combine Base and Lamp Shade</h3>
+
+<p><img alt="" src="images/ledStep1.jpg" /></p>
+<p>Align the base and shade (hollow square) so the holes match up.  </p>
+<p>Find the two provided screws and use an allen wrench with the screws entering from the bottom of the lamp base.</p>
+<p>Screw in until some tightness but don't overtighten or the screws will end up wearing down the lamp's 3D print filament.</p>
+<h3>2. Insert LED Strip</h3>
+
+<p><img alt="" src="images/ledStep2.jpg" /></p>
+<p>Insert the LED Strip through the wide rectangular hole such that the LEDs are inside the lamp shade, and the wiring ends are streaming out - eventually we will connect these to the ESP32 for control.</p>
+<h3>3. Tape LED Strip</h3>
+
+<p><img alt="" src="images/ledStep3.jpg" /></p>
+<p>The blue material on the back of the LED Strip is a covering for sticky tape.</p>
+<p>Remove the blue material and carefuly and tightly tape the LED Strip around the shade.</p>
+<p>Removing the tape cover can be tricky and may require patience and perseverence.</p>
+<p>Try to be thoughtful in covering the corners where the LED strip must bend.</p>
+<p>THAT's IT!</p>
+<p><img alt="" src="images/ledFinal.jpg" /></p>
+<p>You're ready to connect and control the LED Strip.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

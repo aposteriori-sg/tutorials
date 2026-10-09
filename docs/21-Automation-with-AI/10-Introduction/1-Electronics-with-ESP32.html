@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li class="current">Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Basics with ESP32</h2>
+<p>We are going to use the <a href="https://randomnerdtutorials.com/getting-started-with-esp32">ESP32 development board</a> as the basis of our electronics hands-on work.</p>
+<p><img alt="" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/10/ESP32-Getting-Started.jpg?w=1280&amp;quality=100&amp;strip=all&amp;ssl=1" /></p>
+<p>Look at your ESP32 dev board.  It includes a bunch of small electronic components including the esp32 chip and a few LEDs.</p>
+<p><img alt="" src="images/esp32.png" /></p>
+<p>There are also 2 buttons:
+- EN: on the bottom left is a RESET button.  You can use it to soft-power cycle the chip and restart the code you install
+- BOOT: on the bottom right is a programmable button.  You can use it in your project to initiate a user event</p>
+<p>Finally, you have a USB port and you can use this to connect your USB to your laptop to power it up and install your program.</p>
+<p>Notice when you connect your USB that there are 2 LEDs:
+- RED: Power indicator.  If this turns off you are either diconnected from power or have introduced a short.
+- BLUE: Programmable indicator.  When you reset/power-cycle the board, this will blink 3 times.  After that it may behave in various ways that are usage-dependent.  You can program this using Pin2 on the ESP32.</p>
+<h2>PINs</h2>
+<p><img alt="" src="https://quartzcomponents.com/cdn/shop/files/ESP32S_38Pin_Development_Board_WIFI_BLUETOOTH_2.jpg" /></p>
+<p>Look at the back of the ESP32 - you can see 30 pins (15 on each side) sticking out from the bottom of the board.  We will learn how to use these as we go to control various actuators and take reads from various sensors.</p>
+<p><img alt="" src="https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png" /> <a href="https://lastminuteengineers.com/esp32-pinout-reference/">This</a> is a pinout reference that may come in handy at some point in the future.</p>
+<p>On the front you can see very small labels for each pin, like 3V3, GND, D2, and so on...</p>
+<p>3V3 and GND are power pins.  You can connect them to other electronics to supply 3.3V power.  3V3 would act as the +/anode point.  GND would be the -/cathode.</p>
+<p>D2 is internally connected to the Blue LED.  You can turn D2 on/off to control that LED...</p>
+<p>Let's test that!</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

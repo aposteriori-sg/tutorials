@@ -12,7 +12,9 @@ Since we want our game to start with the start scene, we need to make sure it is
 
 ![](images/moveUp.jpg)
 
-Now add a **title** and a **start button** to the game.
+Now add a **title** Text object to the Scene.
+
+and a **start button** to the game.
 
 * Title: This is a text object.
 * Start button: This is from the asset store.
@@ -23,7 +25,9 @@ We need to add an event to make the start button work.
 
 Add a new event, **Add condition**, click the start button, then select the **Cursor/touch is on an object** condition.
 
-To the same event, add a second condition, this time select **Other conditions**, and choose the **Mouse button released** condition.
+![](images/mouseButtonPressed.png)
+
+To the same event, add a second condition, this time select **Other conditions**, and choose the **Mouse button pressed (or released**) condition.
 Under **Button to check**, choose the **Left** button.
 
 ![](images/startButton.png)
@@ -34,7 +38,7 @@ That's because in game movement controls, we usually make a character move when 
 But for other types of controls (eg. selecting options from a menu), we usually trigger the button when the click or touch is released.
 </div>
 
-Under actions, select **Change to scene** and select the **Play** scene.
+Under actions, select **Change to scene** and select the **Level** scene.
 
 ![](images/startEvents.png)
 

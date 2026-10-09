@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li class="current">LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>LED Strips</h2>
+<p>The potential of the ESP32 development board is in its ability to connect to and control an unlimited range of electronics.</p>
+<p>At this time we will look at two very popular actuators - servo motors and RGB LED Strips.</p>
+<p><u>RGB LED Strip</u></p>
+<p><img alt="" src="images/ledStrip.png" /></p>
+<p>Color LEDs have been used ubiquitously since cheap controllers and light strips began being popularized in the past decade.</p>
+<p>The most readily available programmable light strip today is based on ws2812 technology more commonly known as <em>NeoPixel</em>.</p>
+<p><img alt="" src="images/stripsSticks.png" /></p>
+<p>Given a strip you will need to connect it to your controller.</p>
+<p>There are various connections and this depends on your kit:</p>
+<ul>
+<li>Straight to ESP32</li>
+<li>Using a bread board</li>
+<li>With breakout board</li>
+</ul>
+<p><em>Straight to ESP32</em>
+<img alt="" src="images/ledStraight.png" /></p>
+<p><img alt="" src="images/ledPins.png" /></p>
+<p><em>Using a Bread Board</em>
+<img alt="" src="images/ledBreadboard.png" /></p>
+<p><em>With Breakout/Expansion</em></p>
+<p>First, make sure to secure the ESP32 properly into the board:</p>
+<p><img alt="" src="images/servoexpansion1.jpg" /></p>
+<p>Make sure to <strong>align the pins</strong> properly before pushing them in:</p>
+<p><img alt="" src="images/servoexpansion2.jpg" /></p>
+<p>Finally, find the row corresponding to your programming pin, say D13 as in this example, and match:</p>
+<ul>
+<li>+5v wire to the V (middle) column</li>
+<li>Gnd wire to the G (inner) column</li>
+<li>DI wire to the S (outer) column</li>
+</ul>
+<p>Like so:</p>
+<p><img alt="" src="images/ledexpansion1.png" /></p>
+<p><img alt="" src="images/ledexpansion2.png" /></p>
+<p><em>Programming NeoPixel Strips</em></p>
+<p>In order to program the NeoPixel strip we need to utilize a NeoPixel library/API.</p>
+<ul>
+<li>
+<p>Go to <strong>File-&gt;Load extension...</strong>
+<img alt="" src="images/extension.png" /></p>
+</li>
+<li>
+<p>In the search box type <strong>"neo"</strong></p>
+</li>
+<li>
+<p>You will see NeoPixel choice, click <strong>Install</strong>
+<img alt="" src="images/install.png" /></p>
+</li>
+<li>
+<p>Close the dialog box and you will see a Code Block category:
+<img alt="" src="images/neopixel.png" /></p>
+</li>
+</ul>
+<p><em>Make it Red</em></p>
+<ul>
+<li>
+<p>You will need an Initialize block first.  Whicever pin you used for DI above should be the pin you use to initialize.  The number of leds is based on whatver size led strip you are using.  It depends on your kit</p>
+</li>
+<li>
+<p>Next let's choose a color to set all the LEDs to...</p>
+</li>
+<li>
+<p>Finally, and this is important to remember, after every programmatic change to the LEDs you need to inform the electronics of those changes using a Write block</p>
+</li>
+</ul>
+<p><img alt="" src="images/red.png" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

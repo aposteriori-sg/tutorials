@@ -13,11 +13,11 @@ It should look like this...
 ![](images/enemyDelayEvent.png)
 
 We'll change the **1** into a variable.
-Easiest way to do this is to double click on the timer condition to edit it, delete the **1**, then click on the blue **Expressions** button, and select **Value of a scene variable**.
+Easiest way to do this is to double click on the timer condition to edit it, delete the **1**, then click on the blue **Expressions** button, and select **Value of variable**.
 
 ![](images/variableTime.jpg)
 
-Use the variable name **enemyDelay** (...as always, there's nothing special about this variable name. Use whatever you want.)
+Create the variable name **enemyDelay** (...as always, there's nothing special about this variable name. Use whatever you want.)
 
 We need to give **enemDelay** a starting value, else it'll be undefined at the start of the scene (...in GDevelop, an undefined variable will default to 0).
 Find our **At the beginning of the scene** condition event, and add **Change scene variable enemyDelay set to 1** action.
@@ -41,11 +41,10 @@ The event should end up like this...
 
 ![](images/multiplyVariableEvent.png)
 
-<div class="think" markdown="span">
-Why multiply by 0.9? When reducing a value, we would usually think of performing a subtraction, say by **0.1 seconds**.
+THINK:  Why multiply by 0.9? When reducing a value, we would usually think of performing a subtraction, say by **0.1 seconds**.
 But consider what happens when we have subtracted ten times?
 The delay will now be **0 seconds**.
 And if we subtract one more time, the delay will be **-0.1 seconds**. That doesn't make much sense!
+
 Multiplying by 0.9 will reduce the delay, while ensuring that it never reaches zero.
 There are other more complicated equations that we can use, but this is good enough for now.
-</div>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Internet of Things</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Internet of Things
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on using an IoT development board with to create a smart, interconnected device.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-IoT.html"><li >Internet of Things</li></a><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-References.html"><li >References & Resources</li></a><a href="../10-Introduction/20-Simulated-Environment.html"><li >IoT Simulation</li></a></ul><p>Getting Real</p><ul><a href="../20-Getting-Real/10-Hello-World.html"><li >Using Real Electronics</li></a><a href="../20-Getting-Real/15-Compile-and-Upload.html"><li >Compile & Upload</li></a><a href="../20-Getting-Real/20-Blynk-Blink.html"><li >Blynk Blink</li></a><a href="../20-Getting-Real/30-RGB-Strip---Introduction.html"><li >RGB Strip - Introduction</li></a><a href="../20-Getting-Real/40-RGB-Strip---Coding.html"><li >RGB Strip - Coding</li></a><a href="../20-Getting-Real/50-RGB-Strip---Challenges.html"><li >RGB Strip - Challenges</li></a></ul><p>IoT Projects</p><ul><a href="../30-IoT-Projects/10-Doorbell.html"><li >Smart Doorbell</li></a><a href="../30-IoT-Projects/15-Alarm.html"><li >Intruder Alarm</li></a><a href="../30-IoT-Projects/17-Servo.html"><li >Remote-Controlled Motor</li></a><a href="../30-IoT-Projects/20-Planter.html"><li class="current">Smart Planter</li></a><a href="../30-IoT-Projects/30-GPS.html"><li >GPS</li></a><a href="../30-IoT-Projects/31-pH-Sensor.html"><li >pH Sensor</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Smart Planter</h2>
+<p>Another way we can use IoT is to monitor and care for our plants and pets when we are not at home.</p>
+<p>In this project, we will create the electronics necessary to create a Smart Planter, that can monitor its own soil moisture and keep us up to date.</p>
+<p><img alt="" src="images/planter.jpg" /></p>
+<h2>Level Widget</h2>
+<p>For the Planter, we can monitor the moisture level itself, so let's add a Level meter (Level H or Level V, up to you):</p>
+<p><img alt="" src="images/level.jpg" /></p>
+<p>In the settings for the Level widget:</p>
+<ul>
+<li>choose an available Virtual Pin (say V0)</li>
+<li>Change the Max Value to 4095</li>
+<li>keep it at 1 Sec Reading Rate</li>
+</ul>
+<p><img alt="" src="images/levelsettings.jpg" /></p>
+<h2>List of Parts</h2>
+<p>For this project you will need the following electronics from your kit beside the ESP32:</p>
+<ul>
+<li>Breadboard</li>
+<li>Moisture Sensor</li>
+<li>Moisture Sensor Board</li>
+<li>3 Female-to-Female Connectors</li>
+<li>3 Male-to-Female Connectors</li>
+<li>1 Male-to-Male Connector</li>
+</ul>
+<h2>Connect</h2>
+<p>First, get your breadboard ready:</p>
+<p><img alt="" src="images/esp32withhygrometer1.png" /></p>
+<p>It is upside-down on purpose.  I want Row 1 to be on the bottom.</p>
+<p>Now, you need to attach the ESP32 to the breadboard.</p>
+<p>Be <strong>VERY CAREFUL</strong> not to damage the pins when you do this:</p>
+<ul>
+<li>Line the pins up with the holes<ul>
+<li>The first pin from the bottom should be on row 1</li>
+<li>The last pin on the top should be row 19</li>
+</ul>
+</li>
+<li>One side of the board will be dangling in the air to the left of the breadboard</li>
+<li>Start pushing in from one end of the ESP slightly, then try to push from the other end of the ESP</li>
+<li>All the pins should be pushed into the holes from a perpendicular angle</li>
+</ul>
+<p><img alt="" src="images/esp32withhygrometer2.png" /></p>
+<p>Next, use a Female-to-Male jumper wire to connect the 3v3 (top left pin) from the ESP32 to the '+' column of the breadboard on the right hand side.</p>
+<p>Then, use a Male-to-Male wire to connect the GND (top right pin) from the ESP32 to the '-' column on the right hand side.</p>
+<p>The '+' may be the outermost column or the one just next to it.  Or there may be no markings.  Just pick one of those 2 outermost columns as (+) and one as (-) and connect as shown.</p>
+<p>The wire colors are not important.</p>
+<p><img alt="" src="images/esp32withhygrometer3.png" /></p>
+<p>Next use 2 Male-to-Female connectors to connect the '-'/GND &amp; '+' from the breadboard to the GND and VCC pins on the sensor board.</p>
+<p>Use 1 Female-to-Female connector to and GPIO Pin 34 to the sensor board's AD pin as shown.</p>
+<p><img alt="" src="images/esp32withhygrometer4.png" /></p>
+<p>Finally, use 2 Female-to-Female connectors to connect the hygrometer to the board as shown (polarity is not important).</p>
+<p><img alt="" src="images/esp32withhygrometer.png" /></p>
+<p>Use the short USB wire to connect the ESP32 to your laptop to power it up.</p>
+<h2>Coding</h2>
+<h3>Start with Blynk Blink code</h3>
+<p>Open the Arduino application.</p>
+<p>See the basic code for <a href="../20-Getting-Real/20-Blynk-Blink.html">Blynk Blink</a> - that will the starting point we assume for this project.</p>
+<p>The code for Smart Planter needs to read pin 34 as Input, so we need to add the following line to the setup() function:</p>
+<pre class="codehilite"><code>pinMode(34, INPUT);
+</code></pre>
+
+<p>We will then need to create a BLYNK_READ function for this Pin 34 value to send to the Level Widget (on V0, if that's what you chose):</p>
+<pre class="codehilite"><code>BLYNK_READ(V0) {
+  Blynk.virtualWrite(V0, 4095 - analogRead(34));
+}
+</code></pre>
+
+<p>That's it!  All you have to do is compile and upload these changes.</p>
+<h2>Compile &amp; Upload</h2>
+<p>See instructions <a href="../20-Getting-Real/15-Compile-and-Upload.html" target="_blank">here</a></p>
+<h2>Test</h2>
+<p>To test, start your dashboard and make sure your electroncis and code are working.</p>
+<p>You should see your Level meter at 0 when the hygrometer is at rest on a non-conducting surface like your table.</p>
+<p>If you touch the two probe leads to the palm of your hand or one of your fingers, you should see some increase in Level.</p>
+<p>If you dip it in water it should be near MAX (4095).</p>
+<h2>Challenges &amp; Showcases</h2>
+<ul>
+<li>
+<p>See if you can find a plant in your school and try to test the soil there.  What value does your Moisture Level indicate in the dashboard?  Does the soil feel moist or dry?  What levels do you think would be a good inidcation of too dry and too moist?</p>
+</li>
+<li>
+<p>Show your teachers how the new Smart Planter could work - in case of low soil moisture it could get the attention of a landscaping company monitoring your school from some faraway dashboard and send a gardner that day?  Or maybe notify your plant manager onsite at the school?</p>
+</li>
+<li>
+<p>(MODERATE) Add code that checks for the water level, and sends a notification (see Smart Doorbell) to the Dashboard, so the user doesn't just monitor the level actively, but gets an alert to check the monitor when it's too low and they're not paying attention. You can do all of this inside BLYNK_READ() - just need to add an <strong>if</strong> statement and Blynk.notify() when neceesary.</p>
+</li>
+<li>
+<p>(MODERATE) On top of the connections we already made, try to wire up a Servo motor with some small container with water.  Add a button to the dashboard that causes the servo to tip the container with water so that the planter gets watered.  You can now both monitor as well as keep the plant watered after a few days of no rain!</p>
+</li>
+<li>
+<p>(ADVANCED) Add code that can control the Servo when the plant's soil moisture gets too dry.  Don't bother with human users - they're too busy to pay us any attention!  We will water ourselves!</p>
+</li>
+</ul>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

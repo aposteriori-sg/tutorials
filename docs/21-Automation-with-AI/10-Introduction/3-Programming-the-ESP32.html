@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li class="current">Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Programming the ESP32</h2>
+<p>We are finally ready to program the blue LED.</p>
+<p>The first category of blocks on the left is Pins.</p>
+<p><strong>Digital Read/Write</strong> blocks are for pins you will be using as binary toggles - on/off.  For instance to control a programmable light switch.</p>
+<p>Write means you are writing to the pin chosen in order to change its state - 0(off) / 1(on):</p>
+<p><img alt="" src="images/digitalWrite.png" />
+This turns on the 2nd pin and the blue LED light it is internally connected to.</p>
+<p>Read means you are reading from the pin to check its state.  If we wanted to use the EN button on the right of the ESP32 to control some user event we would Read the state of Pin 0 which the button is internally connected to, like this:</p>
+<p><img alt="" src="images/digitalRead.png" /></p>
+<p>If at some point we need more or different type of physical buttons for our project, we can connect them to other pins and use Digital Read to check their state.</p>
+<p>Anyways, right now we just want to exert some programming power over the Blue Light to control its behavior.</p>
+<p>For that we only need the Digital Write block, and you can find the Sleep block under the Control categor:</p>
+<p><img alt="" src="images/blueLED.png" /></p>
+<p>This will turn the Blue LED light on for 3 seconds and then turn it off.</p>
+<p>Now Download and Reset the code to the ESP32:</p>
+<p><img alt="" src="images/download.png" /></p>
+<p><img alt="" src="images/reset.png" /></p>
+<p>You can also reset using the BOOT/RESET button on the bottom left of the ESP32 to rerun the program.</p>
+<p>Finally, there's a reset menu choice as well.</p>
+<p>You should see the power cycle and then the light stay on for however long you sleep in your code.</p>
+<div style="padding: 15px; border-left: 6px solid #ffcc00; background-color: #fff3cd; color: #856404;">
+<strong>NOTE:</strong> Remember that the blue LED will always flash 3 times during the start of a power cycle.  Your program will initiate after that.
+</div>
+
+<h2>Blink Challenge</h2>
+<p>Can you make code that blinks the LED 10 times slower or faster than the power cycle 3 blinks?</p>
+<p>HINT: Use Loops to simplify code.</p>
+<p>HINT 2: Each block happens intantaneously.  In order to maintain the state of the LED on or off for a sustained time that your eye can detect, you must SLEEP.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

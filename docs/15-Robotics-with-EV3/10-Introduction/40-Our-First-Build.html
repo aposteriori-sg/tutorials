@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with EV3</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with EV3
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the LEGO EV3 platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a><a href="../10-Introduction/40-Our-First-Build.html"><li class="current">First Build</li></a><a href="../10-Introduction/50-The-EV3-Brick.html"><li >The EV3 Brick</li></a></ul><p>Basic Movements</p><ul><a href="../20-Basic-Movements/10-Just-Go-Straight.html"><li >Just Go Straight</li></a><a href="../20-Basic-Movements/20-Movement-Blocks.html"><li >Basic Movement Blocks</li></a><a href="../20-Basic-Movements/30-Sequences-to-Functions.html"><li >Sequences to Functions</li></a><a href="../20-Basic-Movements/40-Final-Challenges.html"><li >Final Challenges</li></a></ul><p>Sumo Challenge</p><ul><a href="../30-Sumo-Challenge/10-Overview.html"><li >Overview</li></a><a href="../30-Sumo-Challenge/20-Ultrasonic-Sensor.html"><li >Ultrasonic Sensor</li></a><a href="../30-Sumo-Challenge/30-Color-Sensor.html"><li >Color Sensor</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>First Build</h2>
+<p><img alt="" src="images/ev3educator.jpg" /></p>
+<p>LEGO can seem like a trivial toy, but in fact sometimes it's easier to just glue together some cardboard to achieve similar results that may take hours to build in LEGO.</p>
+<p>If this is your first time building an EV3 2-wheel robot, please follow the instructions provided for the EV3 Core Robot Educator:</p>
+<ul>
+<li>It will teach you some useful LEGO assembly techniques</li>
+<li>You will end up with a working 2-wheel robot</li>
+</ul>
+<p>While we do want to promote creativity and innovation, in order to get to the next part of our curriculum - using sensors, and creating algorithms - we need a working starting point.</p>
+<h2>Instructions</h2>
+<p>Download instructions <a href="download/ev3-rem-driving-base.pdf">here</a>.</p>
+<p>Or:</p>
+<ul>
+<li>Turn on EV3 Classroom </li>
+<li>Naviagte to <em>UNITS</em></li>
+<li>Download the <strong>Robot Trainer</strong> Plan</li>
+<li>Navigate to <em>BUILD</em></li>
+<li>Click on <strong>Driving Base</strong></li>
+</ul>
+<p float="left">
+  <img src="images/ev3units.png" width="300" />
+  <img src="images/ev3build.png" width="300" /> 
+</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

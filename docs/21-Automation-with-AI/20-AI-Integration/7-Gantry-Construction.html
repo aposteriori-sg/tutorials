@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li class="current">Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Gantry Construction</h2>
+<p>This project requires relatively a lot of construction steps and many small parts that can be damaged or lost.  Please be careful, work on a wide area of the table, and keep the parts neat.</p>
+<p>You can 3D print the parts from <a href="https://cad.onshape.com/documents/03db0d88b151f728c43cded5/w/1c832fa568602e61f1c236a7/e/bb37f39192853878a41e2325?renderMode=0&amp;uiState=6a9f9c509a7b14f8f430e16c">this onshape project</a> or from the original <a href="https://www.thingiverse.com/thing:2451583">Thingiverse project page</a> - we thank the original designer, Vlastimil Hovan, for sharing their Bendy Arm Barrier work under common attribution license.</p>
+<h3>Setup</h3>
+<p>You shoud get a pack of 3D printed bits with a but and bolt, and a servo pack with 2 screws and a bolt, as well as 3 servo horns.</p>
+<p><img alt="" src="images/gantry/intro1.jpg" /></p>
+<p>These 2 can be discarded:
+<img alt="" src="images/gantry/intro2.jpg" /></p>
+<p>For reference, we will be calling the various small parts as follows in the instruction:</p>
+<p><img alt="" src="images/gantry/intro3.png" /></p>
+<h3>1. Assemble Gantry Housing</h3>
+
+<p>Take the servo and insert business end first aligned with the matching hole into the gatry housing:</p>
+<p><img alt="" src="images/gantry/main1.jpg" /></p>
+<p>The servo business end should be poking out:</p>
+<p><img alt="" src="images/gantry/main2.jpg" /></p>
+<p>Next wind the servo wiring through the housing cover:</p>
+<p><img alt="" src="images/gantry/main3.jpg" /></p>
+<p>And cover the housing.  </p>
+<p>NOTE: the wire should be coming out the opposite end of the housing from the servo head sticking out...</p>
+<p><img alt="" src="images/gantry/main4.jpg" /></p>
+<p>Find the house holder/base:</p>
+<p><img alt="" src="images/gantry/main45.jpg" /></p>
+<p>THen fit the housing into the base:</p>
+<p><img alt="" src="images/gantry/main5.jpg" /></p>
+<h2>2. Adjust Servo to 90 Degrees</h2>
+
+<p>Connect the servo to the controller as we will need to adjust the servo position for this next part:</p>
+<p>Use the code we learned from <a href="/21%20Automation%20with%20AI/15%20Connecting%20Simple%20Electronics/2%20Servo%20Motor.md">Servo reference</a> to set the Servo to <strong>90 degrees</strong>.</p>
+<p>Once AND ONLY ONCE you are sure the servo gear is aligned to <strong>90 degrees</strong> attach the servo horn as shown here:</p>
+<p><img alt="" src="images/gantry/main6.jpg" /></p>
+<p>It needs to be sticking out to the left at about perpendicular to the ground.</p>
+<p>Failure to calibrate the servo before this step will be detrimental...</p>
+<h3>3. Attach Gantry Fence</h3>
+
+<p>Find the large gantry piece with the indentation and fit it over the servo horn:</p>
+<p><img alt="" src="images/gantry/end1.jpg" /></p>
+<p>Use the <strong>small bolt</strong> to affix the gate piece onto the servo horn.  Don't overtighten.  This can be challenging because the parts are small and may require a lot of force to tighten just right.</p>
+<p><img alt="" src="images/gantry/end2.jpg" /></p>
+<p>Use one of the screws to affix the gantry support piece to the right end hole in the housing.</p>
+<p>Again, do not overtighten, as this piece needs to be able to rotate:</p>
+<p><img alt="" src="images/gantry/end3.jpg" /></p>
+<p>Use the other screw to affix the final piece, the junction, to the other side of the gantry support:</p>
+<p><img alt="" src="images/gantry/end4.jpg" /></p>
+<p>Finally, we will use the long bolt and the nut to secure the junction piece to the gantry gate piece:</p>
+<p><img alt="" src="images/gantry/end5.jpg" />
+<img alt="" src="images/gantry/end6.jpg" /></p>
+<p>Thats it.  You can now test the gantry and add controls:</p>
+<p><img alt="" src="images/gantry/end7.jpg" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li class="current">Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Servo Motor</h2>
+<p>A <strong>Servo Motor</strong> contains a DC motor, some gears with a simple encoder (like a potentiometer), and an on-board electronic controller that will read instructions in and convert them to either a position to hold (180 degree servos) or a direction and speed to spin (360 versions).</p>
+<p><img alt="" src="images/servo.png" /></p>
+<h3>Servo Horns</h3>
+<p>Usually a servo will be provided with some servo horns for various use cases.  The common Tower sg90 servo comes with three:</p>
+<p><img alt="" src="images/servohorns.png" /></p>
+<p>If you want to put a long popsicle stick over the middle of the servo's rotating shaft, then use one of the two bigger double-sided horns.  If you want to make a gantry, or connect a rudder, or have some space constraint then the smaller half-horn is more suitable.</p>
+<h3>Screws</h3>
+<p>There are 2 types of screws, the mall one is for securing the horn onto the servo shaft.  A lot of times that isn't needed because the servo horn has a good tight fit over the shaft.</p>
+<p>The other two screws can be used to secure thehorn onto an external bit of hardware like plastic or wood.</p>
+<h3>Wiring</h3>
+
+<p>The Servo has 3 cables:</p>
+<p><span style="color:red">Red - Power (+)</span></p>
+<p><span style="color:brown">Brown - Power (-/Gnd)</span></p>
+<p><span style="color:orange">Orange - Signal (coded behavior)</span></p>
+<p><img alt="" src="images/servowires.png" /></p>
+<h4>Connecting Directly to ESP32</h4>
+<p>We cannot use the Servo wire connector directly with the ESP32 board, so we will utilize extra Male-to-Female Dupont wires.  The colors on these extra wires is irrelevant.  As long as:</p>
+<table><thead>
+<tr>
+<th>Servo Wire Color</th>
+<th>ESP32 Pin</th>
+</tr>
+<tr>
+</thead>
+<tbody>
+<tr>
+<td>Red</th>
+<td>VIN</th>
+</tr>
+<tr>
+<td>Brown</th>
+<td>GND</th>
+</tr>
+<tr>
+<td>Orange</th>
+<td>Dxx (D04 in coding example)</th>
+</tr>
+</tbody>
+</table>
+
+<h4>Connecting with Breadboard</h4>
+
+<p>Similar to above.  Now we need Male to Male Dupont wires...</p>
+<p><img alt="" src="images/servobreadboard.png" /></p>
+<p>NOTE: In this image the signal wire is connected to Pin 13, but in our coding example we use Pin 4, so make the necessary adjustments in code.</p>
+<h4>Connecting with Expansion Board</h4>
+
+<p>First, make sure to secure the ESP32 properly into the board:</p>
+<p><img alt="" src="images/servoexpansion1.jpg" /></p>
+<p>Make sure to <strong>align the pins</strong> properly before pushing them in:</p>
+<p><img alt="" src="images/servoexpansion2.jpg" /></p>
+<p>Then connect the 5V and Gnd to the power pins:</p>
+<p><img alt="" src="images/servoexpansion3.png" /></p>
+<p>And finally the signal wire to the corresponding pin's (D4?) S or outer column:</p>
+<p><img alt="" src="images/servoexpansion4.png" /></p>
+<p>You're all set!</p>
+<h3>Coding</h3>
+
+<p>Coding the servo is faily simple.  Assuming the most basic servo type (holds positions 0-180 degrees):</p>
+<p><img alt="" src="images/servowrite.png" /></p>
+<p>The pin denotes the pin that the Servo Signal (orange) wire is connected to.</p>
+<p>The second number is the angle position to hold.</p>
+<p>In order to move from one position to another you need to give the servo some time to reach the desired position:</p>
+<p><img alt="" src="images/servosleep.png" /></p>
+<p>ALSO: Note that 0 and 180 may not be exactly 0 and 180.  They map to some API number that is not the same across all servos.  </p>
+<p>You may try the range from roughly -100 to 300 and once you find the true range, you can utilize the <strong>map</strong> block like this:</p>
+<p><img alt="" src="images/servomap.png" /></p>
+<h2>Challenge</h2>
+
+<p>Make repetitive motion like a car's windshield wiper - use loops, and don't forget to sleep.</p>
+<p><img alt="" src="images/pos-servo.gif" /></p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

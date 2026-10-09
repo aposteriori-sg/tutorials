@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li class="current">Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Final Projects</h2>
+<p>You have a choice:</p>
+<ol>
+<li>Voice-Activated Color Lamp</li>
+<li>Smart Gantry with Camera</li>
+</ol>
+<p>In both cases the AI voice or vision things are happening on your PLD, laptop, or even phone.</p>
+<p>You need to code the connection between the AI widget on the app and the ESP32, which will get the event trigger as a communication request, and convert it to an LED or Servo action.</p>
+<p>IF YOU HAVE AN IDEA FOR A DIFFERENT KIND OF PROJECT DO LET US KNOW, WE CAN TRY TO PROVIDE THE MATERIALS IN TIME!</p>
+<h3>Voice-Activated Lamp</h3>
+
+<p>Review the LED Strips lesson, so you remember how to control the LED Strip from the ESP32.</p>
+<p>For voice activation, you will need the Speech Widget in the app:
+<img alt="" src="images/speech.png" /></p>
+<p>The Speech Widget's settings are quite simple.  By default you only need to define the topic:</p>
+<p><img alt="" src="images/speechsettings.png" /></p>
+<p>Up to you if you wish to only allow certain words using the Word List options.</p>
+<p>If you connect a Display Widget to the Speech Widget's topic you can easily test:</p>
+<ul>
+<li>Click on Speech widget (it should 'turn on')</li>
+<li>Speak</li>
+<li>See what it deciphered in the Display widget</li>
+</ul>
+<p>If the Speech Widget did not understand you or if the word was not in the Word List (if you used that option), then you would see nothing happen.</p>
+<p>Otherwise you should get a checkmark, and your speech appear in the Display Widget:
+<img alt="" src="images/speechtest.png" /></p>
+<p>Now inside your ESP32 code, you should intercept the speech the same way we intercepted on/off from the LED button.</p>
+<p>And based on whatever words are sent you can code the behavior, for instance:
+<img alt="" src="images/speechsample.png" /></p>
+<h4>Lamp</h4>
+
+<p>You can design your own lamp, or you can use the <a href="/21%20Automation%20with%20AI/20%20AI%20Integration/6%20LED%20Lamp%20Construction.md">provided parts</a>.  You can add a sillouette screen or just keep the led colors themselves as the attraction.</p>
+<h3>Smart Gantry</h3>
+
+<p>For this you will utilize the Teachable Machine or Object Detector widgets.</p>
+<p><img alt="" src="images/teachablemachinewidget.png" /></p>
+<p><img alt="" src="images/objectdetectorwidget.png" /></p>
+<h4>Object Detector Widget</h4>
+<p>Object Detector is programmed to recognize certain classes of objects like people, phones, chairs, various fruits and animals, and so forth.  The full list is here:</p>
+<p>https://github.com/amikelive/coco-labels/blob/master/coco-labels-2014_2017.txt</p>
+<p>You can use it to maybe make:
+- Animal Crossing gantry (for something like the <a href="https://www.nparks.gov.sg/visit/parks/bukit-timah-nature-reserve/special-features/eco-link-bke">Eco-Link@BKE</a>: it would only allow monkeys, lizards, and other rodents, but not domesticated animals like cats and dogs.  Would be useful in Jurassic Park - no Velociraptors allowed.  Cute Dinosaurs ok!</p>
+<ul>
+<li>
+<p>Specific-Use Carpark:  Only lets in cars, but not motorcycles or trucks</p>
+</li>
+<li>
+<p>More ideas: Human-Only Gantry, Phones Not Allowed Gantry (need to put phone away for it to open), and more</p>
+</li>
+</ul>
+<p>Once you decide what objects you are allowing you will need to connect the ESP32 to the gantry (see Servo unit for how Servos are controlled), and add a hook to listen to Object Detector events:</p>
+<p><img alt="" src="images/objectdetectordemo.png" /></p>
+<p>In order to read values from this string, you will need to do some work.  </p>
+<p>In this example I am printing only the "name" from the string.  </p>
+<p>That is the type of object: person, cell phone, chair, etc...</p>
+<p><img alt="" src="images/jsonsample.png" /></p>
+<p>I created two variables:
+- json
+- object</p>
+<p>The various decoding blocks can be found in:
+- Data (json load string)
+- Lists (in list...)
+- Dictionaries (item [key])</p>
+<p>The above sample code block assumes you have a single object in camera view, but the object detector may pass more objects.  </p>
+<p>If you need to search the list of objects and need help with coding let us know.</p>
+<p>Similarly, you would need to handle cases where the list is empty:</p>
+<p><img alt="" src="images/jsonempty.png" /></p>
+<p>Integrating this with a Servo would look something like this:</p>
+<p><img alt="" src="images/objectdecectorservo.png" /></p>
+<p>Other ideas:</p>
+<ul>
+<li>Servo controls something that moves based on where you are on the screen - see x/y coordinates and w/h for width and height of the object bounding box)</li>
+</ul>
+<h4>Teachable Machine Widget</h4>
+<p>To use the Teachable Machine Widget, you will need to first create and upload to cloud a Teachable Machine model.  Then add the model into the TM Widget's settings.</p>
+<p>You can use this to make:</p>
+<ul>
+<li>Gantry that only opens for you, no other faces</li>
+<li>Gantry that only opens for masked faces (remember COVID?)</li>
+<li>Gantry that only opens if you show it secret hand gesture?</li>
+<li>Anything else you can think of (have a picture of your pet - can open only for your pet)...</li>
+</ul>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

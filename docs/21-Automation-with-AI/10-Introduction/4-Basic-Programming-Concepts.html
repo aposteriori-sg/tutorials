@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li class="current">Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Basic Programming Concepts</h2>
+<p>Let's keep going with some other programming concepts, both unique to the ESP32 and IoTy but also relevant in most coding practice.</p>
+<p><img alt="" src="images/buttons.png" /></p>
+<p><u><strong>Light Switch</strong></u></p>
+<p>Remember the Programmable Button?</p>
+<p>Here, on the bottom right of the ESP32, it is labelled Mode (that has to do with its main built-in default function):</p>
+<p><img alt="" src="images/esp32.png" /></p>
+<p>On the ESP32 itself it is labelled BOOT.  </p>
+<p>Let's use the Digital Read block to query the state of the button, and we will print the result back to the screen/monitor.</p>
+<p>The Print block can be found under Text:</p>
+<p><img alt="" src="images/print.png" /></p>
+<p>Let's print the state of the Button combining Print with Digital Read:</p>
+<p><img alt="" src="images/printState.png" /></p>
+<p>If we donload and run this we won't notice anything happening, but we can open the "Monitor" tab to see if anything is printed out:</p>
+<p><img alt="" src="images/monitor.png" /></p>
+<p>There's quite a lot of built-in debug output that the micropython OS is spitting out at us, but you can see that "1" just before the end.</p>
+<p>The monitor is essential for debugging and analyzing the behavior of your code.  Learn to use it as a diagnostic tool early!</p>
+<p>Let's make this a bit more interactive.  We will print the state of the button in a stream over and over again so we can see if the output changes when we press it:</p>
+<p><img alt="" src="images/printInLoop.png" /></p>
+<p>We added a loop around the print statement so it keeps printing the state over and over.  We also added a 100ms Sleep to prevent over-spamming, but it's not %100 necessary.  It is, howver, a good habit to pump the brakes in thes forever loops as a habit.</p>
+<p>Let's download this code, reset the device, and monitor the button state while we interact with it - press and let go a few times while monitoring:</p>
+<p><img alt="" src="images/rollingState.png" /></p>
+<p>Note that when we press the button the printed State is 0.  When the button is unpressed the State is 1.  Reversed from maybe what you would have assumed, but at least we know the expected logic behavior now.</p>
+<p>Let's change the code to turn the Blue light ON when the button is pressed (state == 0).</p>
+<p>We will use the IF block in Logic:</p>
+<p><img alt="" src="images/if.png" /></p>
+<p>And we will add an "else" path to the code:</p>
+<p><img alt="" src="images/ifelse.png" /></p>
+<p>And now we will add what to do in each case - when the button is pressed / Read == 0, let's turn on blue light, othrwise turn it off:</p>
+<p><img alt="" src="images/lightSwitch.png" /></p>
+<p>If you download this code successfuly and rerun the device, you could test the button now as a temporary light switch - the light stays on as long as the button is pressed.</p>
+<h2>CHALLENGE</h2>
+<p>In order to turn the button into a toggle switch, you need to use a variable.  Save the state of the light in the variable, and whenever the button is pressed check what you did last time, and do the opposite.</p>
+<p>Creating a variable is easy:</p>
+<p><img alt="" src="images/var.png" /></p>
+<p>After you create a variable you will see the Set/Change blocks appear under Variables menu.  Let's set the state of the light to off at the beginning of the code, as the light should start off.</p>
+<p><img alt="" src="images/setVar.png" /></p>
+<p>The 0-box comes from Math blocks.</p>
+<p>Now the If statement checking if the button is pressed is only used to trigger an event but the nature of the event will be determined by the state of the state variable.</p>
+<p>Here is a basic structure:</p>
+<p><img alt="" src="images/toggle.png" /></p>
+<p>Complete the code to make the light turn on if it's off, and off if it's on.  And don't forget to keep track of the state!</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

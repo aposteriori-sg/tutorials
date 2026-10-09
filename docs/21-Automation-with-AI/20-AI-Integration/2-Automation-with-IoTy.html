@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li class="current">Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Automation With IoTy</h2>
+<p>We have some electronics that we know how to control with code, and we have some Machine-Learning model that we would like to use to control it.</p>
+<p>First, we need to learn how to remote control the electronics through ESP32.  We will be using the IoTy system for that, and we will remote control through the Internet, using an Internet-Of-Things (IoT) infrastructure.</p>
+<h3>Connecting to the Internet</h3>
+
+<p>First we need to use WiFi to connect to the wider Internet.  Your school's WiFi does not allow for this, so today we will need to connect to hotspots or a dongled router.</p>
+<p><strong>WIFI Info</strong></p>
+<p><u>SSID</u>: a9i
+<br>
+<u>Password</u>: goodlife</p>
+<p>You can use this for your laptops so that your IoTy remote control can connect to the internet properly.</p>
+<h3>App Builder</h3>
+<p>We will be creating a remote controller from the IoTy's App Builder:</p>
+<p><img alt="" src="images/appbuilder.png" /></p>
+<p>We will need to connect this app to our ESP32 somehow.  The IoTy infrstructure uses MQTT as a server and communication protocol that glues everything together.  This is a very common approach for IoT frameworks.</p>
+<p>So, we will need some way to identify your system and how it communicates between various elements.  For that you will need a MQTT ID.</p>
+<p>If your ESP32 has a # on it, you can simply use it as a MQTT ID as follows:</p>
+<h1>ioty###</h1>
+
+<p>If not, you will need to request an ID from <a href="http://mqtt.a9i.sg">here</a></p>
+<p>Click on the request button and you will get a 6-character ID:
+<img alt="" src="images/mqttid.png" /></p>
+<p>Note that the username and password are always the same, so just copy either.</p>
+<p>Now in the app builder you will use this ID to connect:</p>
+<p>You should also use this for your ESP32 to connect:</p>
+<p><img alt="" src="images/appbuilder-connect.png" /></p>
+<p>Notes if you <em>cannot connect</em>, check that:
+- You have copied the ID correctly
+- Your laptop is connected to a hotspot or the a9i WIFI provided above.</p>
+<p>Now that our app is connected, let's add a simple widget to use to test how to remote control our electronics.</p>
+<p>Click the '+' and drag and drop a Button widget into the app canvas:</p>
+<p><img alt="" src="images/button.png" /></p>
+<p>Next, click on the Button to define its behavior:</p>
+<p><img alt="" src="images/buttondef.png" /></p>
+<p>For Topic, enter your MQTT ID followed by '/' and the name of what this widget controls.  In our case we will control the Blue LED first.</p>
+<p>You can also change the text the widget will be sending to the ESP32 when you click and release it.  IN our example below we changed it from 'press' to 'on' and from 'release' to 'off' as that is the behavior we expect: Press and hold to "On the LED".</p>
+<p>Before we move to the ESSP32, let's test the IoTy service.  We will intercept the button commands inside the app itself to see if it works:</p>
+<p><img alt="" src="images/display.png" /></p>
+<p>And click on it to define its behavior - listening on the same topic as the button's.</p>
+<p><img alt="" src="images/displaydef.png" /></p>
+<p>Now test the app, by <strong>clicking on the Play button</strong> to start it, and click on the button to see the Display change:</p>
+<p><img alt="" src="images/testbutton.png" /></p>
+<p>In the next lesson we will integrate the ESP32 and its LED to this framework.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
