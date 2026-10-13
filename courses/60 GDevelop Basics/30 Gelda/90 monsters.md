@@ -21,13 +21,13 @@ Double-click on the monster, and go to the Behaviors tab.
 
 Click Add a New Behavior.
 
-The one we want is not installed by default, so we need to Search New Behaviors for **Rectangular Movement**.  
+The one we want is already installed by default, so we just need to search for **Rectangular Movement**.  
 
 ![](images/rectangularMovement.png)
 
-When you find it, click to Install it.  Once, installed, you would see it in the Add New Behavior tab for your object and you can now add it.
+When you find it, click and add it.  
 
-You need to choose the center of the rectangle, but you can leave it as 0,0 for objects that you expect to place in the scene, as it will use their position.  You then need to choose the height and width bounding the rectangular movement, as well as the acceleration and speed.
+You need to choose the height and width bounding the rectangular movement, as well as the acceleration and speed.  Initial position and whether it is clockwise or not will also effect the movement.
 
 Play around with it until you find a suitable set of values.
 
@@ -55,8 +55,8 @@ You can use the same Behavior to create a 1-dimension movement pattern for monst
 
 You may wish to use the same pattern, but with different properties.  You can either create complex instance-variable control (set and use instance variables in the movement - e.g. *set Behavior X Distance = Goblin.instance.Variable(XDist))*
 
-Or, you can create many different Objects with varying Behavior properties.
+Or, you can create many different Objects with varying Behavior properties - GoblinRec2, etc...
 
 You can even use random number generators to create various unexpected patterns, or non-repeating behaviors.
 
-For mor Monster control, please look for the Monsters Revisited page.
+For more Monster control, please look for the Monsters Revisited page.

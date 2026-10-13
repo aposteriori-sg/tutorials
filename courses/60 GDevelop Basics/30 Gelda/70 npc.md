@@ -1,7 +1,7 @@
 # Non-Player Characters
 
 You can't have an RPG without Non-Player Characters (NPC).
-We'll start with a Wizard (...or whatever you prefer); he'll be the one to give us our quest.
+We'll start with a Wizard (...or whatever you prefer); he'll be the one to give us our quest.  Make sure to **uncheck the "Tiled Sprite" filter**, if it's still on...
 
 ![](images/wizard.png)
 
@@ -10,7 +10,9 @@ Unlike the player, this NPC don't need to move around.
 This means that we don't need to choose a sprite with up/down/left/right animation, allowing us a lot more choices.
 </div>
 
-Drag an instance of the wizard on to the scene, resize him, and set an appropriate animation (...I'm using animation 1, "Idle").
+Drag an instance of the wizard on to the scene, resize him (usually for this pixel game it's best to set the width to 64 and keep the aspect ratio locked).
+
+Now set an appropriate animation (...I'm using animation 1, "Idle").  If you don't want to use the default first animation and you also don't want to add animation events, just drag the animation of your choice up to be the first animation in the object's Properties tab list.  That will be the animation used by default.  It just so happens to be Idle for Wizard...
 
 ## Dialog
 
@@ -22,11 +24,16 @@ Resize and position an instance of the panel in the scene, and set the layer to 
 
 ![](images/positionDialogPanel.png)
 
+## Text
+
 Next, add another new object, this time select **New Object from Scratch** and choose **Text**.
+
+![](images/newTextObject.png)
+
 Name the new object **Dialog**, and fiddle around with the font and color if you like.
 No need to change the default text (...we'll change it in the events).
 
-Drag an instance of **Dialog** on to the scene, set the layer to **GUI**, then position it suitably within the dialog panel.
+Drag an instance of **Dialog** on to the scene not over the panel.  The Panel is in GUI layer and the Dialog text is by default still in Base Layer so it will be behind the Panel and you wont see it.  So drag it first near the player, set it to **GUI** layer, and then position it suitably within the dialog panel.
 
 ![](images/positionTextInDialog.png)
 

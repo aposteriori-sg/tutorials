@@ -39,15 +39,17 @@
 This includes the ground as well as the walls.</p>
 <p>We want our background to always be behind the player (...else it'll cover the player), so we'll be making use of <strong>Layers</strong>.</p>
 <h2>Layers</h2>
-<p>Click on the <strong>Layers</strong> button to open up the layers editor...</p>
-<p><img alt="" src="images/layers.png" /></p>
+<p>Click on the <strong>Layers</strong> button to open up the layers panel.  We can use this area to change the background.</p>
+<p>As we are setting this game inside an underground lair, it would be good to make the background dark, even black:</p>
+<p><img alt="" src="images/blackBackground.png" /></p>
 <p>You can see that we currently have only a single layer, the default <strong>Base layer</strong>.</p>
 <p>Click <strong>Add a Layer</strong> to add a new layer, rename it to <strong>Background</strong>, and move it below the <strong>Base Layer</strong>.</p>
 <p><img alt="" src="images/moveLayer.png" /></p>
 <p>Now anything that's in the <strong>Background</strong> layer will appear behind all the objects in the <strong>Base Layer</strong>.</p>
-<p>While we are at layers, we should also add a <strong>GUI</strong> layer for the buttons.
+<p>While we are at layers, we should also add a <strong>GUI</strong> layer for any buttons or head-up (HUD) style displays - like Health, Score, Items, mini-map and so forth.
 This layer should be place above the <strong>Base layer</strong>.</p>
-<p>Select each of the buttons on the scene and change their layer to <strong>GUI</strong>.</p>
+<p>If you have the optional touch buttons for movemenent, select each of the buttons on the scene and change their layer to <strong>GUI</strong>.</p>
+<p>But make sure the Player object remains in the Base Layer.  You see the layer of each object in the Properties panel on the left:</p>
 <p><img alt="" src="images/guiLayer.png" /></p>
 <p>This ensures that the buttons will always appear over all other objects in the scene.</p>
 <div class="info">
@@ -55,8 +57,12 @@ GUI stands for <strong>Graphical User Interface</strong>. It includes controls s
 </div>
 <h2>Tile Sprite</h2>
 <p>I'll be using <strong>Gray Background</strong> for the floor and <strong>Blue Background</strong> for the walls.
-If you are using the desktop version of GDevelop, you can find much better floor and walls images online (eg. <a href="https://opengameart.org/">OpenGameArt</a>), but since I'll like to keep this tutorial accessible to everyone, I'll just have to make do with what we have in the asset store.</p>
+You can find much better floor and walls images online (eg. <a href="https://opengameart.org/">OpenGameArt</a>), but since I'll like to keep this tutorial accessible to everyone, I'll just have to make do with what we have in the Asset Store.</p>
 <p><img alt="" src="images/tiledSprite.png" /></p>
+<p>To find these I typed <strong>background</strong> into the search box, I clicked on the filter panel and scrolled down to check the <strong>Tiled Sprite</strong> filter.  </p>
+<p>You will need to click on <strong>Show next assets</strong> after scrolling down and not finding the assets we are looking for.  It's like a Next Page button.  Then scroll to find the Blue and Gray backround tiles next to each other as shown above.</p>
+<p>Go ahead and add both the <strong>Gray Background</strong> and the <strong>Blue Background</strong> to the scene.</p>
+<h2>Tiled vs. Normal Object</h2>
 <p>You can see it indicated below the asset name that these are <strong>tiled sprite</strong>.
 The differences between a normal <strong>sprite</strong> and a <strong>tiled sprite</strong> are...</p>
 <table>
@@ -79,7 +85,6 @@ The differences between a normal <strong>sprite</strong> and a <strong>tiled spr
 </table>
 <p>This images demonstrates what happens when you try to resize a normal sprite and a tiled sprite.</p>
 <p><img alt="" src="images/normalVsTiledSprite.png" /></p>
-<p>Go ahead and add both the <strong>Gray Background</strong> and the <strong>Blue Background</strong> to the scene.</p>
 <div class="tip">
 If you have an image that you'll like to use, but it is not available as a tiled sprite in the asset store, you can select <strong>New Object from Scratch</strong> followed by <strong>Tiled Sprite</strong>. This allows you to create a tiled sprite with any image.
 </div>

@@ -38,10 +38,11 @@
 <p>To inflict acts of violence on the monsters, we'll add in a sword for our player.
 I'm using the <strong>Lavish Sword</strong>...</p>
 <p><img alt="" src="images/sword.png" /></p>
-<p>Add it to the game, but don't drag it into the scene; we'll be adding it using events instead.</p>
+<p>There are many, many swords.  You can use any, but for the graphics to work properly without much tweaks from th efollowing events, use only vertical aligned swords - not diagonal positions ones...</p>
+<p>Add sword object, but don't drag it into the scene; we'll be adding it using events instead.</p>
 <h2>Attack Button</h2>
 <p>We'll need a button to trigger the sword attack.
-We're using the <strong>space</strong> button, but you can choose whichever, along with a touchscreen button if necessary...</p>
+We're using the <strong>space</strong> button, but you can choose whichever, along with a touchscreen button, if needed or wanted...</p>
 <h2>Attack Event</h2>
 <p>Whenever the attack button is pressed, we want...</p>
 <ol>
@@ -51,7 +52,7 @@ We're using the <strong>space</strong> button, but you can choose whichever, alo
 <li>There should be a slight delay before the player can attack again.</li>
 </ol>
 <p>We'll start with a new group event, and name it <strong>Player Attack</strong>.</p>
-<p>Add a sub-event, and for condition, select <strong>Key Pressed (space)</strong>.</p>
+<p>Add a sub-event, and for condition, select <strong>Key Pressed</strong>, choose <strong>space</strong> key.</p>
 <p>For the action, select the <strong>Sword</strong> and choose <strong>Create an object</strong>.
 The <strong>X</strong> and <strong>Y</strong> position doesn't matter, as we'll be changing it in a separate action, so just set them to zero.</p>
 <p><img alt="" src="images/swordAttack1.jpg" /></p>
@@ -60,29 +61,43 @@ The <strong>X</strong> and <strong>Y</strong> position doesn't matter, as we'll 
 <h2>Attack Direction</h2>
 <p>Next, we need to determine the direction that the player is facing, so we'll need to add 4 sub-events.
 These sub-events will check which animation the player is currently set to.</p>
-<p>For the first condition, select the player and choose <strong>Current animation name</strong>.
-Set the sign to <strong>= (equal to)</strong> and value to <strong>Up</strong>.
-For the action, select <strong>Value of scene variable</strong>, set the name to <strong>playerDirection</strong>, and set the value to <strong>0</strong>.</p>
+<p>For the first condition, select the player and choose <strong>Animation (by name(</strong>.
+Set the sign to <strong>= (equal to)</strong> and value to up...</p>
+<p>Remember:<br>
+<strong>Right -&gt; Walk0<br>
+Down -&gt; Walk1<br>
+Left -&gt; Walk2<br>
+Up -&gt; Walk3<br></strong></p>
+<p>So set the value to "Walk3".</p>
+<p>For the action, select <strong>Other actions -&gt; Change variable value</strong>, create new variable and set the name to <strong>playerDirection</strong>, and set the value to <strong>0</strong>.</p>
 <p><img alt="" src="images/swordDirection.jpg" /></p>
 <div class="tip">
-The sword object is drawn facing up by default, with angle = 0.  And using GDevelop coordinate system, Right = 90, Down = 180, and Left = 270 degrees...
+The sword object is drawn facing up by default, with angle = 270 in GDevelop coordinate system (0 is reserved for objects drawn rightward).   
+
+And using the same system:
+Right = 0<br>
+Down = 90<br>
+Left = 180<br>
+degrees...
 </div>
 
-<p>Repeat for all 4 animations / directions.</p>
+<p><br>
+Repeat for all 4 animations / directions.
+<br><br></p>
 <p><img alt="" src="images/swordDirections.jpg" /></p>
 <h2>Position and Rotate Sword</h2>
 <p>Select the <strong>Key Pressed</strong> event and add a sub-event to that.</p>
 <p>For this new sub-event, leave the condition empty.
 For the actions, we need two individual statements:</p>
 <ul>
-<li>rotate the sword to the correct direction.</li>
+<li>place the sword a bit offset from the player</li>
 <li>
-<p>select the <strong>Sword</strong> and choose <strong>Angle</strong>.  Set the sign to <strong>= (set to)</strong> and the value to <strong>Expressions</strong>, <strong>Value of scene variable</strong>, and <strong>swordDirection</strong>.</p>
+<p>select the <strong>Sword</strong> and choose <strong>Put the object around another</strong>.  Choose the player as the center object.  For distance, choose 50.  Then for <strong>Angle</strong>, choose <strong>Expressions</strong> and use <strong>Value of scene variable</strong>, and <strong>PlayerDirection</strong>.</p>
 </li>
 <li>
-<p>place the sword a bit offset from the player</p>
+<p>rotate the sword to the correct direction.</p>
 </li>
-<li>select the <strong>Sword</strong> and choose <strong>Put the object around another</strong>.  Choose the player as the center object.  For distance, choose 50.  Then for <strong>Angle</strong>, choose <strong>Expressions</strong> and use <strong>Value of scene variable</strong>, and <strong>swordDirection</strong>.</li>
+<li>select the <strong>Sword</strong> and choose <strong>Angle</strong>.  Set the sign to <strong>= (set to)</strong> and the value to the variable <strong>PlayerDirection+90</strong>.</li>
 </ul>
 <p>If you preview you will notice the sword is placed incorrectly - that is because the swordDirection is offset by 90 degrees from the character's.  Let's subtract 90 degrees from <strong>Angle</strong> in the second action to correct this.</p>
 <p><img alt="" src="images/swordAttack3.jpg" /></p>
@@ -98,7 +113,7 @@ Set the timer name to <strong>"swordDelay"</strong>, and time in seconds to <str
 <p><img alt="" src="images/swordDelay2.jpg" /></p>
 <h2>Delay Before Next Attack</h2>
 <p>To impose a short delay after each attack, add a new condition to the <strong>Touch or mouse down</strong> event.</p>
-<p>For the condition, select <strong>Other ACtions</strong> and <strong>Value of scene timer</strong>.
+<p>For the condition, select <strong>Other conditions</strong> and <strong>Value of scene timer</strong>.
 Set the timer name to <strong>"swordDelay"</strong>, the comparison to <strong>greater than</strong> and time in seconds to <strong>0.6</strong>.</p>
 <p><img alt="" src="images/swordDelay3.jpg" /></p>
 <p>However, for this to work, a timer has already had to start, so we need to add an extra <strong>At the Beginning of Scene</strong> event like so:</p>

@@ -12,58 +12,26 @@ if you're on a tablet, you might not have a keyboard!
 To solve that, we'll add virtual keys to the screen in the optional section at the end of this page.
 </div>
 
-## Group Events
-
-In **Dodge the Creep**, we only used **Standard Events** and **Sub-Events**.
-That works fine, but as we have more events, things starts to get messy.
-
-**Group Events** are used to organize and structure our events.
-By themselves, they have a title, but otherwise do nothing at all.
-
-**Group Events** are only useful when we add sub-events to them.
-This lets the group event act like a header for a group of events.
-For example, we can create a group event with the title "Enemies" and place all the events related to the enemies under this group.
-
-Let's start by creating a group event, and naming it "Player Movements".
-
-![](images/groupEvents.jpg)
-
 ## Animation
 
-First you can check the different animations of your GenericCharacter by clicking on the object and previewing the various choices.  
+We could follow the example events for controlling animation in Dodge the Creep, but there's a simple Behavior shortcut we can use to be more efficient with our time.
 
-You have four only for this Sprite - up, down, left, right.
+Open the Behaviors tab of the Generic Character player object and search for **"Animator"**.
 
-So, let's get to animating:
+![](images/animatorBehavior.png)
 
-Add a **sub-event** under the Player Movements group, and for condition choose the character object and the condition **Control pressed or simulated ("Up")**.  
+Click on the **Top-Down movement animator** behavior and add it to your player.
 
-![](images/up.jpg)
+You will then need to rename your player's animations in the object Properties tab.  Double Click the player object and stay on the Properties tab.  Scroll down to each animation and change their names as follows:
 
-Then for action, choose **Change the animation (by name)** and select the **"Up"** animation. 
+**Right -> Walk0<br>
+Down -> Walk1<br>
+Left -> Walk2<br>
+Up -> Walk3<br>**
 
-![](images/upEvent.jpg)
+![](images/topDownAnimator.png)
 
-Repeat this for the 3 other movement controls:
-
-![](images/controlEvents.jpg)
-
-
-## Pause and Play animation
-
-In our previous game, we switched to an idle animation when the player isn't moving.
-For our current player sprite, we don't have an idle animation, so instead, we'll pause the animation when the player is stopped.
-
-Add a new sub-event under the **Player Movements** group event.
-For the condition, select the player, choose **Check if the object is moving**, and set it to **Invert condition**.
-For the action, select the player, then choose **Pause the animation**.
-
-Since we have paused the animation, we'll also need to restart it when the player is moving.
-Add a **Play the animation** action to each of the four movement control/animation events.
-
-Our event tab should now look like this...
-
-![](images/controlEventswithIdle.jpg)
+The order they appear in the Properties tab, or their animation number is not important.  Only the exact character naming that is associated. And capitalization of **W**alk is a must.
 
 <br>
 <br>

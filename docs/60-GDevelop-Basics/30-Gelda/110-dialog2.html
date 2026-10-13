@@ -72,8 +72,10 @@ Let's have him speak these three lines.</p>
 <p>Currently, under the <strong>Dialog</strong> group event, you should have a set of events that looks like this...</p>
 <p><img alt="" src="images/showDialog.png" /></p>
 <p>Add a condition to the second event.
-Select the <strong>Wizard</strong> and <strong>Value of an object variable</strong>.
-Set the variable name as <strong>dialogState</strong>, operator as <strong>= (equal to)</strong>, and value as <strong>0</strong>.
+Select the <strong>Wizard</strong> and <strong>Value of an object variable</strong>.</p>
+<p>Add a new character variable:
+<img alt="" src="images/dialogState.png" /></p>
+<p>In the condition, set the variable name as <strong>dialogState</strong>, operator as <strong>= (equal to)</strong>, and value as <strong>0</strong>.
 Next, change the dialog to the first line.</p>
 <p><img alt="" src="images/multiLinesDialog1.png" /></p>
 <p>Repeat for the other two lines of dialog, but set the checks for the <strong>dialogState</strong> value to <strong>1</strong> and <strong>2</strong>.</p>
@@ -86,7 +88,7 @@ We'll use an event to detect if the <strong>dialog</strong> button is pressed, a
 For the conditions, add...</p>
 <ul>
 <li><strong>Key pressed ("a" or whichever)</strong></li>
-<li><strong>Trigger once</strong> (...this is found under <strong>Other conditions</strong>, <strong>Advanced</strong>)</li>
+<li><strong>Trigger once</strong> (...this is found under <strong>Other conditions</strong>, <strong>Advanced</strong>.  Search for "once")</li>
 </ul>
 <div class="important">
 The last condition, Trigger once, ensures that the event is only triggered a single time when you click and hold the button.
@@ -105,8 +107,8 @@ Look for the actions where we hide and show the NPC dialog, and add in actions t
 <p>Now look for the events where we have the text of the wizard dialog, and add in actions for the player dialog.</p>
 <p><img alt="" src="images/playerDialogText.png" /></p>
 <div class="info">
-The first two player dialogs start with an A) to indicate that the player should press that button to progress.
-The last dialog doesn't have the A) as that's the last dialog line.
+The first two player dialogs start with an a) to indicate that the player should press that button to progress.
+The last dialog doesn't have the a) as that's the last dialog line.
 </div>
 <h2>Princess Dialog</h2>
 <p>Using the same method, add dialog for the princess.

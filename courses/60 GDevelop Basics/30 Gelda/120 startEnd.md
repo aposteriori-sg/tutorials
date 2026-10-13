@@ -28,16 +28,26 @@ They can be applied to an object, or to an entire layer.
 
 We'll apply the **Godray** effect on the **Base Layer**, and the **Pixelate** and **Advanced Bloom** effect on the title object.
 
-Starting with **Godray**, click on the **Layer effects button**.
+Starting with **Godray**, click on the **Open layer editor** selection when expanding choices for Base Layer.
 
-![](images/layerEffectsButton.png)
+![](images/layerEditor.png)
 
-Click on **Add Effects**, and under **Choose the effect to apply**, select **Godray**.
+Under **3D Settings** choose **Force Display only 2D Objects**.  Then select the Effects tab.  Click **Add an effect** and choose the **New effect from scratch** tab.  Search for Godray and add it.  Preview to see what the effect does by default, and play around with parameters to get the desired Godray effect.
+
 Experiment with the parameters if you like, then click **Apply** when you are done.
+
+![](images/godrayEffect.png)
+
 
 <div class="info">
 Effects only appear when running the game or a preview; you will not see any effects in the editor screen.
 </div>
+
+Here is what the default Godray effect looks like:
+
+<video autoplay muted loop>
+  <source src="images/godray.mp4" type="video/mp4">
+</video>
 
 For the title object, click on the kebab menu then select **Edit Effects**.
 

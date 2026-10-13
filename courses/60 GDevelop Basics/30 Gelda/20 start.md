@@ -1,13 +1,18 @@
 # Getting Started
 
-As before, start by opening up GDevelop. If you're using the web-based editor, use this link [editor.gdevelop-app.com](https://editor.gdevelop-app.com).
+As before, start by opening up GDevelop. If you're using the web-based editor, use this link [editor.gdevelop.io](http://editor.gdevelop.io/).
 
-Create a new **Empty Game**, add a scene, and name the scene **Play**.
-As before, there's nothing special about the scene name, so use whatever you want.
+Create a new game with **Empty Project**, and select **Custom size** again - 800 x 600.  Name the project and click **Create new game**.
 
-Open up the scene, and you should be greeted with the scene editor...
+You should be greeted with the scene editor...
 
 ![](images/sceneEditor.jpg)
+
+Using the Game management menu on the top left (burger), you can rename the initial Untitled scene to **Play**.  As before, there's nothing special about the scene name, so use whatever you want.
+
+![](images/sceneRename.png)
+
+If you lose the Scene Editor and Events tabs after renaming just click on the new Scene name in the Game management menu and they will reappear.
 
 ## Project Properties
 
@@ -16,7 +21,7 @@ Open up the **Project Properties** window...
 
 ![](images/projectProperties.jpg)
 
-...and set...
+Scroll down to **Resolution & rendering** area and set...
 
 * **Game resolution resize mode** to **No changes to the game size**
 * **Scale mode** to **Nearest**
@@ -24,7 +29,7 @@ Open up the **Project Properties** window...
 
 ![](images/projectPropertiesWindow.jpg)
 
-These settings helps to preserve the jagged, pixelated look of the image.
+These settings help to preserve the jagged, pixelated look of the image.
 Without them, GDevelop will smooth jagged edges, making them look blurry.
 
 ## Scenes

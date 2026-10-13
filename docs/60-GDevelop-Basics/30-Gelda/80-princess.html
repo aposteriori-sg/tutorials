@@ -46,6 +46,8 @@ For me, I'm placing her in a distant room.</p>
 I'm using this sprite...</p>
 <p><img alt="" src="images/door.png" /></p>
 <p>Add it to your game, drag an instance on scene, resize, then position the door somewhere suitable.</p>
+<p>Also, the door should start as locked, so you can flip the order of the animations in th eProperties tab of the door, so that it starts out Locked/Closed.</p>
+<p><img alt="" src="images/doorFirstAnimation.png" /></p>
 <h2>Key</h2>
 <p>To unlock the door, we'll need a key...</p>
 <p><img alt="" src="images/key.png" /></p>
@@ -60,26 +62,35 @@ I'm using this sprite...</p>
 For the condition, select the player, <strong>Collision</strong>, then choose the <strong>Key</strong>.
 For the action, choose the <strong>Key</strong>, then <strong>Delete object</strong>.</p>
 <p><img alt="" src="images/keyEvents.png" /></p>
-<p>To remember that the player has picked up the key, we'll need to set the value of a <strong>Variable</strong>.
-Add another action to the previous event, select <strong>Other Actions</strong>, <strong>Variables</strong>, <strong>Value of a scene variable</strong>.
-Give the variable the name <strong>key</strong>, set the sign to <strong>= (set to)</strong>, and set the value to <strong>1</strong>.</p>
+<p>To remember that the player has picked up the key, we'll need to set the value of a <strong>Variable</strong>.</p>
+<p>Add another action to the previous event, select Character object, then search for <strong>Change object variable value</strong>.</p>
+<p><img alt="" src="images/addCharacterVariable0.png" /></p>
+<p>Click on the <strong>edit variable</strong> button and add a new variable.
+Give the variable the name <strong>hasKey</strong>, set it to a <strong>Boolean</strong>, and leave it to start with the value <strong>False</strong>.</p>
+<p><img alt="" src="images/addCharacterVariable.png" /></p>
+<p>In the actual action set the hasKey variable to True - this is the action for picking up the key.</p>
+<p><img alt="" src="images/keyEvent.png" /></p>
 <h2>Events for Door</h2>
 <p>This is what we need the door to do when it is touched...</p>
 <ol>
-<li>If the <strong>key</strong> variable is <strong>1</strong>, it should change to the <strong>Open</strong> animation.</li>
-<li>If the <strong>key</strong> variable is <strong>NOT 1</strong>, it should move the player away from the door.</li>
+<li>If the <strong>hasKey</strong> variable is <strong>True</strong>, it should change to the <strong>Open</strong> animation.</li>
+<li>If the <strong>hasKey</strong> variable is <strong>False</strong>, it should move the player away from the door.</li>
 </ol>
-<p>Start by creating a group event named <strong>Door</strong>, then add a sub-event to it.
+<p>Start by creating a group event named <strong>Door/Key</strong>, then add a sub-event to it.
 For the condition, select the player, <strong>Collision</strong>, then choose the <strong>Door</strong>.
 Don't set any actions for this, instead, add two more sub-events to this sub-event.</p>
 <p><img alt="" src="images/doorEvents1.png" /></p>
-<p>In the first sub-event, set the condition to <strong>Other Conditions</strong>, <strong>Variables</strong>, <strong>Value of Scene Variable</strong>.
-Set the variable name to <strong>key</strong>, sign to <strong>= (equal to)</strong>, and value to <strong>1</strong>.
-For the action, choose the <strong>Door</strong>, select <strong>Change the animation</strong>, then <strong>= (set to)</strong> a value of <strong>1</strong>.</p>
+<p>In the first sub-event, set the condition to <strong>Character -&gt; Object variable value</strong>.
+Choose the variable <strong>hasKey</strong>, set to <strong>= (equal to)</strong>, and value to <strong>True</strong>.</p>
+<p><img alt="" src="images/doorEventsCheck.png" /></p>
+<p>For the action, choose the <strong>Door</strong>, select <strong>Animation (by name)</strong>, then <strong>= (set to)</strong> a value of <strong>Open</strong>.</p>
 <p><img alt="" src="images/doorEvents2.png" /></p>
-<p>For the second sub-event, use the same condition as the first, but set it to <strong>Invert Condition</strong>.
+<p>For the second sub-event, use the same condition as the first, but set it to check for <strong>False</strong>.
 For the action, choose the player, select <strong>Separate objects</strong>, then choose the <strong>Door</strong>.</p>
 <p><img alt="" src="images/doorEvents3.png" /></p>
+<h2>Test Environment</h2>
+<p>You can <strong>test</strong> that your character can pick the Key, and that the door will be locked until he does so, and ince he does it opens and can pass through!</p>
+<p>To speed up testing you can temporarily move your character and the key near the door... After you are satisfied, you can move them back to their original locations.  Remember this technique.</p>
         </div>
         <button type="button" id="hamburger">
             <div id="hamburgerTop"></div>

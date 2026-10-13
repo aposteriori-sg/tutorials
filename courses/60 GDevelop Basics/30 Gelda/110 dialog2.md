@@ -39,7 +39,11 @@ Currently, under the **Dialog** group event, you should have a set of events tha
 
 Add a condition to the second event.
 Select the **Wizard** and **Value of an object variable**.
-Set the variable name as **dialogState**, operator as **= (equal to)**, and value as **0**.
+
+Add a new character variable:
+![](images/dialogState.png)
+
+In the condition, set the variable name as **dialogState**, operator as **= (equal to)**, and value as **0**.
 Next, change the dialog to the first line.
 
 ![](images/multiLinesDialog1.png)
@@ -58,7 +62,7 @@ Select the **Collision with wizard** event, and add a sub-event under it.
 For the conditions, add...
 
 * **Key pressed ("a" or whichever)**
-* **Trigger once** (...this is found under **Other conditions**, **Advanced**)
+* **Trigger once** (...this is found under **Other conditions**, **Advanced**.  Search for "once")
 
 <div class="important" markdown="span">
 The last condition, Trigger once, ensures that the event is only triggered a single time when you click and hold the button.
@@ -87,8 +91,8 @@ Now look for the events where we have the text of the wizard dialog, and add in 
 ![](images/playerDialogText.png)
 
 <div class="info" markdown="span">
-The first two player dialogs start with an A) to indicate that the player should press that button to progress.
-The last dialog doesn't have the A) as that's the last dialog line.
+The first two player dialogs start with an a) to indicate that the player should press that button to progress.
+The last dialog doesn't have the a) as that's the last dialog line.
 </div>
 
 ## Princess Dialog
