@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li >Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li class="current">Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Listening to IoTy</h2>
+<p>Now that we have managed to send a message from ESP32 to the App, let's try to do the opposite and listen to Button messages from the app to the ESP32.</p>
+<p>First, we need to add a place where those topic messages will go by using the OnReceive Network block:</p>
+<p><img alt="" src="images/onrecieve.png" /></p>
+<p>Inside let's just print the mqtt_msg we get.  Make sure you are not ceating some custom variable, but using the Network block "mqtt_msg":</p>
+<p><img alt="" src="images/mqtt_msg.png" /></p>
+<p>Let's just print that for now:</p>
+<p><img alt="" src="images/printmqttmsg.png" /></p>
+<p>If you test the button now, you will see, that this does not work...  You don't even receive the "Ready" test message in the topic...</p>
+<p>We need to add one more thing in the main code - some way to instruct the ESP32 to look out for messages, and not give up control by exiting the program:</p>
+<p><img alt="" src="images/checkformessages.png" /></p>
+<p>The sleep block is in Control section and make sure to sleep for 100ms or more so that you don't waste bandwidth or overwhelm the servers and your app.</p>
+<p>If you did everything right, you shoudl be able to see the on/off messages hitting your ESP32 monintor when you click on the button.  Make sure your app is in Play mode.</p>
+<p><img alt="" src="images/testonoff.png" /></p>
+<p>Finally, let's bring all of it together - we will check for the on/off message and turn the Blue light on if we receive on and shut it if we receive off.</p>
+<p>First add an IF logic block:</p>
+<p><img alt="" src="images/if.png" /></p>
+<p>Remove the 0=0 portion, as that only works for integers and we need to compare the mqtt_msg <strong>text</strong>.</p>
+<p>Now add the generic comparison block from Logic:</p>
+<p><img alt="" src="images/generic.png" /></p>
+<p>Now add the else portion of the condition:</p>
+<p><img alt="" src="images/ifelse.png" /></p>
+<p>Finally, we will check if mqtt_msg is on or off:</p>
+<p><img alt="" src="images/ifon.png" /></p>
+<p>(The "on" comes from an empty Text string block and defining it with the string you want to check)</p>
+<p>And the last thing is to turn the LEDs on or off, appropriately:</p>
+<p><img alt="" src="images/ledonoff.png" /></p>
+<p>Now test that the LED is turning on/off from the App's button!</p>
+<p>You can transfer control to your phone:</p>
+<p><img alt="" src="images/link.png" /></p>
+<p>Armed with this, can you try to control NeoPixel LED strips to change colors from the App?</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

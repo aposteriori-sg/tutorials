@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Automation with AI</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Automation with AI
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course focuses on integrating electronics with AI/ML technology.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/1-Electronics-with-ESP32.html"><li >Basics with ESP32</li></a><a href="../10-Introduction/2-Connecting-the-ESP32.html"><li class="current">Connecting the ESP32</li></a><a href="../10-Introduction/3-Programming-the-ESP32.html"><li >Programming the ESP32</li></a><a href="../10-Introduction/4-Basic-Programming-Concepts.html"><li >Basic Programming Concepts</li></a></ul><p>Connecting Electronics</p><ul><a href="../15-Connecting-Simple-Electronics/1-LED-Strips.html"><li >LED Strips</li></a><a href="../15-Connecting-Simple-Electronics/2-Servo-Motor.html"><li >Servo Motor</li></a></ul><p>AI Integration</p><ul><a href="../20-AI-Integration/1-AI-with-Google-Teachable-Machine.html"><li >AI with Google Teachable Machine</li></a><a href="../20-AI-Integration/2-Automation-with-IoTy.html"><li >Automation With IoTy</li></a><a href="../20-AI-Integration/3-Integrate-ESP32-into-IoTy.html"><li >Integrate ESP32 with IoTy</li></a><a href="../20-AI-Integration/4-Listening-to-IoTy.html"><li >Listening to IoTy</li></a><a href="../20-AI-Integration/5-Final-Projects.html"><li >Final Projects</li></a><a href="../20-AI-Integration/6-LED-Lamp-Construction.html"><li >LED Lamp Construction</li></a><a href="../20-AI-Integration/7-Gantry-Construction.html"><li >Gantry Construction</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Connecting the ESP32</h2>
+<p>We are going to code the on-board blue light LED just as a way to understand the programming environment we will use with the ESP32.</p>
+<p>But first we will need to establish a connection between our ESP32 and the programming environment.</p>
+<p><img alt="" src="images/esp32.png" /></p>
+<p>The platform we will be using for our coding and control of the ESP32 board is <a href="http://a9i.sg/ioty">A Posteriori's IoTy</a> at http://a9i.sg/ioty.</p>
+<p><img alt="" src="images/ioty.png" /></p>
+<p>Reminder: You can program the blue light's behavior by controlling the D2/Pin2 on the ESP32.</p>
+<p>Make sure your ESP32 is connected to your laptop with teh USB cable.  We will be using Serial Connection to communicate between IoTy platform and the ESP32 board.</p>
+<p>Note:  There are other ways to connect using bluetooth and WiFi - we mainly use that when our IoTy platform is running on a mobile PLD like an iPad.</p>
+<p>Click on the ESP32 Menu (3 dots) and make sure the connection type is set to Serial.</p>
+<p>Then click <strong>Connect (Serial)...</strong></p>
+<p><img alt="" src="images/connect.png" /></p>
+<p>Click <strong>Filtered Connect</strong> - it will filter out some ports that won't make sense for our platform that can be confusing and only required for advanced use cases.</p>
+<p><img alt="" src="images/filtered.png" /></p>
+<p>There should be only one port listed.  Click on it, and then connect.</p>
+<p><img alt="" src="images/serial.png" /></p>
+<p>If there are no ports listed, try to unplug and plug back in your USB - both sides to make sure you have a proper connection.</p>
+<p>If successful, the top right connection status area should turn green and say "Connected".</p>
+<p><img alt="" src="images/connected.png" /></p>
+<div style="padding: 15px; border-left: 6px solid #ffcc00; background-color: #fff3cd; color: #856404;">
+<strong>WARNING:</strong>  Every now and then the connection falls asleep for various reasons like power-saving.  In this case the connected status stays on but the serial connection is no longer stable.  You may see errors like Communication Timeout or the screen freeze with "Entering Raw Mode".
+
+In these cases, you will need to **physically disconnect and reconnect** the USB cable and reconnect in software using the steps outlined above.
+</div>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

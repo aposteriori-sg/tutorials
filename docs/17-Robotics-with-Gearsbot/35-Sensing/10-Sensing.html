@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with GearsBot</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with GearsBot
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the virtual GearsBot platform to teach basic Robotics.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-Computational-Thinking.html"><li >Computational Thinking</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-GearsBot-App.html"><li >The GearsBot App</li></a><a href="../10-Introduction/40-Basic-2-Wheel-Robots.html"><li >2-Wheel Robots</li></a></ul><p>Basic Coding</p><ul><a href="../20-Basic-Coding/10-Sequences.html"><li >Sequences</li></a><a href="../20-Basic-Coding/12-Taking-a-Break.html"><li >Pause, Sleep, Rest</li></a><a href="../20-Basic-Coding/14-Sharp-Turns.html"><li >Sharp Turns</li></a><a href="../20-Basic-Coding/15-Painting-Challenges.html"><li >Painting Challenges</li></a><a href="../20-Basic-Coding/16-Soft-Turns.html"><li >Soft Turns</li></a><a href="../20-Basic-Coding/17-Painting-Challenges-2.html"><li >Painting Challenges 2</li></a><a href="../20-Basic-Coding/20-Simple-Maze.html"><li >Simple Maze Challenge</li></a></ul><p>Mechanical Design</p><ul><a href="../30-Mechanical-Design/10-Linear-Actuator.html"><li >Linear Actuator</li></a></ul><p>Sensing</p><ul><a href="../35-Sensing/10-Sensing.html"><li class="current">Sensing</li></a><a href="../35-Sensing/20-Color-Sensor-Wait-Until.html"><li >Color Sensor - Wait Until</li></a><a href="../35-Sensing/30-Color-Sensor-Conditionals.html"><li >Color Sensor - Conditionals</li></a><a href="../35-Sensing/40-Color-Sensor-Agorithms.html"><li >Color Sensor - Algorithms</li></a></ul><p>Mechanical Design II</p><ul><a href="../40-Mechanical-Design-II/15-Robot-Configurator.html"><li >Robot Configurator</li></a><a href="../40-Mechanical-Design-II/20-Basic-Shapes.html"><li >Basic Shapes</li></a><a href="../40-Mechanical-Design-II/30-Arm-Actuator.html"><li >Arm Actuator</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Sensing</h2>
+<p>So far we have programmed robots to do some pretty simple tasks that are repetitive and easy for the robot to do well over and over again.</p>
+<p>Traditionally, that's all robots did in manufacturing &amp; automation applications.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/anDBlJM2Rac?start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>But, nowadays robots do all kinds of work that requires them to see, touch or even hear the environment around them to function properly.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gNYT4pVvweA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2>Sensors</h2>
+<p>Sensors are a way for robots to experience aspects of its environment.</p>
+<p>Sensors are to robots what our eyes, ears, and finger nerve endings are for us humans.</p>
+<p><img alt="" src="images/sensors.png" /></p>
+<p>They don't work exactly the same, though, so in order to control robots to do some specialized task, we have to learn how sensors work and how we can use them in our programs.</p>
+<h2>GearsBot Sensors</h2>
+<p>GearsBot supports several types of sensors, and these two are realted to vision:</p>
+<p><img alt="" src="images/gearsSensors.png" /></p>
+<h3>Ultrasonic Sensor</h3>
+<p>Ultra means very high.
+Sonic means sound.</p>
+<p><img alt="" src="images/ultrasonic.png" /></p>
+<p>Even though this sensor utilizes sound waves, it actually is closer to an eye than a ear.</p>
+<p>It can help robots see like a bat, using echo-location to find solids in front of it.</p>
+<h3>Color Sensor</h3>
+<p>This sensor is a bit like one pixel in our eye.  Our eyes have many such color sensors (rods &amp; cones), but way smaller, and together they can see a full picture, but the Color Sensor can just see a small area.  It is not able to detect features or visualize a whole scene like a camera.</p>
+<p><img alt="" src="images/colorSensor.jpg" /></p>
+<p>We can use it to find things, or make movement decisions, like follow lines.</p>
+<p>Here is an example of a SumoBot using both Ultrasonic &amp; Color Sensor:</p>
+<video autoplay muted loop width=100% height="auto">
+  <source src="images/sumo.mp4" type="video/mp4">
+</video>
+
+<h3>Port View</h3>
+<p>You can see what the sensors "see" by looking at the Port View:</p>
+<p><img alt="" src="images/portView.png" /></p>
+<p>Use <a href="https://quirkycort.github.io/gears/public/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FXgrApkT72B.json&amp;filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FNNCXg4pVKe.json&amp;worldScripts=world_challenges">this world</a> with Port View to see the various colors seen by the robot as you drive over them with Joystick control.</p>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>

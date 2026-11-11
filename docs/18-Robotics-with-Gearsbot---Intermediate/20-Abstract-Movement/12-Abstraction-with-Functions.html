@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="../../css/pygment_idle.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/print.css" rel="stylesheet" media="print">
+
+  <title>Robotics with GearsBot - Intermediate</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-left">
+            <a id="home" href="../../index.html"><i class="fa fa-home"></i></a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            Robotics with GearsBot - Intermediate
+        </div>
+        <div id="header-right">
+            <a href="https://aposteriori.com.sg">
+                <img src="../../images/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="sidebarOverlay"></div>
+        <nav id="sidebar" role="navigation">
+            <div id="sidebarHeader">This course uses the virtual GearsBot platform to teach Robotics using GearsBot.  It is meant for students and people who have a basic understanding of coding and some computational thinking skills.</div>
+            <p>Getting Started</p><ul><a href="../10-Introduction/10-Course-Overview.html"><li >Course Overview</li></a><a href="../10-Introduction/11-Computational-Thinking.html"><li >Computational Thinking</li></a><a href="../10-Introduction/12-Spot-the-Difference-Puzzle.html"><li >Spot the DIfference</li></a><a href="../10-Introduction/20-What-is-a-Robot.html"><li >What is a Robot?</li></a><a href="../10-Introduction/30-The-GearsBot-App.html"><li >The GearsBot App - Review</li></a><a href="../10-Introduction/40-Basic-2-Wheel-Movement-Blocks.html"><li >2-Wheel Robots & Move Tank</li></a></ul><p>Abstract Movement</p><ul><a href="../20-Abstract-Movement/10-Sequences.html"><li >Movement Sequences</li></a><a href="../20-Abstract-Movement/11-Sharp-Turns.html"><li >Sharp Turns</li></a><a href="../20-Abstract-Movement/12-Abstraction-with-Functions.html"><li class="current">Abstraction with Functions</li></a><a href="../20-Abstract-Movement/13-Simple-Maze.html"><li >Maze Challenges</li></a></ul><p>Basic Coding</p><ul><a href="../20-Movement/10-Sequences.html"><li >Movement Sequences</li></a><a href="../20-Movement/12-Taking-a-Break.html"><li >Pause, Sleep, Rest</li></a><a href="../20-Movement/14-Sharp-Turns.html"><li >Sharp Turns</li></a><a href="../20-Movement/15-Painting-Challenges.html"><li >Painting Challenges</li></a><a href="../20-Movement/16-Soft-Turns.html"><li >Soft Turns</li></a><a href="../20-Movement/17-Painting-Challenges-2.html"><li >Painting Challenges 2</li></a><a href="../20-Movement/20-Simple-Maze.html"><li >Simple Maze Challenge</li></a></ul><p>Art Patterns</p><ul><a href="../30-Art-Patterns/15-Painting-Challenges.html"><li >Painting Challenges</li></a><a href="../30-Art-Patterns/16-Soft-Turns.html"><li >Soft Turns</li></a><a href="../30-Art-Patterns/17-Painting-With-Loops.html"><li >Painting With Loops</li></a><a href="../30-Art-Patterns/18-Art-Pattern-Challenges.html"><li >Art Pattern Challenges</li></a></ul><p>Mechanical Design</p><ul><a href="../30-Mechanical-Design/10-Linear-Actuator.html"><li >Linear Actuator</li></a></ul><p>Sensing</p><ul><a href="../35-Sensing/10-Sensing.html"><li >Sensing</li></a><a href="../35-Sensing/20-Color-Sensor-Wait-Until.html"><li >Color Sensor - Wait Until</li></a><a href="../35-Sensing/30-Color-Sensor-Conditionals.html"><li >Color Sensor - Conditionals</li></a><a href="../35-Sensing/40-Color-Sensor-Agorithms.html"><li >Color Sensor - Algorithms</li></a></ul><p>Mechanical Design II</p><ul><a href="../40-Mechanical-Design-II/15-Robot-Configurator.html"><li >Robot Configurator</li></a><a href="../40-Mechanical-Design-II/20-Basic-Shapes.html"><li >Basic Shapes</li></a><a href="../40-Mechanical-Design-II/30-Arm-Actuator.html"><li >Arm Actuator</li></a><a href="../40-Mechanical-Design-II/99-The-Configurator.html"><li >At the time of writing, the GearsBot platforms supports the basic building block shapes: **box, sphere, and cylinder**</li></a></ul>
+        </nav>
+        <div id="content">
+            <h2>Abstraction with Functions</h2>
+<p>You might have gotten very good at remembering how to solve a maze, and which pattern of Move Tank is Forward, and which is Back, and which is Left or Right.</p>
+<p>But you might have seen it gets quite hard to solve larger more complex problems, if you have to remember and keep track of so many details.</p>
+<p>You can use <strong>Abstraction</strong> to simplify things and hide some of those details:</p>
+<p><img alt="" src="images/abstract_fwd.jpg" /></p>
+<h2>Abstracting Statements</h2>
+<p>Which is easier to read?</p>
+<p><img alt="" src="images/maze_solution_abstracted.jpg" /></p>
+<p>So, how do we create these abstractions?</p>
+<h2>Create Functions</h2>
+<h3>1. Get a Function Block</h3>
+<p><img alt="" src="images/abstraction_howto_1.jpg" /></p>
+<h3>2. Give Function the abstract Name</h3>
+<p><img alt="" src="images/abstraction_howto_2.jpg" /></p>
+<h3>3. Move your complex Code Block into Function Definition</h3>
+<p><img alt="" src="images/abstraction_howto_3.jpg" /></p>
+<h3>4. Find the newly created Function Block under Functions</h3>
+<p><img alt="" src="images/abstraction_howto_4.jpg" /></p>
+<h3>5. Move the new Function Block into the correct place in your code</h3>
+<p><img alt="" src="images/abstraction_howto_5.jpg" /></p>
+<h2>Challenge</h2>
+<ul>
+<li>Solve <a href="https://gears.aposteriori.com.sg/index.html?worldJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2F2htL3iLGey.json&amp;filterBlocksJSON=https%3A%2F%2Ffiles.aposteriori.com.sg%2Fget%2FsRCnSgcwKF.json">this maze</a> again, with Abstracted Functions for <em>Forward</em> and <em>Right</em></li>
+</ul>
+        </div>
+        <button type="button" id="hamburger"><i class="fa fa-bars"></i></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('close');
+            });
+
+            let currentEle = document.querySelector('#sidebar li.current');
+            currentEle.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
