@@ -5,7 +5,7 @@ Resize it and use it to build the first wall in the scene.
 Repeat...
 
 <video autoplay muted loop>
-  <source src="images/assembleWalls.mp4" type="video/mp4">
+  <source src="images/assembleWalls.mp4" width="200" type="video/mp4">
 </video>
 
 ...until you have a huge maze...
